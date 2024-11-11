@@ -180,10 +180,11 @@
     $(document).ready(function () {
       // index.html 경로가 아닌 다른페이지에서는 id="header"에 sub라는 클래스 추가하여
       // 서브페이지에서 다른 색상의 헤더로 사용
-      if ($(location).attr("pathname") !== "/index.html") {
+      if ($(location).attr("pathname") !== "/index.html" || 
+          $(location).attr("pathname") !== "/") {
         $("#header").addClass("sub");
       }
-      console.log($(location).attr("pathname"));
+      // console.log($(location).attr("pathname"));
     });
   </script>
   <body>
