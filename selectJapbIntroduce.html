@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>국가자연사 연구종합정보 시스템(JAPB 소개)</title>
+    
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/common.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-gnb.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-footer.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/datepicker.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-main.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-popup.css"
+      media="all"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/contents.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/layout.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/table.css"
+      media="all"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/response.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/custom-ui.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/jquery.ui.custom.naris.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/cmmn/css/lightgallery/lightgallery.css"
+      media="all"
+    />
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="./resources/favicon-multi.ico"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="./resources/favicon-152.png"
+    />
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/2.2.4/jquery-2.2.4.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/easing/jquery-easing.1.3.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/slick/slick.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/waypoints/waypoints.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/counter/counter.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/gray/jquery.gray.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery-ui.js"
+    ></script>
+    <script type="text/javascript" src="./resources/srvc/js/ui.js"></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/srvc/js/searchQuery.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery.validate.js"
+    ></script>
+    <script type="text/javascript" src="./resources/cmmn/js/common.js"></script>
+    <script
+      type="text/javascript"
+      src="./resources/srvc/js/jquery.modalLayer.custom.response.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lightgallery.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-thumbnail.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-fullscreen.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-zoom.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-autoplay.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery.blockUI.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery.cookie.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/iscroll/iscroll.js"
+    ></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        // 퍼블리싱용 공통 헤더ㆍ푸터 블라오기
+        $("#headers").load("header.html");
+        $("#footers").load("footer.html");
+
+        // SNS 공유 visibility
+        const togBtn = document.getElementById("snsShare");
+        const list = document.getElementById("shareList");
+        togBtn.addEventListener("click", function () {
+          list.classList.toggle("visible");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- wrap -->
+		<div id="wrap" >
+      <!-- skipNav -->
+      <div id="skipnavi">
+          <a href="#container">본문바로가기</a>
+      </div>
+      <!-- //skipNav -->
+		  
+      <div id="headers"></div>
+
+			<!-- container -->
+			<div id="container">
+        <!-- depth_location -->
+        <div class="depth_location-new">
+          <div class="location_hero">
+            <button
+              type="button"
+              class="home"
+              onclick="javascript:location.href='/index.html';"
+            >
+              <span>홈</span>
+            </button>
+            <button type="button" class="depth depth1">1뎁스명</button>
+            <button type="button" class="depth depth2">2뎁스명</button>
+
+            <article class="share-area">
+              <button title="공유하기" type="button" id="snsShare">
+                <img src="./resources/srvc/images-new/common/icon_share.svg" />
+              </button>
+              <ul id="shareList" class="share-list">
+                <li>
+                  <button type="button" title="블로그 공유 새창 열림">
+                    <img
+                      src="./resources/srvc/images-new/common/icon_share_01.svg"
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button type="button" title="유튜브 공유 새창 열림">
+                    <img
+                      src="./resources/srvc/images-new/common/icon_share_02.svg"
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button type="button" title="인스타그램 공유 새창 열림">
+                    <img
+                      src="./resources/srvc/images-new/common/icon_share_03.svg"
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button type="button" title="카카오채널 공유 새창 열림">
+                    <img
+                      src="./resources/srvc/images-new/common/icon_share_04.svg"
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button type="button" title="트위터 공유 새창 열림">
+                    <img
+                      src="./resources/srvc/images-new/common/icon_share_05.svg"
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button type="button" title="페이스북 공유 새창 열림">
+                    <img
+                      src="./resources/srvc/images-new/common/icon_share_06.svg"
+                    />
+                  </button>
+                </li>
+              </ul>
+              <button
+                title="화면 프린트"
+                type="button"
+                onclick="javascript:window.print();"
+              >
+                <img src="./resources/srvc/images-new/common/icon_print.svg" />
+              </button>
+              <button title="이 컨텐츠 주소복사" type="button">
+                <img src="./resources/srvc/images-new/common/icon_url.svg" />
+              </button>
+            </article>
+          </div>
+        </div>
+        <!-- //depth_location -->
+
+        <!-- 페이지 큰 타이틀 -->
+        <article class="page-title">
+          <div class="inner">
+            <h2 class="tit"><span>JAPB 소개(미완료)</span></h2>
+          </div>
+        </article>
+        <!-- //페이지 큰 타이틀 -->
+			
+				<!-- scontents -->
+				<div id="scontents">
+					<!-- scontents_inner -->
+					<div class="scontents_inner">
+						<!-- 개발자 컨텐츠 영역 -->
+						<div class="japb_intro">
+							<!-- cm_tab_ty1 -->
+							<!-- <div class="cm_tab_ty1 tab_num2">
+								<ul>
+									<li class="active"><a href="/intd/sym/selectJapbIntroduce.do">JAPB 소개</a></li>
+									<li><a href="/jrnl/selectBoardList.do">JAPB(보기)</a></li>
+								</ul>
+							</div> -->
+
+							<!-- stit_area -->
+							<div class="stit_area">
+								<h4 class="stit"><span class=eng>JAPB<span> 소개</h4>
+							</div>
+
+							<!-- info_txt01 -->
+							<p class="info_txt01 mgb50">아&middot;태 생물다양성 국제학술지(JAPB; Journal of Asia-Pacific Biodiversity)</p>
+
+							<!-- sstit_area -->
+							<div class="sstit_area">
+								<h5 class="sstit">목적 및 내용</h5>
+							</div>
+
+							<!-- info_list02 -->
+							<ul class="info_list02 mgb50">
+								<li>생물다양성 전문연구 학술지를 발간하여 생물다양성 정보의 대중화와 생활화에 기여하고, 아시아를 대표하는 국제 우수학술지로 발전시켜 국립중앙과학관의 위상 제고</li>
+								<li>국내외 육상, 담수 그리고 해양생물의 다양성과 풍부도, 지역적 분포, 보존에 관한 연구논문, 리뷰논문, 기술논문 수록</li>
+							</ul>
+
+							<!-- sstit_area -->
+							<div class="sstit_area">
+								<h5 class="sstit">발간현황</h5>
+							</div>
+
+							<dl class="info_list03 mgb50">
+								<dt>발간주최</dt>
+								<dd>GBIF 한국사무국(국립중앙과학관), 국립수목원</dd>
+								<dt>편집위원회 구성</dt>
+								<dd>
+									아태지역 생물다양성 전문가로 구성(임기 2년)
+<p>편집위원장(1인), 편집간사(2인), 부편집위원장(12인), 편집위원(23인) 포함 38명</p>
+								</dd>
+								<dt>발간일정</dt>
+								<dd>연4회 발행(3·6·9·12월)</dd>
+								<dt>논문투고국가</dt>
+								<dd>한국, 인도, 중국, 대만, 일본, 스리랑카, 방글라데시, 말레이시아, 러시아, 태국, 튀니지아, 아랍에미레이트, 이란, 미국, 몽골 등 총 15개국</dd>
+							</dl>
+
+							<!-- sstit_area -->
+							<div class="sstit_area">
+								<h5 class="sstit">발간연혁</h5>
+							</div>
+
+							<!-- japb_history -->
+							<div class="japb_history">
+								<!-- top_year -->
+								
+								<div class="top_year">
+									<strong class="nums">2024</strong>
+								</div>
+
+								<!-- year_list -->
+								<ul class="year_list">
+									
+										
+											
+												
+									<li>
+										<dl class="year_cont al_left">
+											<dt>2019</dt>
+												
+											<dd>한국생물다양성정보기구 영문학술지(JAPB), ESCI 등재</dd>
+														
+												
+										</dl>
+									</li>
+												
+												
+											
+												
+												
+									<li>
+										<dl class="year_cont al_right">
+											<dt>2015</dt>
+												
+											<dd>국제학술출판 색인 DB인 스코퍼스(SCOPUS) 등재</dd>
+													
+											<dd><p class="sinfo">스코퍼스(SCOPUS)는 세계적인 출판사 엘스비어(Elsevier)가 만든 전 세계 우수학술논문색인 DB로 자연과학, 의학, 인문·사회과학, 공학분야 등 전 세계 5,000여개의 출판사와 20,000여개가 넘는 전문심사(peer-reviewed) 학술지를 포함하는 종합적인 학술색인 DB</p></dd>
+														
+												
+										</dl>
+									</li>
+												
+											
+												
+									<li>
+										<dl class="year_cont al_left">
+											<dt>2014</dt>
+												
+											<dd>온라인 논문투고시스템 전환 및 Science Direct(국제과학기술연구자료 제공 웹사이트)를 통해 Open Access로 서비스</dd>
+													
+											<dd><p class="sinfo">92개국에서 접속 및 월 평균 4,000여건 논문 파일 다운로드(2016년 기준)</p></dd>
+														
+												
+										</dl>
+									</li>
+												
+												
+											
+												
+												
+									<li>
+										<dl class="year_cont al_right">
+											<dt>2013</dt>
+												
+											<dd>Journal of Asia-Pacific Biodiversity로 명칭 변경</dd>
+													
+											<dd><p class="sinfo">국내 지역성을 탈피하고 국제 논문 접수 및 투고 시작</p></dd>
+														
+												
+										</dl>
+									</li>
+												
+											
+												
+									<li>
+										<dl class="year_cont al_left">
+											<dt>2008</dt>
+												
+											<dd>Journal of Korean Nature 창간</dd>
+														
+												
+										</dl>
+									</li>
+												
+												
+											
+										
+									
+								</ul>
+								<!-- //year_list -->
+							</div>
+							<!-- //japb_history -->
+						</div>
+						<!-- //개발자 컨텐츠 영역 -->
+					</div>
+					<!-- //scontents_inner -->
+				</div>
+				<!-- //scontents -->
+			</div>
+			<!-- //container -->
+		</div>
+		<!-- //wrap -->
+    <div id="footers"></div>
+  </body>
+</html>

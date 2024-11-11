@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      국가자연사 연구종합정보 시스템(데이터 구축 현황-연계기관별 구축현황)
+    </title>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/common.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-gnb.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-footer.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/datepicker.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-main.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-popup.css"
+      media="all"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/contents.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/layout.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/table.css"
+      media="all"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/response.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/custom-ui.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/jquery.ui.custom.naris.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/cmmn/css/lightgallery/lightgallery.css"
+      media="all"
+    />
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="./resources/favicon-multi.ico"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="./resources/favicon-152.png"
+    />
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/2.2.4/jquery-2.2.4.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/easing/jquery-easing.1.3.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/slick/slick.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/waypoints/waypoints.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/counter/counter.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/gray/jquery.gray.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery-ui.js"
+    ></script>
+    <script type="text/javascript" src="./resources/srvc/js/ui.js"></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/srvc/js/searchQuery.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery.validate.js"
+    ></script>
+    <script type="text/javascript" src="./resources/cmmn/js/common.js"></script>
+    <script
+      type="text/javascript"
+      src="./resources/srvc/js/jquery.modalLayer.custom.response.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lightgallery.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-thumbnail.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-fullscreen.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-zoom.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-autoplay.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery.blockUI.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery.cookie.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/iscroll/iscroll.js"
+    ></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        // 퍼블리싱용 공통 헤더ㆍ푸터 블라오기
+        $("#headers").load("header.html");
+        $("#footers").load("footer.html");
+
+        // SNS 공유 visibility
+        const togBtn = document.getElementById("snsShare");
+        const list = document.getElementById("shareList");
+        togBtn.addEventListener("click", function () {
+          list.classList.toggle("visible");
+        });
+
+        /* 숫자 카운팅 */
+        $(".counting").counterUp({
+          delay: 10,
+          time: 1000,
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- skipNav -->
+      <div id="skipnavi">
+        <a href="#container">본문바로가기</a>
+      </div>
+      <!-- //skipNav -->
+
+      <div id="headers"></div>
+
+      <!-- container -->
+      <div id="container">
+        <!-- depth_location -->
+        <div class="depth_location-new">
+          <div class="location_hero">
+            <button
+              type="button"
+              class="home"
+              onclick="javascript:location.href='/index.html';"
+            >
+              <span>홈</span>
+            </button>
+            <button type="button" class="depth depth1">1뎁스명</button>
+            <button type="button" class="depth depth2">2뎁스명</button>
+
+            <article class="share-area">
+              <button title="공유하기" type="button" id="snsShare">
+                <img src="./resources/srvc/images-new/common/icon_share.svg" />
+              </button>
+              <ul id="shareList" class="share-list">
+                <li>
+                  <button type="button" title="블로그 공유 새창 열림">
+                    <img
+                      src="./resources/srvc/images-new/common/icon_share_01.svg"
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button type="button" title="유튜브 공유 새창 열림">
+                    <img
+                      src="./resources/srvc/images-new/common/icon_share_02.svg"
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button type="button" title="인스타그램 공유 새창 열림">
+                    <img
+                      src="./resources/srvc/images-new/common/icon_share_03.svg"
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button type="button" title="카카오채널 공유 새창 열림">
+                    <img
+                      src="./resources/srvc/images-new/common/icon_share_04.svg"
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button type="button" title="트위터 공유 새창 열림">
+                    <img
+                      src="./resources/srvc/images-new/common/icon_share_05.svg"
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button type="button" title="페이스북 공유 새창 열림">
+                    <img
+                      src="./resources/srvc/images-new/common/icon_share_06.svg"
+                    />
+                  </button>
+                </li>
+              </ul>
+              <button
+                title="화면 프린트"
+                type="button"
+                onclick="javascript:window.print();"
+              >
+                <img src="./resources/srvc/images-new/common/icon_print.svg" />
+              </button>
+              <button title="이 컨텐츠 주소복사" type="button">
+                <img src="./resources/srvc/images-new/common/icon_url.svg" />
+              </button>
+            </article>
+          </div>
+        </div>
+        <!-- //depth_location -->
+
+        <!-- 페이지 큰 타이틀 -->
+        <article class="page-title">
+          <div class="inner">
+            <h2 class="tit"><span>데이터 구축 현황</span></h2>
+          </div>
+        </article>
+        <!-- //페이지 큰 타이틀 -->
+
+        <!-- scontents -->
+        <div id="scontents">
+          <div class="scontents_inner etc">
+            <!-- 개발자 컨텐츠 영역 -->
+            <div class="data_status">
+              <!-- cm_tab_ty1 -->
+              <div class="cm_tab_ty2 tab_num2">
+                <ul>
+                  <li id="tab1" class="active">
+                    <a href="./selectPrtcInttActtoDbCnstcForCnt.html"
+                      >연계기관별 구축현황</a
+                    >
+                  </li>
+                  <li id="tab2">
+                    <a href="./selectHoldResrceDbCnstcForCnt.html"
+                      >보유자원별 DB구축현황</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <div class="explan-image">
+                <!-- stit_area -->
+                <div class="stit_area">
+                  <h4 class="stit">연계기관별 DB구축 현황</h4>
+                </div>
+                <p class="info_txt02">
+                  NARIS시스템은 국가생물자원 통합DB 네트워크 구축을 통하여 국내
+                  생물자원의 통합 관리와 대국민 서비스의 기틀을 마련하고,<br />
+                  세계생물다양성정보기구(GBIF)를 통한 국내생물자원의 통합 연계
+                  추진으로 국가생물자원 확보를 위한 국가간 경쟁에서 우위 선점을
+                  위한 시스템으로 생물자원 통합DB 현황은 다음과 같습니다.
+                </p>
+              </div>
+
+              <!-- stit_area -->
+              <div class="sstit_area explan">
+                <h5 class="sstit">생물자원 통합DB 구축 현황</h5>
+              </div>
+
+              <!-- 합계 -->
+              <div class="flex-row_flex-start_gap25 mgb100">
+                <div class="agency_data_sumbox">
+                  <img
+                    src="./resources/srvc/images-new/contents/data_db_icon.png"
+                    alt="생물자원 통합DB 구축 현황"
+                  />
+                  <div class="flex-col_flex-start">
+                    <strong class="agency">합계</strong>
+                    <span class="nums counting">1,257,576</span>
+                  </div>
+                </div>
+
+                <!-- agency_data -->
+                <div class="agency_data wid100p">
+                  <!-- cm_tab_ty1 -->
+                  <div class="cm_tab_ty3">
+                    <ul>
+                      <li id="tab1" class="active">
+                        <a href="./.html">국립</a>
+                      </li>
+                      <li id="tab2">
+                        <a href="#">공립</a>
+                      </li>
+                      <li id="tab3">
+                        <a href="#">사립</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- agency_list -->
+                  <ul class="agency_list">
+                    <li>
+                      <div class="agency_box">
+                        <strong class="agency">전남해양수산과학관</strong>
+                        <span class="nums">3,607</span>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="agency_box">
+                        <strong class="agency">㈜한국생태네트워크</strong>
+                        <span class="nums">191</span>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="agency_box">
+                        <strong class="agency">충남대학교</strong>
+                        <span class="nums">490</span>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="agency_box">
+                        <strong class="agency">국립대구과학관</strong>
+                        <span class="nums">4,938</span>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="agency_box">
+                        <strong class="agency">다살이생물자원연구소</strong>
+                        <span class="nums">1,200</span>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="agency_box">
+                        <strong class="agency"
+                          >이화여자대학교 자연사박물관</strong
+                        >
+                        <span class="nums">13,590</span>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="agency_box">
+                        <strong class="agency">국립과천과학관</strong>
+                        <span class="nums">29</span>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="agency_box">
+                        <strong class="agency">경남산림환경연구원</strong>
+                        <span class="nums">2,536</span>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="agency_box">
+                        <strong class="agency">경기도수산해양자원연구소</strong>
+                        <span class="nums">162</span>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="agency_box">
+                        <strong class="agency">군산철새연구소</strong>
+                        <span class="nums">4,818</span>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="agency_box">
+                        <strong class="agency">한국자연사박물관</strong>
+                        <span class="nums">3,959</span>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="agency_box">
+                        <strong class="agency">전라남도 완도수목원</strong>
+                        <span class="nums">844</span>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="agency_box">
+                        <strong class="agency">대전광역시 한밭수목원</strong>
+                        <span class="nums">552</span>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="agency_box">
+                        <strong class="agency">한화 해양생물연구센터</strong>
+                        <span class="nums">39</span>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="agency_box">
+                        <strong class="agency">한남대학교 자연사박물관</strong>
+                        <span class="nums">18,912</span>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="agency_box">
+                        <strong class="agency">인제곤충바이오센터</strong>
+                        <span class="nums">1,040</span>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="agency_box">
+                        <strong class="agency"
+                          >제주테크노파크 생물종다양성연구소</strong
+                        >
+                        <span class="nums">2,852</span>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="agency_box">
+                        <strong class="agency"
+                          >제주자치시도 세계유산본부(한라수목원)</strong
+                        >
+                        <span class="nums">3,024</span>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="agency_box">
+                        <strong class="agency"
+                          >제주특별자치도 민속자연사박물관</strong
+                        >
+                        <span class="nums">60,766</span>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="agency_box">
+                        <strong class="agency">한국동굴생물연구소</strong>
+                        <span class="nums">6,498</span>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="agency_box">
+                        <strong class="agency">한국과학기술정보연구원</strong>
+                        <span class="nums">963</span>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="agency_box">
+                        <strong class="agency">한국환경생태연구소</strong>
+                        <span class="nums">69,239</span>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="agency_box">
+                        <strong class="agency"
+                          >한국수자원공사K-water연구원</strong
+                        >
+                        <span class="nums">8,818</span>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="agency_box">
+                        <strong class="agency">국립수목원</strong>
+                        <span class="nums">10,645</span>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="agency_box">
+                        <strong class="agency">경북대학교자연사박물관</strong>
+                        <span class="nums">1,000</span>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="agency_box">
+                        <strong class="agency">한국자생식물원</strong>
+                        <span class="nums">499</span>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="agency_box">
+                        <strong class="agency">무주곤충박물관</strong>
+                        <span class="nums">1,196</span>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="agency_box">
+                        <strong class="agency">몽골자연사박물관</strong>
+                        <span class="nums">1,307</span>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="agency_box">
+                        <strong class="agency">목포자연사박물관</strong>
+                        <span class="nums">24,353</span>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="agency_box">
+                        <strong class="agency"
+                          >국립문화재연구소 천연기념물센터</strong
+                        >
+                        <span class="nums">202</span>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="agency_box">
+                        <strong class="agency">충남대학교 자연사박물관</strong>
+                        <span class="nums">2,980</span>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="agency_box">
+                        <strong class="agency">경희대학교자연사박물관</strong>
+                        <span class="nums">11,083</span>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="agency_box">
+                        <strong class="agency"
+                          >국립산림과학원 난대・아열대산림연구소</strong
+                        >
+                        <span class="nums">305</span>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="agency_box">
+                        <strong class="agency">별새꽃돌자연탐사과학관</strong>
+                        <span class="nums">1,000</span>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="agency_box">
+                        <strong class="agency">국립중앙과학관</strong>
+                        <span class="nums">973,137</span>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="agency_box">
+                        <strong class="agency">국립세종수목원</strong>
+                        <span class="nums">321</span>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="agency_box">
+                        <strong class="agency">서대문자연사박물관</strong>
+                        <span class="nums">4,412</span>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="agency_box">
+                        <strong class="agency"
+                          >성신여자대학교 자연사박물관</strong
+                        >
+                        <span class="nums">366</span>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="agency_box">
+                        <strong class="agency">우포늪생태관</strong>
+                        <span class="nums">1,497</span>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="agency_box">
+                        <strong class="agency">우석헌자연사박물관</strong>
+                        <span class="nums">8,572</span>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="agency_box">
+                        <strong class="agency">영월동굴생태관</strong>
+                        <span class="nums">6,067</span>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="agency_box">
+                        <strong class="agency">양평곤충박물관</strong>
+                        <span class="nums">624</span>
+                      </div>
+                    </li>
+                  </ul>
+                  <!-- //agency_list -->
+                </div>
+                <!-- //agency_data -->
+              </div>
+            </div>
+            <!-- //개발자 컨텐츠 영역 -->
+          </div>
+          <!-- //scontents_inner -->
+        </div>
+        <!-- //scontents -->
+      </div>
+      <!-- //container -->
+    </div>
+    <!-- //wrap -->
+    <div id="footers"></div>
+  </body>
+</html>

@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>국가자연사 연구종합정보 시스템(통계-기관별구축현황)</title>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/common.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-gnb.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-footer.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/datepicker.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-main.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-popup.css"
+      media="all"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/contents.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/layout.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/table.css"
+      media="all"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/response.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/custom-ui.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/jquery.ui.custom.naris.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/cmmn/css/lightgallery/lightgallery.css"
+      media="all"
+    />
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="./resources/favicon-multi.ico"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="./resources/favicon-152.png"
+    />
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/2.2.4/jquery-2.2.4.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/easing/jquery-easing.1.3.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/slick/slick.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/waypoints/waypoints.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/counter/counter.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/gray/jquery.gray.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery-ui.js"
+    ></script>
+    <script type="text/javascript" src="./resources/srvc/js/ui.js"></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/srvc/js/searchQuery.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery.validate.js"
+    ></script>
+    <script type="text/javascript" src="./resources/cmmn/js/common.js"></script>
+    <script
+      type="text/javascript"
+      src="./resources/srvc/js/jquery.modalLayer.custom.response.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lightgallery.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-thumbnail.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-fullscreen.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-zoom.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-autoplay.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery.blockUI.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery.cookie.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/iscroll/iscroll.js"
+    ></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        // 퍼블리싱용 공통 헤더ㆍ푸터 블라오기
+        $("#headers").load("header.html");
+        $("#footers").load("footer.html");
+
+        // SNS 공유 visibility
+        const togBtn = document.getElementById("snsShare");
+        const list = document.getElementById("shareList");
+        togBtn.addEventListener("click", function () {
+          list.classList.toggle("visible");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- skipNav -->
+      <div id="skipnavi">
+        <a href="#container">본문바로가기</a>
+      </div>
+      <!-- //skipNav -->
+
+      <div id="headers"></div>
+
+      <!-- container -->
+      <div id="container">
+        <!-- depth_location -->
+        <div class="depth_location-new">
+          <div class="location_hero">
+            <button
+              type="button"
+              class="home"
+              onclick="javascript:location.href='/index.html';"
+            >
+              <span>홈</span>
+            </button>
+            <button type="button" class="depth depth1">1뎁스명</button>
+            <button type="button" class="depth depth2">2뎁스명</button>
+
+            <article class="share-area">
+              <button title="공유하기" type="button" id="snsShare">
+                <img src="./resources/srvc/images-new/common/icon_share.svg" />
+              </button>
+              <ul id="shareList" class="share-list">
+                <li>
+                  <button type="button" title="블로그 공유 새창 열림">
+                    <img
+                      src="./resources/srvc/images-new/common/icon_share_01.svg"
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button type="button" title="유튜브 공유 새창 열림">
+                    <img
+                      src="./resources/srvc/images-new/common/icon_share_02.svg"
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button type="button" title="인스타그램 공유 새창 열림">
+                    <img
+                      src="./resources/srvc/images-new/common/icon_share_03.svg"
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button type="button" title="카카오채널 공유 새창 열림">
+                    <img
+                      src="./resources/srvc/images-new/common/icon_share_04.svg"
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button type="button" title="트위터 공유 새창 열림">
+                    <img
+                      src="./resources/srvc/images-new/common/icon_share_05.svg"
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button type="button" title="페이스북 공유 새창 열림">
+                    <img
+                      src="./resources/srvc/images-new/common/icon_share_06.svg"
+                    />
+                  </button>
+                </li>
+              </ul>
+              <button
+                title="화면 프린트"
+                type="button"
+                onclick="javascript:window.print();"
+              >
+                <img src="./resources/srvc/images-new/common/icon_print.svg" />
+              </button>
+              <button title="이 컨텐츠 주소복사" type="button">
+                <img src="./resources/srvc/images-new/common/icon_url.svg" />
+              </button>
+            </article>
+          </div>
+        </div>
+        <!-- //depth_location -->
+
+        <!-- 페이지 큰 타이틀 -->
+        <article class="page-title">
+          <div class="inner">
+            <h2 class="tit"><span>통계</span></h2>
+          </div>
+        </article>
+        <!-- //페이지 큰 타이틀 -->
+
+        <!-- scontents -->
+        <div id="scontents">
+          <form
+            id="chartVO"
+            name="chartVO"
+            action="/resc/selectStaticChart.do"
+            method="post"
+          >
+            <input id="temp1" name="temp1" type="hidden" value="" />
+
+            <div class="scontents_inner etc">
+              <!-- cm_tab_ty1 -->
+              <div class="cm_tab_ty2 tab_num3">
+                <ul>
+                  <li id="tab1">
+                    <a href="./selectStaticChart(resource).html"
+                      >보유자원현황</a
+                    >
+                  </li>
+                  <li id="tab2" class="active">
+                    <a href="./selectStaticChart(company).html"
+                      >기관별구축현황</a
+                    >
+                  </li>
+                  <li id="tab3">
+                    <a href="./selectStaticChart(classby).html">분류군별현황</a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- 개발자 컨텐츠 영역 -->
+              <!-- search_list -->
+              <div class="chart-area company">
+                <!-- billboard.js chart -->
+                <!-- ※ 차트 width 크기는 1440px로 class="chart-area" 이라는 border영역을 안에서 생성됩니다.
+                        id="chart" 를 감싸고 있는 div에 class="chart-area" 주어도되고,
+                        id="chart" 옆에 class="chart-area" 클래스를 추가하여도 됩니다.
+                 -->
+                <div id="chart"></div>
+                <!-- //billboard.js chart -->
+              </div>
+              <!-- //search_list -->
+              <!-- //개발자 컨텐츠 영역 -->
+
+              <!-- jquery excel -->
+              <!-- 각 탭의 제목과 엑셀 다운로드 버튼을 합친 영역 추가 -->
+              <div class="chart-excel-area">
+                <div class="tit">기관별구축현황</div>
+                <a href="" download="" class="btn_gray" id="excelBtn"
+                  ><span>엑셀 다운로드</span></a
+                >
+              </div>
+              <!-- //jquery excel -->
+
+              <div class="tbl_normal end_space" id="callbyCompany">
+                <!-- tbl01 -->
+                <table class="tbl01 respon_tbl">
+                  <colgroup>
+                    <col style="width: 20%" />
+                    <col style="width: 35%" />
+                    <col style="width: 20%" />
+                    <col style="width: 25%" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">구분</th>
+                      <th scope="col">기관명</th>
+                      <th scope="col">기관코드</th>
+                      <th scope="col">건수</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td rowspan="44" class="bdright">기관별현황</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">전남해양수산과학관</td>
+                      <td>ASJK</td>
+                      <td>3,607건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">㈜한국생태네트워크</td>
+                      <td>CEER</td>
+                      <td>191건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">충남대학교</td>
+                      <td>CNU</td>
+                      <td>490건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">국립대구과학관</td>
+                      <td>DNSM</td>
+                      <td>4,938건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">다살이생물자원연구소</td>
+                      <td>DRIB</td>
+                      <td>1,200건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">이화여자대학교 자연사박물관</td>
+                      <td>ENHM</td>
+                      <td>13,590건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">국립과천과학관</td>
+                      <td>GCSM</td>
+                      <td>29건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">경남산림환경연구원</td>
+                      <td>GFEI</td>
+                      <td>2,536건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">경기도수산해양자원연구소</td>
+                      <td>GFRI</td>
+                      <td>162건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">군산철새연구소</td>
+                      <td>GMBO</td>
+                      <td>4,818건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">한국자연사박물관</td>
+                      <td>GNHM</td>
+                      <td>3,904건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">전라남도 완도수목원</td>
+                      <td>GNWP</td>
+                      <td>844건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">대전광역시 한밭수목원</td>
+                      <td>HBBG</td>
+                      <td>552건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">한화 해양생물연구센터</td>
+                      <td>HHNR</td>
+                      <td>39건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">한남대학교 자연사박물관</td>
+                      <td>HUNM</td>
+                      <td>18,912건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">인제곤충바이오센터</td>
+                      <td>IJIB</td>
+                      <td>1,040건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">제주테크노파크 생물종다양성연구소</td>
+                      <td>JBRI</td>
+                      <td>2,852건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">
+                        제주자치시도 세계유산본부(한라수목원)
+                      </td>
+                      <td>JJHA</td>
+                      <td>3,025건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">제주특별자치도 민속자연사박물관</td>
+                      <td>JNHM</td>
+                      <td>60,765건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">한국동굴생물연구소</td>
+                      <td>KIBS</td>
+                      <td>6,498건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">한국과학기술정보연구원</td>
+                      <td>KIDR</td>
+                      <td>963건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">한국환경생태연구소</td>
+                      <td>KIEE</td>
+                      <td>69,239건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">한국수자원공사K-water연구원</td>
+                      <td>KIWE</td>
+                      <td>8,818건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">국립수목원</td>
+                      <td>KNAM</td>
+                      <td>10,645건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">경북대학교자연사박물관</td>
+                      <td>KNUN</td>
+                      <td>1,000건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">한국자생식물원</td>
+                      <td>KOBG</td>
+                      <td>499건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">무주곤충박물관</td>
+                      <td>MJIN</td>
+                      <td>1,196건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">몽골자연사박물관</td>
+                      <td>MMNH</td>
+                      <td>1,307건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">목포자연사박물관</td>
+                      <td>MNHM</td>
+                      <td>24,353건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">국립문화재연구소 천연기념물센터</td>
+                      <td>NHCA</td>
+                      <td>202건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">충남대학교 자연사박물관</td>
+                      <td>NHMC</td>
+                      <td>2,980건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">경희대학교자연사박물관</td>
+                      <td>NHMK</td>
+                      <td>11,083건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">
+                        국립산림과학원 난대・아열대산림연구소
+                      </td>
+                      <td>NIFS</td>
+                      <td>305건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">별새꽃돌자연탐사과학관</td>
+                      <td>NMNO</td>
+                      <td>1,000건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">국립중앙과학관</td>
+                      <td>NSMK</td>
+                      <td>972,175건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">국립세종수목원</td>
+                      <td>SJNA</td>
+                      <td>321건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">서대문자연사박물관</td>
+                      <td>SMNH</td>
+                      <td>4,372건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">성신여자대학교 자연사박물관</td>
+                      <td>SSNH</td>
+                      <td>366건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">우포늪생태관</td>
+                      <td>UWEP</td>
+                      <td>1,497건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">우석헌자연사박물관</td>
+                      <td>WSHN</td>
+                      <td>8,572건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">영월동굴생태관</td>
+                      <td>YCEM</td>
+                      <td>6,067건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">양평곤충박물관</td>
+                      <td>YPIM</td>
+                      <td>624건</td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <td colspan="3">합계</td>
+                      <td>1,257,576건</td>
+                    </tr>
+                  </tfoot>
+                </table>
+                <p class="message_txt01 respon mgb05">
+                  드래그하여 내용을 확인하실 수 있습니다&#46;
+                </p>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!-- //scontents -->
+      </div>
+      <!-- //container -->
+    </div>
+    <!-- //wrap -->
+    <div id="footers"></div>
+  </body>
+</html>

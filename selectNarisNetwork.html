@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>국가자연사 연구종합정보 시스템(통계-기관별구축현황)</title>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/common.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-gnb.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-footer.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/datepicker.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-main.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-popup.css"
+      media="all"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/contents.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/layout.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/table.css"
+      media="all"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/response.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/custom-ui.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/jquery.ui.custom.naris.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/cmmn/css/lightgallery/lightgallery.css"
+      media="all"
+    />
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="./resources/favicon-multi.ico"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="./resources/favicon-152.png"
+    />
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/2.2.4/jquery-2.2.4.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/easing/jquery-easing.1.3.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/slick/slick.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/waypoints/waypoints.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/counter/counter.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/gray/jquery.gray.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery-ui.js"
+    ></script>
+    <script type="text/javascript" src="./resources/srvc/js/ui.js"></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/srvc/js/searchQuery.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery.validate.js"
+    ></script>
+    <script type="text/javascript" src="./resources/cmmn/js/common.js"></script>
+    <script
+      type="text/javascript"
+      src="./resources/srvc/js/jquery.modalLayer.custom.response.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lightgallery.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-thumbnail.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-fullscreen.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-zoom.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-autoplay.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery.blockUI.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery.cookie.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/iscroll/iscroll.js"
+    ></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        // 퍼블리싱용 공통 헤더ㆍ푸터 블라오기
+        $("#headers").load("header.html");
+        $("#footers").load("footer.html");
+
+        // SNS 공유 visibility
+        const togBtn = document.getElementById("snsShare");
+        const list = document.getElementById("shareList");
+        togBtn.addEventListener("click", function () {
+          list.classList.toggle("visible");
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="dialogMsg" title="알림" style="display: none">
+      <span id="messageSpan"></span>
+    </div>
+    <div id="dialogMsgConfirm" title="확인" style="display: none">
+      <span id="messageSpanConfirm"></span>
+    </div>
+
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- skipNav -->
+      <div id="skipnavi">
+        <a href="#container">본문바로가기</a>
+      </div>
+      <!-- //skipNav -->
+
+      <div id="headers"></div>
+
+      <!-- container -->
+      <div id="container">
+        <!-- depth_location -->
+        <div class="depth_location-new">
+          <div class="location_hero">
+            <button
+              type="button"
+              class="home"
+              onclick="javascript:location.href='/index.html';"
+            >
+              <span>홈</span>
+            </button>
+            <button type="button" class="depth depth1">1뎁스명</button>
+            <button type="button" class="depth depth2">2뎁스명</button>
+
+            <article class="share-area">
+              <button title="공유하기" type="button" id="snsShare">
+                <img src="./resources/srvc/images-new/common/icon_share.svg" />
+              </button>
+              <ul id="shareList" class="share-list">
+                <li>
+                  <button type="button" title="블로그 공유 새창 열림">
+                    <img
+                      src="./resources/srvc/images-new/common/icon_share_01.svg"
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button type="button" title="유튜브 공유 새창 열림">
+                    <img
+                      src="./resources/srvc/images-new/common/icon_share_02.svg"
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button type="button" title="인스타그램 공유 새창 열림">
+                    <img
+                      src="./resources/srvc/images-new/common/icon_share_03.svg"
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button type="button" title="카카오채널 공유 새창 열림">
+                    <img
+                      src="./resources/srvc/images-new/common/icon_share_04.svg"
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button type="button" title="트위터 공유 새창 열림">
+                    <img
+                      src="./resources/srvc/images-new/common/icon_share_05.svg"
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button type="button" title="페이스북 공유 새창 열림">
+                    <img
+                      src="./resources/srvc/images-new/common/icon_share_06.svg"
+                    />
+                  </button>
+                </li>
+              </ul>
+              <button
+                title="화면 프린트"
+                type="button"
+                onclick="javascript:window.print();"
+              >
+                <img src="./resources/srvc/images-new/common/icon_print.svg" />
+              </button>
+              <button title="이 컨텐츠 주소복사" type="button">
+                <img src="./resources/srvc/images-new/common/icon_url.svg" />
+              </button>
+            </article>
+          </div>
+        </div>
+        <!-- //depth_location -->
+
+        <!-- 페이지 큰 타이틀 -->
+        <article class="page-title">
+          <div class="inner">
+            <h2 class="tit"><span>네트워크 구성도</span></h2>
+          </div>
+        </article>
+        <!-- //페이지 큰 타이틀 -->
+
+        <!-- scontents -->
+        <div id="scontents">
+          <!-- scontents_inner -->
+          <div class="scontents_inner">
+            <!-- 개발자 컨텐츠 영역 -->
+            <div class="naris_network">
+              <!-- pci_diagram -->
+
+              <div class="pci_diagram">
+                <!-- diagram_sec1 -->
+                <div class="diagram_sec1">
+                  <!-- sec_tit -->
+                  <div class="sec_tit">
+                    <strong class="tit">자문/전문위원</strong>
+                    <span class="pos">DB구축 및 개발 자문</span>
+                    <div class="arrow_b">
+                      <span>자문</span>
+                    </div>
+                  </div>
+
+                  <!-- naris_dual -->
+                  <div class="naris_dual">
+                    <div class="logo">
+                      <img
+                        src="./resources/srvc/images-new/contents/network_naris.png"
+                        alt="NARIS"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- naris_service -->
+                  <div class="naris_service">
+                    <!-- box_pos1 -->
+                    <div class="service_box box_pos1">
+                      <dl>
+                        <dt>연구 개발</dt>
+                        <dd>자연사정보</dd>
+                        <dd>텍스트정보</dd>
+                      </dl>
+                    </div>
+
+                    <!-- box_pos2 -->
+                    <div class="service_box box_pos2">
+                      <dl>
+                        <dt>관리·연계</dt>
+                        <dd>나리스관리</dd>
+                        <dd>콘텐츠관리</dd>
+                        <dd>백업관리</dd>
+                        <dd>연계서비스</dd>
+                      </dl>
+                    </div>
+
+                    <!-- box_pos3 -->
+                    <div class="service_box box_pos3">
+                      <dl>
+                        <dt>DB 개발</dt>
+                        <dd>DB 구축</dd>
+                        <dd>국문텍스트 작성</dd>
+                        <dd>영문텍스트 작성</dd>
+                        <dd>이미지 촬영</dd>
+                      </dl>
+                    </div>
+                  </div>
+                  <!-- //naris_service -->
+
+                  <!-- arrow_r -->
+                  <div class="arrow_r">
+                    <span>연계</span>
+                  </div>
+                </div>
+                <!-- //diagram_sec1 -->
+
+                <!-- diagram_sec2 -->
+                <div class="diagram_sec2">
+                  <!-- sec_tit -->
+                  <div class="sec_tit">
+                    <strong class="tit">연계기관</strong>
+                  </div>
+
+                  <ul>
+                    <li>
+                      <!-- metapi -->
+                      <div class="metapi">
+                        <span>META<br />API</span>
+                        <div class="arrow_r"></div>
+                      </div>
+
+                      <!-- kobis -->
+                      <div class="share_cp">
+                        <a
+                          href="http://www.kobis.re.kr"
+                          target="_blank"
+                          title="국가생명연구자원 통합정보시스템(KOBIS)바로가기"
+                          class="website"
+                          ><span class="blind"
+                            >국가생명연구자원
+                            통합정보시스템(KOBIS)바로가기</span
+                          >
+                          <!-- cp_logo -->
+                          <div class="cp_logo">
+                            <img
+                              src="./resources/srvc/images-new/contents/network_cp_kobis.png"
+                              alt="국가생명연구자원 통합정보시스템(KOBIS)"
+                            /></div
+                        ></a>
+                      </div>
+                    </li>
+                    <li>
+                      <!-- metapi -->
+                      <div class="metapi">
+                        <span>META<br />API</span>
+                        <div class="arrow_r"></div>
+                      </div>
+
+                      <!-- kbif -->
+                      <div class="share_cp">
+                        <a
+                          href="http://www.kbif.go.kr"
+                          target="_blank"
+                          title="한국데이터포털(KDR) 바로가기"
+                          class="website"
+                          ><span class="blind"
+                            >한국데이터포털(KDR) 바로가기</span
+                          >
+                          <!-- cp_logo -->
+                          <div class="cp_logo">
+                            <img
+                              src="./resources/srvc/images-new/contents/network_cp_ipt.png"
+                              alt="한국데이터포털(KDR)"
+                            /></div
+                        ></a>
+                      </div>
+                    </li>
+                    <li>
+                      <!-- metapi -->
+                      <div class="metapi">
+                        <span>META<br />API</span>
+                        <div class="arrow_r"></div>
+                      </div>
+
+                      <!-- naver -->
+                      <div class="share_cp">
+                        <a
+                          href="http://www.naver.com"
+                          target="_blank"
+                          title="네이버 바로가기"
+                          class="website"
+                          ><span class="blind">네이버 바로가기</span>
+                          <!-- cp_logo -->
+                          <div class="cp_logo">
+                            <img
+                              src="./resources/srvc/images-new/contents/network_cp_naver.png"
+                              alt="네이버"
+                            />
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <!-- metapi -->
+                      <div class="metapi">
+                        <span>OPEN<br />API</span>
+                        <div class="arrow_r"></div>
+                      </div>
+
+                      <!-- data -->
+                      <div class="share_cp">
+                        <a
+                          href="http://www.data.go.kr"
+                          target="_blank"
+                          title="공공데이터포털 바로가기"
+                          class="website"
+                          ><span class="blind">공공데이터포털 바로가기</span>
+                          <!-- cp_logo -->
+                          <div class="cp_logo">
+                            <img
+                              src="./resources/srvc/images-new/contents/network_cp_data.png"
+                              alt="공공데이터포털"
+                            />
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <!-- metapi -->
+                      <div class="metapi">
+                        <span>OPEN<br />API</span>
+                        <div class="arrow_r"></div>
+                      </div>
+
+                      <!-- gbif -->
+                      <div class="share_cp">
+                        <a
+                          href="http://www.gbif.org"
+                          target="_blank"
+                          title="세계생물다양성정보기구 바로가기"
+                          class="website"
+                          ><span class="blind"
+                            >세계생물다양성정보기구 바로가기</span
+                          >
+                          <!-- cp_logo -->
+                          <div class="cp_logo">
+                            <img
+                              src="./resources/srvc/images-new/contents/network_cp_gbif.png"
+                              alt="세계생물다양성정보기구"
+                            />
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <!-- //diagram_sec2 -->
+
+                <!-- diagram_sec3 -->
+                <div class="diagram_sec3">
+                  <!-- sec_tit -->
+                  <div class="sec_tit">
+                    <strong class="tit">참여기관</strong>
+                    <span class="pos">원시데이터 확보 및 사진정리</span>
+                  </div>
+
+                  <!-- ap_list -->
+                  <ul class="ap_list">
+                    <li>
+                      <div class="inner_ap">
+                        <img
+                          src="./resources/srvc/images-new/contents/network_ap_science.png"
+                          alt="국립중앙과학관"
+                        />
+                      </div>
+                    </li>
+                    <li>
+                      <div class="inner_ap">
+                        <img
+                          src="./resources/srvc/images-new/contents/network_ap_kna.png"
+                          alt="국립수목원"
+                        />
+                      </div>
+                    </li>
+                    <li>
+                      <div class="inner_ap">
+                        <img
+                          src="./resources/srvc/images-new/contents/network_ap_nhc.png"
+                          alt="쳔연기념물센터"
+                        />
+                      </div>
+                    </li>
+                    <li>
+                      <div class="inner_ap">
+                        <img
+                          src="./resources/srvc/images-new/contents/network_ap_seoul.png"
+                          alt="서울시립과학관"
+                        />
+                      </div>
+                    </li>
+                    <li>
+                      <div class="inner_ap">
+                        <img
+                          src="./resources/srvc/images-new/contents/network_ap_sdm.png"
+                          alt="서대문자연사박물관"
+                        />
+                      </div>
+                    </li>
+                    <li>
+                      <div class="inner_ap">
+                        <img
+                          src="./resources/srvc/images-new/contents/network_ap_ewha.png"
+                          alt="이화여대자연사박물관"
+                        />
+                      </div>
+                    </li>
+                    <li>
+                      <div class="inner_ap">
+                        <img
+                          src="./resources/srvc/images-new/contents/network_ap_jeju.png"
+                          alt="제주민속자연사박물관"
+                        />
+                      </div>
+                    </li>
+                    <li>
+                      <div class="inner_ap">
+                        <img
+                          src="./resources/srvc/images-new/contents/network_ap_sumokwon.png"
+                          alt="한라수목원"
+                        />
+                      </div>
+                    </li>
+                    <li>
+                      <div class="inner_ap">
+                        <img
+                          src="./resources/srvc/images-new/contents/network_ap_koeco.png"
+                          alt="한국환경생태연구소"
+                        />
+                      </div>
+                    </li>
+                    <li>
+                      <div class="inner_ap">
+                        <img
+                          src="./resources/srvc/images-new/contents/network_ap_krnamu.png"
+                          alt="계룡산자연사박물관"
+                        />
+                      </div>
+                    </li>
+                  </ul>
+
+                  <!-- arrow_r -->
+                  <div class="arrow_r">
+                    <span>DB 구축 / 연계</span>
+                  </div>
+                </div>
+                <!-- //diagram_sec3 -->
+              </div>
+              <!-- //pci_diagram -->
+
+              <!-- stit_area -->
+              <div class="sstit_area">
+                <h5 class="sstit">참여기관 소개</h5>
+                <span class="unit_type txt_point02"></span>
+              </div>
+
+              <!-- cm_tab_ty1 -->
+              <div class="cm_tab_ty2 tab_num3">
+                <ul>
+                  <li id="tab1" class="active">
+                    <a href="./.html">국립</a>
+                  </li>
+                  <li id="tab2">
+                    <a href="./.html">공립</a>
+                  </li>
+                  <li id="tab3">
+                    <a href="./.html">사립</a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- pci_agency -->
+              <div class="pci_agency">
+                <!-- agency_list -->
+                <ul class="agency_list">
+                  <li>
+                    <div class="agency_box">
+                      <strong class="agency">㈜한국생태네트워크</strong>
+                      <span class="address"></span>
+                    </div>
+                  </li>
+
+                  <li>
+                    <!-- agency_box -->
+                    <a
+                      href="http://fish.gg.go.kr/"
+                      class="website"
+                      target="_blank"
+                      ><span class="blind"
+                        >경기도수산해양자원연구소 홈페이지바로가기</span
+                      >
+                      <div class="agency_box">
+                        <strong class="agency">경기도수산해양자원연구소</strong>
+                        <span class="address"
+                          >경기도 양평군 용문면 상광길 23-2 (12513)</span
+                        >
+                      </div>
+                    </a>
+                  </li>
+
+                  <li>
+                    <!-- agency_box -->
+                    <a
+                      href="http://tree.gndo.kr/00main/index.jsp"
+                      class="website"
+                      target="_blank"
+                      ><span class="blind"
+                        >경남산림환경연구원 홈페이지바로가기</span
+                      >
+                      <div class="agency_box">
+                        <strong class="agency">경남산림환경연구원</strong>
+                        <span class="address"
+                          >경남 진주시 이반성면 수목원로 386 (52615)</span
+                        >
+                      </div>
+                    </a>
+                  </li>
+
+                  <li>
+                    <!-- agency_box -->
+                    <a href="www.mnh.knu.ac.kr" class="website" target="_blank"
+                      ><span class="blind"
+                        >경북대학교자연사박물관 홈페이지바로가기</span
+                      >
+                      <div class="agency_box">
+                        <strong class="agency">경북대학교자연사박물관</strong>
+                        <span class="address"></span>
+                      </div>
+                    </a>
+                  </li>
+
+                  <li>
+                    <!-- agency_box -->
+                    <a
+                      href="http://nhm.khu.ac.kr/"
+                      class="website"
+                      target="_blank"
+                      ><span class="blind"
+                        >경희대학교자연사박물관 홈페이지바로가기</span
+                      >
+                      <div class="agency_box">
+                        <strong class="agency">경희대학교자연사박물관</strong>
+                        <span class="address"
+                          >서울특별시 동대문구 경희대로 26 (02447)</span
+                        >
+                      </div>
+                    </a>
+                  </li>
+
+                  <li>
+                    <div class="agency_box">
+                      <strong class="agency">국립과천과학관</strong>
+                      <span class="address"
+                        >경기도 과천시 상하벌로 110 (13817)</span
+                      >
+                    </div>
+                  </li>
+
+                  <li>
+                    <!-- agency_box -->
+                    <a
+                      href="https://www.dnsm.or.kr"
+                      class="website"
+                      target="_blank"
+                      ><span class="blind"
+                        >국립대구과학관 홈페이지바로가기</span
+                      >
+                      <div class="agency_box">
+                        <strong class="agency">국립대구과학관</strong>
+                        <span class="address"
+                          >대구광역시 달성군 유가읍 테크노대로 6길 20
+                          (43023)</span
+                        >
+                      </div>
+                    </a>
+                  </li>
+
+                  <li>
+                    <!-- agency_box -->
+                    <a
+                      href="http://www.nhc.go.kr/naturalweb/main/Index.do?mn=KO_01"
+                      class="website"
+                      target="_blank"
+                      ><span class="blind"
+                        >국립문화재연구소 천연기념물센터 홈페이지바로가기</span
+                      >
+                      <div class="agency_box">
+                        <strong class="agency"
+                          >국립문화재연구소 천연기념물센터</strong
+                        >
+                        <span class="address"
+                          >대전광역시 서구 만년동 유등로 927 (35204)</span
+                        >
+                      </div>
+                    </a>
+                  </li>
+
+                  <li>
+                    <!-- agency_box -->
+                    <a
+                      href="http://www.kfri.go.kr"
+                      class="website"
+                      target="_blank"
+                      ><span class="blind"
+                        >국립산림과학원 난대・아열대산림연구소
+                        홈페이지바로가기</span
+                      >
+                      <div class="agency_box">
+                        <strong class="agency"
+                          >국립산림과학원 난대・아열대산림연구소</strong
+                        >
+                        <span class="address"
+                          >제주도 서귀포시 돈내코로 22번길 (63582)</span
+                        >
+                      </div>
+                    </a>
+                  </li>
+
+                  <li>
+                    <!-- agency_box -->
+                    <a
+                      href="https://www.sjna.or.kr/"
+                      class="website"
+                      target="_blank"
+                      ><span class="blind"
+                        >국립세종수목원 홈페이지바로가기</span
+                      >
+                      <div class="agency_box">
+                        <strong class="agency">국립세종수목원</strong>
+                        <span class="address"
+                          >세종특별자치시 연기면 수목원로 136
+                          국립세종수목원</span
+                        >
+                      </div>
+                    </a>
+                  </li>
+
+                  <li>
+                    <!-- agency_box -->
+                    <a
+                      href="http://www.forest.go.kr"
+                      class="website"
+                      target="_blank"
+                      ><span class="blind">국립수목원 홈페이지바로가기</span>
+                      <div class="agency_box">
+                        <strong class="agency">국립수목원</strong>
+                        <span class="address"
+                          >경기도 포천시 소흘읍 광릉수목원로 415 (11186)</span
+                        >
+                      </div>
+                    </a>
+                  </li>
+
+                  <li>
+                    <!-- agency_box -->
+                    <a
+                      href="http://www.naris.go.kr"
+                      class="website"
+                      target="_blank"
+                      ><span class="blind"
+                        >국립중앙과학관 홈페이지바로가기</span
+                      >
+                      <div class="agency_box">
+                        <strong class="agency">국립중앙과학관</strong>
+                        <span class="address"
+                          >대전광역시 유성구 대덕대로 481 (34143)</span
+                        >
+                      </div>
+                    </a>
+                  </li>
+
+                  <li>
+                    <!-- agency_box -->
+                    <a
+                      href="http://gmbo.gunsan.go.kr/home.htm?gNum=1"
+                      class="website"
+                      target="_blank"
+                      ><span class="blind"
+                        >군산철새연구소 홈페이지바로가기</span
+                      >
+                      <div class="agency_box">
+                        <strong class="agency">군산철새연구소</strong>
+                        <span class="address"
+                          >전라북도 군산시 성산면 성덕리</span
+                        >
+                      </div>
+                    </a>
+                  </li>
+
+                  <li>
+                    <!-- agency_box -->
+                    <a href="www.dasarilife.com" class="website" target="_blank"
+                      ><span class="blind"
+                        >다살이생물자원연구소 홈페이지바로가기</span
+                      >
+                      <div class="agency_box">
+                        <strong class="agency">다살이생물자원연구소</strong>
+                        <span class="address"
+                          >대전 유성구 신성로 102번길 다숲빌라트 103호
+                          (34116)</span
+                        >
+                      </div>
+                    </a>
+                  </li>
+
+                  <li>
+                    <!-- agency_box -->
+                    <a
+                      href="http://www.daejeon.go.kr/gar/index.do"
+                      class="website"
+                      target="_blank"
+                      ><span class="blind"
+                        >대전광역시 한밭수목원 홈페이지바로가기</span
+                      >
+                      <div class="agency_box">
+                        <strong class="agency">대전광역시 한밭수목원</strong>
+                        <span class="address"
+                          >대전광역시 서구 둔산대로 169 (35204)</span
+                        >
+                      </div>
+                    </a>
+                  </li>
+
+                  <li>
+                    <!-- agency_box -->
+                    <a
+                      href="http://museum.mokpo.go.kr/2011/kor/"
+                      class="website"
+                      target="_blank"
+                      ><span class="blind"
+                        >목포자연사박물관 홈페이지바로가기</span
+                      >
+                      <div class="agency_box">
+                        <strong class="agency">목포자연사박물관</strong>
+                        <span class="address"
+                          >전라남도 목포시 남농로 135 (58699)</span
+                        >
+                      </div>
+                    </a>
+                  </li>
+
+                  <li>
+                    <div class="agency_box">
+                      <strong class="agency">몽골자연사박물관</strong>
+                      <span class="address">&nbsp;</span>
+                    </div>
+                  </li>
+
+                  <li>
+                    <!-- agency_box -->
+                    <a
+                      href="http://tour.muju.go.kr/bandiland/index.do"
+                      class="website"
+                      target="_blank"
+                      ><span class="blind"
+                        >무주곤충박물관 홈페이지바로가기</span
+                      >
+                      <div class="agency_box">
+                        <strong class="agency">무주곤충박물관</strong>
+                        <span class="address"></span>
+                      </div>
+                    </a>
+                  </li>
+
+                  <li>
+                    <!-- agency_box -->
+                    <a
+                      href="http://www.ntam.org/"
+                      class="website"
+                      target="_blank"
+                      ><span class="blind"
+                        >별새꽃돌자연탐사과학관 홈페이지바로가기</span
+                      >
+                      <div class="agency_box">
+                        <strong class="agency">별새꽃돌자연탐사과학관</strong>
+                        <span class="address"
+                          >충북 제천시 봉양읍 옥전4길 45 (2710)</span
+                        >
+                      </div>
+                    </a>
+                  </li>
+
+                  <li>
+                    <!-- agency_box -->
+                    <a
+                      href="http://namu.sdm.go.kr/"
+                      class="website"
+                      target="_blank"
+                      ><span class="blind"
+                        >서대문자연사박물관 홈페이지바로가기</span
+                      >
+                      <div class="agency_box">
+                        <strong class="agency">서대문자연사박물관</strong>
+                        <span class="address"
+                          >서울특별시 서대문구 연희로 32길 51 (03718)</span
+                        >
+                      </div>
+                    </a>
+                  </li>
+
+                  <li>
+                    <div class="agency_box">
+                      <strong class="agency"
+                        >성신여자대학교 자연사박물관</strong
+                      >
+                      <span class="address"
+                        >서울 강북구 도봉로 76가길 55 성신여자대학교
+                        운정그린캠퍼스 (01133)</span
+                      >
+                    </div>
+                  </li>
+
+                  <li>
+                    <!-- agency_box -->
+                    <a
+                      href="http://www.yim.go.kr/page/museum2_main.asp"
+                      class="website"
+                      target="_blank"
+                      ><span class="blind"
+                        >양평곤충박물관 홈페이지바로가기</span
+                      >
+                      <div class="agency_box">
+                        <strong class="agency">양평곤충박물관</strong>
+                        <span class="address"
+                          >경기도 양평군 옥천면 경강로 1496(12507)</span
+                        >
+                      </div>
+                    </a>
+                  </li>
+
+                  <li>
+                    <!-- agency_box -->
+                    <a
+                      href="http://www.ywmuseum.com/"
+                      class="website"
+                      target="_blank"
+                      ><span class="blind"
+                        >영월동굴생태관 홈페이지바로가기</span
+                      >
+                      <div class="agency_box">
+                        <strong class="agency">영월동굴생태관</strong>
+                        <span class="address"></span>
+                      </div>
+                    </a>
+                  </li>
+
+                  <li>
+                    <!-- agency_box -->
+                    <a href="www.geomuseum.org" class="website" target="_blank"
+                      ><span class="blind"
+                        >우석헌자연사박물관 홈페이지바로가기</span
+                      >
+                      <div class="agency_box">
+                        <strong class="agency">우석헌자연사박물관</strong>
+                        <span class="address"
+                          >경기도 남양주시 진접읍 금강로 1095 (12074)</span
+                        >
+                      </div>
+                    </a>
+                  </li>
+
+                  <li>
+                    <!-- agency_box -->
+                    <a
+                      href="http://www.upo.or.kr/main/"
+                      class="website"
+                      target="_blank"
+                      ><span class="blind">우포늪생태관 홈페이지바로가기</span>
+                      <div class="agency_box">
+                        <strong class="agency">우포늪생태관</strong>
+                        <span class="address"
+                          >경상남도 창녕군 유어면 세진리</span
+                        >
+                      </div>
+                    </a>
+                  </li>
+
+                  <li>
+                    <!-- agency_box -->
+                    <a
+                      href="http://cms.ewha.ac.kr/user/indexMain.action?siteId=nhm"
+                      class="website"
+                      target="_blank"
+                      ><span class="blind"
+                        >이화여자대학교 자연사박물관 홈페이지바로가기</span
+                      >
+                      <div class="agency_box">
+                        <strong class="agency"
+                          >이화여자대학교 자연사박물관</strong
+                        >
+                        <span class="address"
+                          >서울특별시 서대문구 이화여대길 52 (03760)</span
+                        >
+                      </div>
+                    </a>
+                  </li>
+
+                  <li>
+                    <!-- agency_box -->
+                    <a
+                      href="https://www.inje.go.kr/"
+                      class="website"
+                      target="_blank"
+                      ><span class="blind"
+                        >인제곤충바이오센터 홈페이지바로가기</span
+                      >
+                      <div class="agency_box">
+                        <strong class="agency">인제곤충바이오센터</strong>
+                        <span class="address"
+                          >강원도 인제군 상남면 미덕길 253</span
+                        >
+                      </div>
+                    </a>
+                  </li>
+
+                  <li>
+                    <!-- agency_box -->
+                    <a
+                      href="http://www.jmfsm.or.kr/"
+                      class="website"
+                      target="_blank"
+                      ><span class="blind"
+                        >전남해양수산과학관 홈페이지바로가기</span
+                      >
+                      <div class="agency_box">
+                        <strong class="agency">전남해양수산과학관</strong>
+                        <span class="address"
+                          >전남 여수시 돌산읍 돌산로 2876 (59771)</span
+                        >
+                      </div>
+                    </a>
+                  </li>
+
+                  <li>
+                    <div class="agency_box">
+                      <strong class="agency">전라남도 완도수목원</strong>
+                      <span class="address"
+                        >전남 완도군 군외면 청해진북로 88번길 156 (59105)</span
+                      >
+                    </div>
+                  </li>
+
+                  <li>
+                    <!-- agency_box -->
+                    <a
+                      href="http://sumokwon.jeju.go.kr/?sso=ok"
+                      class="website"
+                      target="_blank"
+                      ><span class="blind"
+                        >제주자치시도 세계유산본부(한라수목원)
+                        홈페이지바로가기</span
+                      >
+                      <div class="agency_box">
+                        <strong class="agency"
+                          >제주자치시도 세계유산본부(한라수목원)</strong
+                        >
+                        <span class="address"
+                          >제주도 제주시 수목원길 72(연동) 한라수목원
+                          (63143)</span
+                        >
+                      </div>
+                    </a>
+                  </li>
+
+                  <li>
+                    <div class="agency_box">
+                      <strong class="agency"
+                        >제주테크노파크 생물종다양성연구소</strong
+                      >
+                      <span class="address"
+                        >제주도 서귀포시 남원읍 신례동로 338 (63608)</span
+                      >
+                    </div>
+                  </li>
+
+                  <li>
+                    <!-- agency_box -->
+                    <a
+                      href="http://museum.jeju.go.kr/?sso=ok"
+                      class="website"
+                      target="_blank"
+                      ><span class="blind"
+                        >제주특별자치도 민속자연사박물관 홈페이지바로가기</span
+                      >
+                      <div class="agency_box">
+                        <strong class="agency"
+                          >제주특별자치도 민속자연사박물관</strong
+                        >
+                        <span class="address"
+                          >제주특별자치도 제주시 삼성로 40 (63270)</span
+                        >
+                      </div>
+                    </a>
+                  </li>
+
+                  <li>
+                    <!-- agency_box -->
+                    <a href="https://cnu.ac.kr" class="website" target="_blank"
+                      ><span class="blind">충남대학교 홈페이지바로가기</span>
+                      <div class="agency_box">
+                        <strong class="agency">충남대학교</strong>
+                        <span class="address"
+                          >대전광역시 유성구 대학로 99 (34134)</span
+                        >
+                      </div>
+                    </a>
+                  </li>
+
+                  <li>
+                    <!-- agency_box -->
+                    <a
+                      href="http://nhm.cnu.ac.kr/"
+                      class="website"
+                      target="_blank"
+                      ><span class="blind"
+                        >충남대학교 자연사박물관 홈페이지바로가기</span
+                      >
+                      <div class="agency_box">
+                        <strong class="agency">충남대학교 자연사박물관</strong>
+                        <span class="address"
+                          >대전광역시 유성구 대학로99 (34134)</span
+                        >
+                      </div>
+                    </a>
+                  </li>
+
+                  <li>
+                    <!-- agency_box -->
+                    <a
+                      href="http://www.kisti.re.kr/"
+                      class="website"
+                      target="_blank"
+                      ><span class="blind"
+                        >한국과학기술정보연구원 홈페이지바로가기</span
+                      >
+                      <div class="agency_box">
+                        <strong class="agency">한국과학기술정보연구원</strong>
+                        <span class="address"
+                          >대전광역시 유성구 대학로 245 (34141)</span
+                        >
+                      </div>
+                    </a>
+                  </li>
+
+                  <li>
+                    <div class="agency_box">
+                      <strong class="agency">한국동굴생물연구소</strong>
+                      <span class="address"
+                        >대전광역시 유성구 진잠로 139번길 10-10(교촌동) 501호
+                        (34225)</span
+                      >
+                    </div>
+                  </li>
+
+                  <li>
+                    <!-- agency_box -->
+                    <a
+                      href="http://kiwe.kwater.or.kr/main.do"
+                      class="website"
+                      target="_blank"
+                      ><span class="blind"
+                        >한국수자원공사K-water연구원 홈페이지바로가기</span
+                      >
+                      <div class="agency_box">
+                        <strong class="agency"
+                          >한국수자원공사K-water연구원</strong
+                        >
+                        <span class="address"
+                          >대전광역시 유성구 유성대로 1689번길 125 (34045)</span
+                        >
+                      </div>
+                    </a>
+                  </li>
+
+                  <li>
+                    <!-- agency_box -->
+                    <a
+                      href="http://www.kbotanic.co.kr/"
+                      class="website"
+                      target="_blank"
+                      ><span class="blind"
+                        >한국자생식물원 홈페이지바로가기</span
+                      >
+                      <div class="agency_box">
+                        <strong class="agency">한국자생식물원</strong>
+                        <span class="address"
+                          >강원도 평창군 대관령면 비안길 159-4 (25339)</span
+                        >
+                      </div>
+                    </a>
+                  </li>
+
+                  <li>
+                    <!-- agency_box -->
+                    <a
+                      href="http://www.krnamu.or.kr/"
+                      class="website"
+                      target="_blank"
+                      ><span class="blind"
+                        >한국자연사박물관 홈페이지바로가기</span
+                      >
+                      <div class="agency_box">
+                        <strong class="agency">한국자연사박물관</strong>
+                        <span class="address"
+                          >충청남도 공주시 반포면 임금봉길 49-25 (32626)</span
+                        >
+                      </div>
+                    </a>
+                  </li>
+
+                  <li>
+                    <!-- agency_box -->
+                    <a
+                      href="http://www.keei.or.kr/pg/"
+                      class="website"
+                      target="_blank"
+                      ><span class="blind"
+                        >한국환경생태연구소 홈페이지바로가기</span
+                      >
+                      <div class="agency_box">
+                        <strong class="agency">한국환경생태연구소</strong>
+                        <span class="address"
+                          >대전광역시 유성구 테크노 1로 62-12 (34014)</span
+                        >
+                      </div>
+                    </a>
+                  </li>
+
+                  <li>
+                    <!-- agency_box -->
+                    <a
+                      href="http://museum.hannam.ac.kr/"
+                      class="website"
+                      target="_blank"
+                      ><span class="blind"
+                        >한남대학교 자연사박물관 홈페이지바로가기</span
+                      >
+                      <div class="agency_box">
+                        <strong class="agency">한남대학교 자연사박물관</strong>
+                        <span class="address"
+                          >대전광역시 대덕구 한남로 70 (34430)</span
+                        >
+                      </div>
+                    </a>
+                  </li>
+
+                  <li>
+                    <!-- agency_box -->
+                    <a
+                      href="http://www.aquaplanet.co.kr/"
+                      class="website"
+                      target="_blank"
+                      ><span class="blind"
+                        >한화 해양생물연구센터 홈페이지바로가기</span
+                      >
+                      <div class="agency_box">
+                        <strong class="agency">한화 해양생물연구센터</strong>
+                        <span class="address"
+                          >제주도 남제주군 성산읍 고성리</span
+                        >
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+                <!-- //agency_list -->
+              </div>
+              <!-- //pci_agency -->
+            </div>
+            <!-- //개발자 컨텐츠 영역 -->
+          </div>
+          <!-- //scontents_inner -->
+        </div>
+        <!-- //scontents -->
+      </div>
+      <!-- //container -->
+    </div>
+    <!-- //wrap -->
+    <div id="footers"></div>
+  </body>
+</html>

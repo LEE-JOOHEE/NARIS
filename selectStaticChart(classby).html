@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>국가자연사 연구종합정보 시스템(통계-분류군별현황)</title>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/common.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-gnb.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-footer.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/datepicker.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-main.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-popup.css"
+      media="all"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/contents.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/layout.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/table.css"
+      media="all"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/response.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/custom-ui.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/jquery.ui.custom.naris.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/cmmn/css/lightgallery/lightgallery.css"
+      media="all"
+    />
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="./resources/favicon-multi.ico"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="./resources/favicon-152.png"
+    />
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/2.2.4/jquery-2.2.4.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/easing/jquery-easing.1.3.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/slick/slick.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/waypoints/waypoints.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/counter/counter.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/gray/jquery.gray.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery-ui.js"
+    ></script>
+    <script type="text/javascript" src="./resources/srvc/js/ui.js"></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/srvc/js/searchQuery.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery.validate.js"
+    ></script>
+    <script type="text/javascript" src="./resources/cmmn/js/common.js"></script>
+    <script
+      type="text/javascript"
+      src="./resources/srvc/js/jquery.modalLayer.custom.response.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lightgallery.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-thumbnail.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-fullscreen.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-zoom.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-autoplay.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery.blockUI.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery.cookie.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/iscroll/iscroll.js"
+    ></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        // 퍼블리싱용 공통 헤더ㆍ푸터 블라오기
+        $("#headers").load("header.html");
+        $("#footers").load("footer.html");
+
+        // SNS 공유 visibility
+        const togBtn = document.getElementById("snsShare");
+        const list = document.getElementById("shareList");
+        togBtn.addEventListener("click", function () {
+          list.classList.toggle("visible");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- skipNav -->
+      <div id="skipnavi">
+        <a href="#container">본문바로가기</a>
+      </div>
+      <!-- //skipNav -->
+
+      <div id="headers"></div>
+
+      <!-- container -->
+      <div id="container">
+        <!-- depth_location -->
+        <div class="depth_location-new">
+          <div class="location_hero">
+            <button
+              type="button"
+              class="home"
+              onclick="javascript:location.href='/index.html';"
+            >
+              <span>홈</span>
+            </button>
+            <button type="button" class="depth depth1">1뎁스명</button>
+            <button type="button" class="depth depth2">2뎁스명</button>
+
+            <article class="share-area">
+              <button title="공유하기" type="button" id="snsShare">
+                <img src="./resources/srvc/images-new/common/icon_share.svg" />
+              </button>
+              <ul id="shareList" class="share-list">
+                <li>
+                  <button type="button" title="블로그 공유 새창 열림">
+                    <img
+                      src="./resources/srvc/images-new/common/icon_share_01.svg"
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button type="button" title="유튜브 공유 새창 열림">
+                    <img
+                      src="./resources/srvc/images-new/common/icon_share_02.svg"
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button type="button" title="인스타그램 공유 새창 열림">
+                    <img
+                      src="./resources/srvc/images-new/common/icon_share_03.svg"
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button type="button" title="카카오채널 공유 새창 열림">
+                    <img
+                      src="./resources/srvc/images-new/common/icon_share_04.svg"
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button type="button" title="트위터 공유 새창 열림">
+                    <img
+                      src="./resources/srvc/images-new/common/icon_share_05.svg"
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button type="button" title="페이스북 공유 새창 열림">
+                    <img
+                      src="./resources/srvc/images-new/common/icon_share_06.svg"
+                    />
+                  </button>
+                </li>
+              </ul>
+              <button
+                title="화면 프린트"
+                type="button"
+                onclick="javascript:window.print();"
+              >
+                <img src="./resources/srvc/images-new/common/icon_print.svg" />
+              </button>
+              <button title="이 컨텐츠 주소복사" type="button">
+                <img src="./resources/srvc/images-new/common/icon_url.svg" />
+              </button>
+            </article>
+          </div>
+        </div>
+        <!-- //depth_location -->
+
+        <!-- 페이지 큰 타이틀 -->
+        <article class="page-title">
+          <div class="inner">
+            <h2 class="tit"><span>통계</span></h2>
+          </div>
+        </article>
+        <!-- //페이지 큰 타이틀 -->
+
+        <!-- scontents -->
+        <div id="scontents">
+          <form
+            id="chartVO"
+            name="chartVO"
+            action="/resc/selectStaticChart.do"
+            method="post"
+          >
+            <input id="temp1" name="temp1" type="hidden" value="" />
+
+            <div class="scontents_inner etc">
+              <!-- cm_tab_ty1 -->
+              <div class="cm_tab_ty2 tab_num3">
+                <ul>
+                  <li id="tab1">
+                    <a href="./selectStaticChart(resource).html"
+                      >보유자원현황</a
+                    >
+                  </li>
+                  <li id="tab2">
+                    <a href="./selectStaticChart(company).html"
+                      >기관별구축현황</a
+                    >
+                  </li>
+                  <li id="tab3" class="active">
+                    <a href="./selectStaticChart(classby).html">분류군별현황</a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- 개발자 컨텐츠 영역 -->
+              <!-- search_list -->
+              <div class="chart-area classby">
+                <!-- billboard.js chart -->
+                <!-- ※ 차트 width 크기는 1440px로 class="chart-area" 이라는 border영역을 안에서 생성됩니다.
+                        id="chart" 를 감싸고 있는 div에 class="chart-area" 주어도되고,
+                        id="chart" 옆에 class="chart-area" 클래스를 추가하여도 됩니다.
+                 -->
+                <div id="chart"></div>
+                <!-- //billboard.js chart -->
+              </div>
+              <!-- //search_list -->
+              <!-- //개발자 컨텐츠 영역 -->
+
+              <!-- jquery excel -->
+              <!-- 각 탭의 제목과 엑셀 다운로드 버튼을 합친 영역 추가 -->
+              <div class="chart-excel-area">
+                <div class="tit">분류군별현황</div>
+                <a href="" download="" class="btn_gray" id="excelBtn"
+                  ><span>엑셀 다운로드</span></a
+                >
+              </div>
+              <!-- //jquery excel -->
+
+              <div class="tbl_normal end_space" id="callbyClassBy">
+                <!-- tbl01 -->
+                <table class="tbl01 respon_tbl">
+                  <colgroup>
+                    <col style="width: 20%" />
+                    <col style="width: 40%" />
+                    <col style="width: 40%" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">구분</th>
+                      <th scope="col">분류군</th>
+                      <th scope="col">건수</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td rowspan="38" class="bdright">분류군별현황</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">규조식물문</td>
+                      <td>2,634건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">규조식물문</td>
+                      <td>22건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">극피동물문</td>
+                      <td>2,657건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">나자식물문</td>
+                      <td>4,009건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">난균문</td>
+                      <td>39건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">남조식물문, 남세균문</td>
+                      <td>1,880건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">녹조식물문</td>
+                      <td>9,530건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">담자균문</td>
+                      <td>2,255건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">대롱편모조식물문</td>
+                      <td>5,630건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">대롱편모조식물문</td>
+                      <td>2,726건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">돌말식물아문</td>
+                      <td>4건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">몽골식물</td>
+                      <td>1,794건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">미분류</td>
+                      <td>135건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">선태식물문</td>
+                      <td>15건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">섬모충문</td>
+                      <td>1,494건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">성구동물문</td>
+                      <td>13건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">암석/화석</td>
+                      <td>34,881건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">양치식물문</td>
+                      <td>9,461건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">연체동물문</td>
+                      <td>80,068건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">와편모조식물문</td>
+                      <td>2,153건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">완족동물문</td>
+                      <td>375건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">유글레나식물문</td>
+                      <td>57건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">윤형동물문</td>
+                      <td>603건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">은편모조식물문</td>
+                      <td>3건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">의충동물문</td>
+                      <td>27건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">자낭균문</td>
+                      <td>119건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">자포동물문</td>
+                      <td>598건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">절지동물문</td>
+                      <td>548,794건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">척삭동물문</td>
+                      <td>1,446,833건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">태류식물문</td>
+                      <td>8건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">태형동물문</td>
+                      <td>27건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">피자식물문</td>
+                      <td>189,331건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">해면동물문</td>
+                      <td>373건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">홍조식물문</td>
+                      <td>7,225건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">환형동물문</td>
+                      <td>263건</td>
+                    </tr>
+
+                    <tr>
+                      <td class="bgnone">황갈조식물문, 대롱편모조식물문</td>
+                      <td>362건</td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <td colspan="2">합계</td>
+                      <td>2,356,398건</td>
+                    </tr>
+                  </tfoot>
+                </table>
+                <p class="message_txt01 respon mgb05">
+                  드래그하여 내용을 확인하실 수 있습니다&#46;
+                </p>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!-- //scontents -->
+      </div>
+      <!-- //container -->
+    </div>
+    <!-- //wrap -->
+    <div id="footers"></div>
+  </body>
+</html>

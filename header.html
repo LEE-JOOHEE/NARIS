@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NEW 공통 헤더</title>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/common.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-gnb.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-footer.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/datepicker.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-main.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-popup.css"
+      media="all"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/contents.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/layout.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/table.css"
+      media="all"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/response.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/custom-ui.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/jquery.ui.custom.naris.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/cmmn/css/lightgallery/lightgallery.css"
+      media="all"
+    />
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="./resources/favicon-multi.ico"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="./resources/favicon-152.png"
+    />
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/2.2.4/jquery-2.2.4.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/easing/jquery-easing.1.3.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/slick/slick.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/waypoints/waypoints.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/counter/counter.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/gray/jquery.gray.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery-ui.js"
+    ></script>
+    <script type="text/javascript" src="./resources/srvc/js/ui.js"></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/srvc/js/searchQuery.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery.validate.js"
+    ></script>
+    <script type="text/javascript" src="./resources/cmmn/js/common.js"></script>
+    <script
+      type="text/javascript"
+      src="./resources/srvc/js/jquery.modalLayer.custom.response.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lightgallery.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-thumbnail.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-fullscreen.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-zoom.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-autoplay.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery.blockUI.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery.cookie.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/iscroll/iscroll.js"
+    ></script>
+  </head>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      // index.html 경로가 아닌 다른페이지에서는 id="header"에 sub라는 클래스 추가하여
+      // 서브페이지에서 다른 색상의 헤더로 사용
+      if ($(location).attr("pathname") !== "/index.html") {
+        $("#header").addClass("sub");
+      }
+    });
+  </script>
+  <body>
+    <header id="header">
+      <meta name="referrer" content="strict-origin-when-cross-origin" />
+      <!-- top_util -->
+      <div class="top_util">
+        <!-- util_inner -->
+        <div class="util_inner">
+          <!-- logo -->
+          <h1 class="logo">
+            <a href="./index.html" title="메인페이지 바로가기"
+              ><span class="blind">국가자연사연구정보시스템</span></a
+            >
+          </h1>
+
+          <div class="flex-row_flex-start_gap25">
+            <!-- language -->
+            <div class="language">
+              <script type="text/javascript">
+                $(document).ready(function () {
+                  $("div.drop_open")
+                    .find("a[id^=chnglangbutton]")
+                    .each(function () {
+                      $(this).click(function (event) {
+                        event.preventDefault();
+                        var langs = $(this).attr("aria-label");
+                        $("form[id=changeLangForm] input[id=useLang]").val(
+                          langs
+                        );
+                        $("form[id=changeLangForm]").submit();
+                      });
+                    });
+                });
+              </script>
+              <form
+                id="changeLangForm"
+                name="changeLangForm"
+                action="./index.html"
+                method="post"
+              >
+                <input name="useLang" id="useLang" value="" type="hidden" />
+              </form>
+              <ul>
+                <li>
+                  <button type="button">
+                    <span>KOR</span>
+                  </button>
+                  <!-- drop_open -->
+                  <div class="drop_open">
+                    <ul>
+                      <li>
+                        <a href="#naris" id="chnglangbutton_1" aria-label="en"
+                          >ENG</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- //language -->
+
+            <!-- menu_list -->
+            <div class="utilmenu">
+              <ul>
+                <li>
+                  <a
+                    href="http://www.msit.go.kr"
+                    target="_blank"
+                    title="과학기술정보통신부 홈페이지 바로가기"
+                  >
+                    <span class="msit"></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- //util_inner -->
+      </div>
+      <!-- //top_util -->
+
+      <!--  gnb_wrap -->
+      <div class="gnb-mask"></div>
+      <div class="gnb_wrap">
+        <!--  gnb_inner -->
+        <div class="gnb_inner">
+          <!--  gnb_hero -->
+          <ul class="gnb_hero">
+            <!-- NARIS -->
+            <li class="exp1">
+              <a href="#"><span>NARIS</span></a>
+              <div class="explan exp1">
+                <strong class="tit"><span class="eng">NARIS</span></strong>
+                <p class="info">
+                  홈페이지 소개,나리스소개,나리스네트워크,데이터 구축현황,
+                  연계서비스 정보를 제공합니다.
+                </p>
+              </div>
+              <ul class="depth2 exp1">
+                <li>
+                  <a href="./selectNarisIntroduce.html">
+                    <label>NARIS 소개</label>
+                    <p>
+                      국내 과학관, 대학교 및 자연사박물관 등이 소유한 생물다양성
+                      정보를 세계생물다양성정보기구(GBIF) 기준에 따라
+                      데이터베이스화 한 표준자연사 DB시스템입니다.
+                    </p>
+                  </a>
+                </li>
+                <li>
+                  <a href="./selectNarisNetwork.html">
+                    <label>NARIS 네트워크</label>
+                    <p>
+                      NARIS는 GBIF Data Node로서의 역할수행을 위한 전 세계
+                      네트워크 연동 서비스입니다.
+                    </p>
+                  </a>
+                </li>
+                <li>
+                  <a href="./selectPrtcInttActtoDbCnstcForCnt.html">
+                    <label>데이터 구축현황</label>
+                    <p>
+                      세계생물다양성정보기구(GBIF) 통합 연계 추진으로
+                      국가생물자원 확보를 생물자원 통합DB 현황입니다.
+                    </p>
+                  </a>
+                </li>
+                <li>
+                  <a href="/intd/sym/selectOpenApiIntroduce.do">
+                    <label>Open API</label>
+                    <p>
+                      기초과학 연구 및 관련 산업 연구를 목적으로
+                      국립중앙과학관이 보유하고 있는 표본 및 관련 정보(이미지,
+                      동영상, 음성, DNA) 지원신청이 가능합니다.
+                    </p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- 자연사 자원검색 -->
+            <li class="exp2">
+              <a href="./selectClassBySrch(resc).html">자연사 종합 정보</a>
+              <div class="explan exp2">
+                <strong class="tit">자연사 <br />종합 정보</strong>
+                <p class="info">
+                  분류군별.유형별.기관별 검색 기능을 제공합니다.
+                </p>
+              </div>
+              <ul class="depth2 exp2">
+                <li>
+                  <a href="./selectClassBySrch(resc).html">
+                    <label>자원사 자원검색</label>
+                    <p>
+                      국내 과학관, 대학교 및 자연사박물관 등이 소유한 생물다양성
+                      정보를 세계생물다양성정보기구(GBIF) 기준에 따라
+                      데이터베이스화 한 표준자연사 DB시스템입니다.
+                    </p>
+                  </a>
+                </li>
+                <li>
+                  <a href="index.html">
+                    <label>자연사 지리정보서비스</label>
+                    <p>
+                      NARIS는 GBIF Data Node로서의 역할수행을 위한 전 세계
+                      네트워크 연동 서비스입니다.
+                    </p>
+                  </a>
+                </li>
+                <li>
+                  <a href="./selectBoardList(notice).html">
+                    <label>해외 유용성 자원정보</label>
+                    <p>
+                      세계생물다양성정보기구(GBIF) 통합 연계 추진으로
+                      국가생물자원 확보를 생물자원 통합DB 현황입니다.
+                    </p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- 정보이용/표본대여 -->
+            <li class="exp3">
+              <a href="#"><span>정보이용/표본대여</span></a>
+              <div class="explan exp3">
+                <strong class="tit">정보이용/표본대여</strong>
+                <p class="info">
+                  홈페이지 소개,나리스소개,나리스네트워크,데이터 구축현황,
+                  연계서비스 정보를 제공합니다.
+                </p>
+              </div>
+              <ul class="depth2 exp3">
+                <li>
+                  <a href="index.html">
+                    <label>정보이용 신청 서비스</label>
+                    <p></p>
+                  </a>
+                </li>
+                <li>
+                  <a href="./selectBoardList(data).html">
+                    <label>자연사 표본대여 서비스</label>
+                    <p></p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- KBIF -->
+            <li class="exp4">
+              <a href="/intd/kbif/selectKbifIntroduce.do"><span>KBIF</span></a>
+              <div class="explan exp4">
+                <strong class="tit"><span class="eng">KBIF</span></strong>
+                <p class="info">KBIF 운영,자료실 기능을 제공합니다.</p>
+              </div>
+              <ul class="depth2 exp4">
+                <li>
+                  <a href="/intd/kbif/selectGbifVision.do">
+                    <label>GBIF에 관하여</label>
+                    <p>세계생물다양성정보기구(GBIF) 소개 페이지입니다.</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="/intd/kbif/selectKbifIntroduce.do">
+                    <label>KBIF 설립 및 현황</label>
+                    <p>
+                      세계생물다양성정보기구(GBIF)의 정회원국가로서
+                      한국생물다양성정보기구(KBIF: Korean Biodiversity
+                      Information Facility)에 대한 소개 페이지입니다.
+                    </p>
+                  </a>
+                </li>
+                <li>
+                  <a href="/intd/kbif/selectKbifOperate.do">
+                    <label>한국위원회 및 한국사무국</label>
+                    <p>
+                      세계생물다양성정보기구(GBIF) 회원으로서의 의무사항 이행과
+                      적극적인 참여 및 활동을 지원하기 위하여 GBIF 한국위원회와
+                      GBIF 한국사무국 안내 페이지입니다.
+                    </p>
+                  </a>
+                </li>
+                <li>
+                  <a href="/intd/kbif/selectNtnlBioDvstOrgCombine.do">
+                    <label>국가생물다양성기관연합</label>
+                    <p>
+                      세계생물다양성정보기구(GBIF)와의 협력활동에 필요한 국내외
+                      협력망 구축 및 운영 안내 페이지입니다.
+                    </p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- JAPB(학술지) -->
+            <li class="exp5">
+              <a href="./selectJapbIntroduce.html">JAPB(학술지)</a>
+              <div class="explan exp5">
+                <strong class="tit"
+                  ><span class="eng">JAPB(학술지)</span></strong
+                >
+                <p class="info">JAPB소개, 학술지 정보를 제공합니다.</p>
+              </div>
+              <ul class="depth2 cross exp5">
+                <li>
+                  <a href="./selectJapbIntroduce.html">
+                    <label>JAPB 소개</label>
+                    <p></p>
+                  </a>
+                </li>
+                <li>
+                  <a href="./selectBoardList(jrnl).html">
+                    <label>JAPB(보기)</label>
+                    <p></p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- 자료실 -->
+            <li class="exp6">
+              <a href="./selectBoardList(pubmtl).html">자료실</a>
+              <div class="explan exp6">
+                <strong class="tit">자료실</strong>
+                <p class="info">발간자료, 갤러리 기능을 제공합니다.</p>
+              </div>
+              <ul class="depth2 exp6">
+                <li>
+                  <a href="./selectBoardList(pubmtl).html">
+                    <label>영상 & 책자</label>
+                    <p>
+                      국가자연사연구정보시스템 내 영상&책자 자료 조회
+                      페이지입니다.
+                    </p>
+                  </a>
+                </li>
+                <li>
+                  <a href="/gallery/selectBoardList.do">
+                    <label>연구 성과 특별전</label>
+                    <p>
+                      국가생물다양성기관연합 연구성과 특별전 페이지 확인 필요
+                    </p>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="./selectStaticChart(resource).html">
+                    <label>통계</label>
+                    <p>
+                      국가자연사연구정보시스템 내 통계자료 현황 페이지입니다.
+                    </p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <!--//gnb_hero -->
+        </div>
+        <!--  gnb_inner -->
+      </div>
+      <!--  //gnb_wrap -->
+    </header>
+  </body>
+</html>

@@ -1,0 +1,1620 @@
+@charset "utf-8";
+/* respon 1440px */
+/* @media all and (max-width:1200px) { */
+@media all and (max-width: 1440px) {
+  /* layput */
+  #mcontents .mcontents_inner {
+    width: 100%;
+    padding: 45px 0 85px;
+  }
+  #scontents .scontents_inner {
+    width: 100%;
+    padding: 45px 20px 85px;
+  }
+  /* top_util */
+  /* .top_util .util_inner {
+    width: 100%;
+  }
+  .top_util .util_inner .logo {
+    top: 60px;
+    left: 50%;
+    margin-left: -137px;
+  }
+  .top_util .util_inner .logo a {
+    background-size: 274px 52px;
+    width: 274px;
+    height: 52px;
+  }
+  .top_util .util_inner .logo.eng {
+    margin-left: -117px;
+  } */
+  /* gnb */
+  /* .gnb_wrap {
+    top: 100px;
+  }
+  .gnb_wrap .gnb_inner {
+    width: 100%;
+  }
+  .gnb_hero {
+    float: none;
+  }
+  .gnb_hero > li {
+    width: 20%;
+    padding-top: 20px;
+  }
+  .gnb_hero > li .dec_intro {
+    display: none;
+  }
+  .gnb_hero > li > a {
+    font-size: 18px;
+    height: 80px;
+    line-height: 80px;
+  } */
+  /* mfocus */
+  .mfocus {
+    margin-top: 50px;
+  }
+  .mfocus .mfocus_inner {
+    width: 100%;
+    left: auto;
+    margin-left: 0;
+  }
+  .mfocus .msearch {
+    right: 20px;
+    width: 330px;
+  }
+  .mfocus .mfocus_slider .slider_box .cont_area {
+    left: 20px;
+    margin-left: 0;
+  }
+  .mfocus .mfocus_slider .slick-prev {
+    left: 20px;
+    margin-left: 0;
+  }
+  .mfocus .mfocus_slider .slick-next {
+    left: 130px;
+    margin-left: 0;
+  }
+  .mfocus .hero_btn {
+    left: 75px;
+    margin-left: 0;
+  }
+  .mfocus .data_result > ul > li .result_box:before {
+    bottom: 188px;
+  }
+  .mfocus .data_result > ul > li .result_box .number_box:before {
+    display: none;
+  }
+  /* mservice */
+  .mservice .service_list {
+    margin: 0 -5px;
+    padding: 0 20px;
+  }
+  .mservice .service_list li .service_box {
+    margin: 0 5px;
+  }
+  .mservice .service_list li .service_box .real_cont .kor_tit dd {
+    font-size: 14px;
+  }
+  /* mquick */
+  .mquick {
+    padding: 0 20px;
+  }
+  .mquick .quick_slider {
+    margin: 0 -5px;
+  }
+  .mquick .quick_slider .slider_box {
+    margin: 0 5px;
+  }
+  /* footer */
+  .foot_cont .cont_inner {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .foot_cont .cont_inner .menu_area .naris_web .select_normal {
+    margin-right: 0;
+    width: 180px;
+  }
+  .foot_cont .cont_inner .det_info .addr_info {
+    margin-bottom: 15px;
+  }
+  .foot_cont .cont_inner .det_info .site_intent {
+    position: relative;
+    right: auto;
+    top: auto;
+  }
+  .foot_cont .cont_inner .page_top {
+    right: 20px;
+  }
+  /* sfocus */
+  .sfocus .sfocus_inner {
+    width: 100%;
+    margin-top: 50px;
+  }
+  .sfocus .search {
+    right: 20px;
+    width: 260px;
+  }
+  /* depth_location */
+  .depth_location .location_hero {
+    width: 100%;
+  }
+  .depth_location .location_hero > ul > li {
+    width: 33.33333333%;
+  }
+  /* 홈페이지소개 */
+  .website_intro .detail_info ul li.kbif {
+    padding-right: 0;
+  }
+  .website_intro .detail_info ul li.kbif .visual_sec .symbol {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 153px;
+    height: 79px;
+    margin-left: -76.5px;
+    margin-top: -47px;
+    background: url("../images/contents/webintro_kbif_symbol.png") no-repeat 50%
+      50%;
+    background-size: 153px 79px;
+    overflow: hidden;
+    text-indent: -999999px;
+  }
+  .website_intro .detail_info ul li.kbif.eng .visual_sec .symbol {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 153px;
+    height: 59px;
+    margin-left: -76.5px;
+    margin-top: -35px;
+    background: url("../images/contents/webintro_kbif_symbol_eng.png") no-repeat
+      50% 50%;
+    background-size: 153px 59px;
+    overflow: hidden;
+    text-indent: -999999px;
+  }
+  .website_intro .detail_info ul li.naris {
+    padding-left: 0;
+  }
+  .website_intro .detail_info ul li.naris .visual_sec .symbol {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 79px;
+    margin-left: -100px;
+    margin-top: -47px;
+    background: url("../images/contents/webintro_naris_symbol.png") no-repeat
+      50% 50%;
+    background-size: 200px 79px;
+    overflow: hidden;
+    text-indent: -999999px;
+  }
+  .website_intro .detail_info ul li.naris.eng .visual_sec .symbol {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 59px;
+    margin-left: -100px;
+    margin-top: -36px;
+    background: url("../images/contents/webintro_naris_symbol_eng.png")
+      no-repeat 50% 50%;
+    background-size: 200px 59px;
+    overflow: hidden;
+    text-indent: -999999px;
+  }
+  .website_intro .detail_info ul li .info_sec {
+    min-height: 0;
+    padding: 50px 30px 30px;
+    background: none;
+    box-sizing: border-box;
+  }
+  /* NARIS소개 */
+  .naris_bg > ul > li {
+    float: left;
+    width: 50%;
+    margin-bottom: 20px;
+  }
+
+  /* 데이터 구축현황 */
+  .data_status .data_total > ul > li {
+    margin-bottom: 20px;
+  }
+  .data_status .data_result > ul > li {
+    padding-bottom: 18px;
+    flex-wrap: wrap;
+  }
+  .data_status .data_result > ul > li .result_detail li {
+    width: 20%;
+    margin-bottom: 5px;
+  }
+  .data_status .data_result > ul > li .result_detail li.image {
+    width: auto;
+  }
+  .data_status .data_result .result_detail {
+    flex-wrap: wrap;
+  }
+  /* 자원검색 */
+  .resources_search {
+    padding-right: 0;
+    min-height: 200px;
+  }
+  .search_side {
+    position: relative;
+    right: auto;
+    top: auto;
+    width: 100%;
+    height: auto;
+    padding: 0 20px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+  }
+  .search_side .side_tit {
+    margin-bottom: 0;
+  }
+  .search_side .side_tit .tit {
+    display: none;
+  }
+  .search_side .side_tit .respon_tit {
+    display: block;
+    font-family: notosans;
+    font-weight: normal;
+    letter-spacing: -0.5px;
+    font-size: 14px;
+  }
+  .search_side .side_form {
+    display: none;
+  }
+  .search_side .side_form .form_area {
+    padding: 20px 0 25px;
+    border-top: 1px solid #ddd;
+  }
+  .search_side .func_btn .btn_white span {
+    padding-top: 16px;
+    padding-bottom: 15px;
+    font-size: 14px;
+  }
+  .search_side .func_btn .btn_gray span {
+    padding-top: 16px;
+    padding-bottom: 15px;
+    font-size: 14px;
+  }
+  .search_list {
+    padding-top: 20px;
+  }
+  .list_result {
+    padding: 0 20px;
+  }
+  .list_result .search_area {
+    display: none;
+  }
+  .list_result .search_more {
+    right: 20px;
+  }
+  .list_legend {
+    border-bottom: none;
+    border-top: none;
+  }
+  .list_legend > ul {
+    background: #f6f7f9;
+    padding: 20px;
+    padding-bottom: 10px;
+  }
+  .list_legend > ul > li {
+    width: 33.3333333%;
+    margin-bottom: 10px;
+  }
+  .list_legend > ul > li .data_info dd {
+    color: #fff;
+  }
+  /* KBIF 운영 */
+  .kbif_mission > ul > li {
+    display: block;
+    width: 33.333333%;
+    float: left;
+  }
+
+  /* 학술지 - 리스트 */
+  .journal_list {
+    padding: 0 20px;
+  }
+  /* 갤러리 - 리스트 */
+  .gallery_list {
+    padding: 0 20px;
+  }
+  /* 2018.07.13 START 분양신청서 기능 추가 */
+  .frm_parcel {
+    position: relative;
+    right: auto;
+    top: auto;
+    width: 100%;
+    height: auto;
+    padding: 0 20px;
+    border-bottom: 1px solid #ddd;
+  }
+  /* 2018.07.13 END 분양신청서 기능 추가  */
+}
+
+/* respon 1200px */
+@media all and (max-width: 1200px) {
+  /* NARIS 네트워크 */
+  .naris_network .pci_agency .agency_list {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+
+  /* 데이터 구축현황 */
+  .flex-row_flex-start_gap25 {
+    flex-direction: column !important;
+  }
+  .agency_data_sumbox {
+    width: calc(100% - 80px) !important;
+    min-width: 240px !important;
+  }
+  .data_status .data_result .result_detail {
+    flex-wrap: wrap;
+  }
+  .data_status .data_result > ul > li .result_detail li {
+    flex: none !important;
+  }
+}
+
+/* respon 1100px */
+@media all and (max-width: 1100px) {
+  /* NARIS 네트워크 */
+  .naris_network .pci_diagram {
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+    gap: 50px;
+  }
+  .naris_network .pci_diagram .diagram_sec1 {
+    order: 1 !important;
+  }
+  .naris_network .pci_diagram .diagram_sec2 {
+    order: 2 !important;
+    margin-top: 100px;
+    width: 100% !important;
+  }
+  .naris_network .pci_diagram .diagram_sec3 {
+    order: 3 !important;
+    width: 100% !important;
+  }
+  .naris_network .pci_diagram .diagram_sec3 .arrow_r {
+    display: none !important;
+  }
+  .naris_network .pci_diagram .diagram_sec1 .arrow_r {
+    height: 80px !important;
+    width: 160px;
+    top: 670px !important;
+    left: calc(50% - 80px);
+    background: url("../images-new/contents/network_arrow_b.png") no-repeat 50%
+      bottom !important;
+    background-size: 16px 80px;
+  }
+  .naris_network .pci_diagram .diagram_sec1 .arrow_r span {
+    top: 90px !important;
+  }
+
+  .naris_network .pci_diagram .diagram_sec1 .sec_tit {
+    width: 100% !important;
+  }
+
+  .naris_network .pci_diagram .diagram_sec2 ul,
+  .naris_network .pci_diagram .diagram_sec3 .ap_list {
+    flex-direction: row !important;
+  }
+  .naris_network .pci_diagram .diagram_sec2 ul li {
+    width: 239px !important;
+  }
+  .naris_network .pci_diagram .diagram_sec3 .ap_list li {
+    width: 50% !important;
+  }
+  .naris_network
+    .pci_diagram
+    .diagram_sec3
+    .ap_list
+    li:nth-child(2n)
+    .inner_ap {
+    margin-left: 0 !important;
+  }
+  .naris_network .pci_diagram .diagram_sec3 .ap_list {
+    column-gap: 0 !important;
+  }
+}
+
+/* respon 900px */
+@media all and (max-width: 900px) {
+  .gnb_hero > li > .depth2 li a {
+    font-size: 13px;
+  }
+  /* sfocus */
+  .sfocus .sfocus_inner .tit {
+    margin-bottom: 20px;
+    font-size: 28px;
+  }
+  .sfocus {
+    height: 222px;
+  }
+  .sfocus .sfocus_inner {
+    padding-top: 81px;
+  }
+  .sfocus .search {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 20px;
+  }
+  /* 데이터 구축현황 */
+  .data_status .agency_data .agency_list {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+  .data_status .data_result > ul > li {
+    flex-wrap: wrap;
+  }
+  /* message_txt */
+  .message_txt01.respon {
+    display: block;
+  }
+  /* 자원검색 */
+  .view_subject {
+    margin-bottom: 20px;
+  }
+  .view_head {
+    padding: 0 0 40px 0;
+    min-height: 0;
+  }
+  .view_head .photo_area {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: auto;
+    padding: 0;
+    margin-bottom: 40px;
+    border: none;
+  }
+  .view_body {
+    min-height: 0;
+    padding: 20px 0;
+  }
+  .view_body .feature_cont {
+    width: auto;
+    padding-right: 0;
+  }
+  .view_body .feature_cont .feature_info {
+    padding: 15px;
+    margin-bottom: 25px;
+  }
+  .view_body .map_wrap {
+    position: relative;
+    right: auto;
+    top: auto;
+    width: auto;
+    height: auto;
+    border-left: none;
+    padding: 25px 0 0;
+    padding-left: 0;
+    background: none;
+  }
+  .view_body .map_wrap .split_btn {
+    display: none;
+  }
+  .view_body .map_area {
+    height: 300px;
+  }
+  .view_body .map_area iframe {
+    height: 300px;
+  }
+  .view_body .map_wrap.active {
+    position: relative;
+    right: auto;
+    top: auto;
+    width: auto;
+    height: auto;
+    border-left: none;
+    padding: 25px 0 0;
+    padding-left: 0;
+    background: none;
+  }
+  .view_body .map_wrap.active .split_btn {
+    display: none;
+  }
+  .view_head .summury_info .other_btn li {
+    width: 50%;
+  }
+  .view_head .summury_info .other_btn li:first-child {
+    width: 100%;
+    margin-bottom: 2px;
+  }
+  .view_head .summury_info .other_btn li .btn_white span {
+    padding: 15px 0 16px 0;
+  }
+  .resources_view .btnarea_left .btn_gray {
+    display: block;
+  }
+  .resources_view .btnarea_left .btn_gray span {
+    padding: 15px 0 16px 0;
+  }
+  /* KBIF 운영 */
+  .kbif_mission > ul > li {
+    width: 50%;
+  }
+  /* GBIF 데이터포털 */
+  .gbif_bg > ul > li .bg_box .bg_info dd {
+    height: 190px;
+  }
+  .gbif_bg > ul > li:hover .bg_box .bg_info dd {
+    height: 220px;
+  }
+  /* 학술지 - 리스트 */
+  .journal_list .normal li {
+    width: 50%;
+  }
+  /* 갤러리 - 리스트 */
+  .gallery_list .normal li {
+    width: 50%;
+  }
+  /* stit */
+  .stit_area .stit {
+    font-size: 22px;
+  }
+  .stit_area .stit:before {
+    top: 1px;
+  }
+  .stit_area .stit:after {
+    top: 13px;
+  }
+  .stit_area .unit_type {
+    display: block;
+    padding-left: 28px;
+    margin-left: 0;
+  }
+  /* NARIS 네트워크 */
+  .naris_network .pci_agency .agency_list {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+/* respon 740px */
+
+@media all and (max-width: 740px) {
+  /* footer */
+  .foot_cont .cont_inner .det_info .addr_info dt {
+    margin-bottom: 2px;
+  }
+  .foot_cont .cont_inner .det_info .addr_info dd {
+    float: none;
+    margin-bottom: 2px;
+  }
+
+  /* 데이터 구축현황 */
+  .data_status .agency_data .agency_list {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+/* respon 640px */
+
+@media all and (max-width: 640px) {
+  #header {
+    height: auto;
+  }
+  #mcontents .mcontents_inner {
+    padding: 1px 0 30px;
+  }
+  #scontents .scontents_inner {
+    padding-bottom: 45px;
+  }
+  /* top_util */
+  .top_util {
+    display: none;
+  }
+  /* gnb */
+  .gnb_wrap {
+    display: none;
+  }
+  /* mheader */
+  .mheader {
+    display: block;
+  }
+  /* mfocus */
+  .mfocus {
+    height: 660px;
+    margin-top: 0;
+  }
+  .mfocus .msearch {
+    right: 0;
+    top: 90px;
+    width: 100%;
+    padding: 0 20px;
+  }
+  .mfocus .mfocus_slider .slider_box.focus_visual1 {
+    height: 660px;
+  }
+  .mfocus .mfocus_slider .slider_box.focus_visual2 {
+    height: 660px;
+  }
+  .mfocus .mfocus_slider .slider_box.focus_visual3 {
+    height: 660px;
+  }
+  .mfocus .mfocus_slider .slider_box.focus_visual4 {
+    height: 660px;
+  }
+  .mfocus .mfocus_slider .slider_box.focus_visual5 {
+    height: 660px;
+  }
+  .mfocus .mfocus_slider .slider_box.focus_visual6 {
+    height: 660px;
+  }
+  .mfocus .mfocus_slider .slider_box.focus_visual7 {
+    height: 660px;
+  }
+  .mfocus .mfocus_slider .slider_box .cont_area {
+    top: auto;
+    bottom: 30px;
+    left: auto;
+    width: 100%;
+    text-align: center;
+  }
+  .mfocus .mfocus_slider .slick-arrow {
+    top: auto;
+    bottom: 95px;
+  }
+  .mfocus .mfocus_slider .slick-prev {
+    left: 50%;
+    margin-left: -79px;
+  }
+  .mfocus .mfocus_slider .slick-next {
+    left: 50%;
+    margin-left: 33px;
+  }
+  .mfocus .hero_btn {
+    top: auto;
+    left: 50%;
+    bottom: 95px;
+    margin-left: -23px;
+  }
+  .mfocus .data_result {
+    top: 152px;
+  }
+  .mfocus .data_result > ul {
+    text-align: center;
+  }
+  .mfocus .data_result > ul > li {
+    width: 30%;
+    float: none;
+    display: inline-block;
+  }
+  .mfocus .data_result > ul > li:nth-child(3n):after {
+    display: none;
+  }
+  .mfocus .data_result > ul > li .result_box:before {
+    display: none;
+  }
+  .mfocus .data_result > ul > li .result_box:after {
+    display: none;
+  }
+  .mfocus .data_result > ul > li .result_box .number_box {
+    margin-bottom: 0;
+    padding-top: 95px;
+  }
+  .mfocus .data_result > ul > li .result_box .number_box .number {
+    font-size: 20px;
+  }
+  .mfocus .data_result > ul > li .result_box .result_tit {
+    font-size: 15px;
+  }
+  .mfocus .data_result > ul > li:after {
+    display: none;
+  }
+  .mfocus .data_result > ul > li.jong .result_box .number_box {
+    background: url("../images/main/mfocus_jong.png") no-repeat 50% 38px;
+    background-size: 36px 47px;
+  }
+  .mfocus .data_result > ul > li.jong:hover .result_box .number_box {
+    background: url("../images/main/mfocus_jong.png") no-repeat 50% 38px;
+    background-size: 36px 47px;
+  }
+  .mfocus .data_result > ul > li.specimen .result_box .number_box {
+    background: url("../images/main/mfocus_specimen.png") no-repeat 50% 38px;
+    background-size: 37px 43px;
+  }
+  .mfocus .data_result > ul > li.specimen:hover .result_box .number_box {
+    background: url("../images/main/mfocus_specimen.png") no-repeat 50% 38px;
+    background-size: 37px 43px;
+  }
+  .mfocus .data_result > ul > li.observe .result_box .number_box {
+    background: url("../images/main/mfocus_observe.png") no-repeat 50% 38px;
+    background-size: 44px 44px;
+  }
+  .mfocus .data_result > ul > li.observe:hover .result_box .number_box {
+    background: url("../images/main/mfocus_observe.png") no-repeat 50% 38px;
+    background-size: 44px 44px;
+  }
+  .mfocus .data_result > ul > li.video .result_box .number_box {
+    background: url("../images/main/mfocus_video.png") no-repeat 50% 38px;
+    background-size: 37px 43px;
+  }
+  .mfocus .data_result > ul > li.video:hover .result_box .number_box {
+    background: url("../images/main/mfocus_video.png") no-repeat 50% 38px;
+    background-size: 37px 43px;
+  }
+  .mfocus .data_result > ul > li.sound .result_box .number_box {
+    background: url("../images/main/mfocus_sound.png") no-repeat 50% 38px;
+    background-size: 58px 46px;
+  }
+  .mfocus .data_result > ul > li.sound:hover .result_box .number_box {
+    background: url("../images/main/mfocus_sound.png") no-repeat 50% 38px;
+    background-size: 58px 46px;
+  }
+  .mfocus .msearch .msearch_area .recent_search {
+    display: none;
+    background: rgba(0, 0, 0, 0.9);
+  }
+  /* sfocus */
+  .sfocus .sfocus_inner .tit {
+    margin-bottom: 30px;
+  }
+  .sfocus .sfocus_inner {
+    margin-top: 0;
+  }
+  .sfocus .search .search_area .search_inp {
+    height: 48px;
+    line-height: 48px;
+  }
+  .sfocus .search .search_area .search_btn {
+    margin-top: -27px;
+  }
+  .sfocus .search .search_area .search_btn button {
+    display: block;
+    width: 54px;
+    height: 54px;
+  }
+  /* mservice */
+  .mservice .service_list {
+    padding: 0;
+  }
+  .mservice .service_list li {
+    float: none;
+    width: 100%;
+    margin-bottom: 1px;
+  }
+  .mservice .service_list li:last-child {
+    margin-bottom: 0;
+  }
+  .mservice .service_list li .service_box {
+    height: 250px;
+  }
+  .mservice .service_list li .service_box .real_cont .kor_tit {
+    padding-top: 54px;
+  }
+  .mservice .service_list li .service_box .real_cont .eng_tit {
+    bottom: 54px;
+  }
+  /* mquick */
+  .mquick .quick_slider .slider_box a dl dd {
+    font-size: 13px;
+  }
+  /* footer */
+  .foot_cont .cont_inner .menu_area {
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+  }
+  .foot_cont .cont_inner .menu_area .menu_list {
+    margin-bottom: 20px;
+  }
+  .foot_cont .cont_inner .menu_area .menu_list li {
+    width: 33.333333%;
+    text-align: center;
+  }
+  .foot_cont .cont_inner .menu_area .naris_web {
+    position: relative;
+    right: auto;
+    top: auto;
+  }
+  .foot_cont .cont_inner .menu_area .naris_web .select_normal {
+    width: 100%;
+  }
+  .foot_cont .cont_inner .menu_area .naris_web .select_normal select {
+    display: block;
+  }
+  .foot_cont .cont_inner .det_info {
+    padding-right: 60px;
+    padding-top: 20px;
+  }
+  .foot_cont .cont_inner .page_top {
+    top: 152px;
+  }
+  /* depth_location */
+  .depth_location .location_hero > ul > li {
+    width: 50%;
+    padding: 0 15px;
+  }
+  .depth_location .dynamic_depth .dynamic_list > li a {
+    padding: 8px 15px;
+  }
+  /* stit */
+  .stit {
+    font-size: 24px;
+    padding-left: 24px;
+  }
+  .stit:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 14px;
+    height: 14px;
+    background: rgba(63, 117, 168, 0.8);
+    border-radius: 50%;
+  }
+  .stit:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 16px;
+    width: 14px;
+    height: 14px;
+    background: rgba(34, 131, 138, 0.8);
+    border-radius: 50%;
+  }
+  /* info_txt */
+  .info_txt01 {
+    font-size: 16px;
+  }
+  .info_txt02 {
+    font-size: 14px;
+  }
+  /* info_list */
+  .info_list01 li {
+    margin-bottom: 10px;
+  }
+  .info_list02 li {
+    margin-bottom: 10px;
+  }
+  .info_list03 {
+    padding-left: 0;
+  }
+  .info_list03 dt {
+    position: relative;
+    left: auto;
+    margin-bottom: 5px;
+  }
+  .info_list03 dd {
+    padding-left: 5px;
+    margin-bottom: 10px;
+  }
+  .info_list04 {
+    padding-left: 0;
+  }
+  .info_list04 dt {
+    position: relative;
+    left: auto;
+    margin-bottom: 5px;
+  }
+  .info_list04 dd {
+    padding-left: 5px;
+    margin-bottom: 10px;
+  }
+  /* 홈페이지소개 */
+  .website_intro .sum_info {
+    padding: 0 0 35px;
+  }
+  .website_intro .sum_info .info_t01 {
+    font-size: 26px;
+  }
+  .website_intro .sum_info .info_t02 {
+    text-align: left;
+  }
+  .website_intro .detail_info ul li.kbif {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .website_intro .detail_info ul li.kbif .visual_sec {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: 257px;
+    background: url("../images/contents/webintro_kbif_img.png") no-repeat 50%
+      50%;
+    background-size: cover;
+  }
+  .website_intro .detail_info ul li.naris {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .website_intro .detail_info ul li.naris .visual_sec {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: 257px;
+    background: url("../images/contents/webintro_naris_img.png") no-repeat 50%
+      50%;
+    background-size: cover;
+  }
+  .website_intro .detail_info ul li .info_sec {
+    background: none;
+    padding: 20px 0 50px;
+    min-height: 0;
+  }
+  .website_intro .detail_info ul li:last-child .info_sec {
+    padding-bottom: 0;
+  }
+  .website_intro .detail_info ul li .info_sec .tit {
+    display: block;
+    background: #f5f5f5;
+    padding: 8px 12px;
+    margin-bottom: 15px;
+    font-size: 26px;
+  }
+  /* NARIS소개 */
+  .naris_bg > ul > li {
+    float: left;
+    width: 100%;
+  }
+  .naris_bg > ul > li .bg_box .bg_info {
+    padding: 0 10px 10px;
+  }
+  .naris_bg > ul > li .bg_box .bg_info dt {
+    min-height: auto;
+  }
+  .naris_history:before {
+    display: none;
+  }
+  .naris_history .top_year {
+    left: 0;
+    width: 100%;
+    margin-left: 0;
+  }
+  .naris_history .year_list {
+    padding: 125px 0 0;
+  }
+  .naris_history .year_list:after {
+    display: none;
+  }
+  .naris_history:after {
+    display: none;
+  }
+  .naris_history .year_list > li {
+    margin-bottom: 30px;
+  }
+  .naris_history .year_list > li .year_cont {
+    width: 100%;
+  }
+  .naris_history .year_list > li .year_cont.al_left {
+    text-align: left;
+    padding-right: 0;
+  }
+  .naris_history .year_list > li .year_cont.al_left:before {
+    display: none;
+  }
+  .naris_history .year_list > li .year_cont.al_left:after {
+    display: none;
+  }
+  .naris_history .year_list > li .year_cont.al_left dt:after {
+    display: none;
+  }
+  .naris_history .year_list > li .year_cont.al_right {
+    float: left;
+    padding-left: 0;
+  }
+  .naris_history .year_list > li .year_cont.al_right:before {
+    display: none;
+  }
+  .naris_history .year_list > li .year_cont.al_right:after {
+    display: none;
+  }
+  .naris_history .year_list > li .year_cont.al_right dt:after {
+    display: none;
+  }
+  /* ************************************************************* */
+  /* NARIS 네트워크 */
+  .naris_network .pci_diagram .diagram_sec1 .naris_service {
+    flex-direction: column;
+  }
+  .naris_network .pci_diagram .diagram_sec1 .naris_service .service_box {
+    width: 100% !important;
+  }
+  .naris_network .pci_diagram .diagram_sec2 ul {
+    justify-content: center;
+  }
+  .naris_network .pci_diagram .diagram_sec1 .arrow_r {
+    top: 1100px !important;
+  }
+  .naris_network .pci_diagram .diagram_sec2 {
+    margin-top: 140px;
+  }
+  .naris_network .pci_diagram .diagram_sec3 .ap_list {
+    flex-direction: row !important;
+  }
+  .naris_network .pci_diagram .diagram_sec3 .ap_list li {
+    width: 100% !important;
+  }
+  .naris_network
+    .pci_diagram
+    .diagram_sec3
+    .ap_list
+    li:nth-child(2n)
+    .inner_ap {
+    margin-left: 20px !important;
+  }
+  .naris_network .pci_agency .agency_list {
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+  }
+  /* ************************************************************* */
+
+  /* 데이터 구축현황 */
+  .data_status .data_total {
+    margin-bottom: 20px;
+    padding: 20px 0 !important;
+  }
+  .data_status .data_total > ul > li {
+  }
+  .data_status .data_total > ul > li .data_box .number {
+    font-size: 16px;
+  }
+  .data_status .data_total > ul > li .data_box .infog_ico {
+    width: 75px;
+    height: 75px;
+  }
+  .data_status .data_total > ul > li .data_box .tit {
+    font-size: 14px;
+  }
+  .data_status .data_result > ul > li .result_detail li {
+    width: 50%;
+  }
+  .data_status .data_result > ul > li .result_detail li.image {
+    width: 100%;
+  }
+  /* tab */
+  .cm_tab_ty1 {
+    background: none;
+    padding: 0;
+    margin-bottom: 35px;
+  }
+  .cm_tab_ty1 ul {
+    margin-left: 0;
+  }
+  .cm_tab_ty1 ul li {
+    margin-bottom: 3px;
+  }
+  .cm_tab_ty1 ul li:last-child {
+    margin-bottom: 0;
+  }
+  .cm_tab_ty1 ul li a {
+    margin-left: 0;
+  }
+  .cm_tab_ty1.tab_num2 ul li {
+    width: 100%;
+  }
+  .cm_tab_ty1.tab_num4 ul li {
+    width: 100%;
+  }
+
+  /* paging */
+  .paging .ctrl.first {
+    display: none;
+  }
+  .paging .ctrl.last {
+    display: none;
+  }
+  /* 자원검색 */
+  .resources_search {
+    padding-bottom: 45px;
+  }
+  .list_ty1 > ul > li {
+    padding-right: 20px;
+    padding-bottom: 20px;
+  }
+  .list_ty1 > ul > li .inner_box {
+    padding-left: 0;
+  }
+  .list_ty1 > ul > li .inner_box .tit_area {
+    padding: 0 0 15px 135px;
+    min-height: 95px;
+  }
+  .list_ty1 > ul > li .inner_box .tit_area .tit {
+    font-size: 15px;
+  }
+  .list_ty1 > ul > li .inner_box .tit_area .tit .eng {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .list_ty1 > ul > li .inner_box .tit_area .tit .kor {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .list_ty1 > ul > li .inner_box .list_data > ul > li {
+    width: 33.3333333%;
+    margin-bottom: 10px;
+  }
+  .view_head .summury_info .info_cont {
+    padding: 9px 0;
+    padding-left: 0;
+  }
+  .view_head .summury_info .info_cont > dt {
+    position: relative;
+    left: auto;
+    width: auto;
+    padding: 9px 0;
+  }
+  .view_head .summury_info .info_cont > dd {
+    padding: 0 0 9px 5px;
+  }
+  .view_head .summury_info .info_cont > dd:before {
+    top: 9px;
+  }
+  /* navigator */
+  .navigator .nav_list {
+    padding: 0 20px;
+  }
+  .navigator .nav_list > li {
+    padding-left: 0;
+    padding-top: 10px;
+  }
+  .navigator .nav_list > li .nav_tit {
+    display: block;
+    position: relative;
+    left: auto;
+    top: auto;
+  }
+  /* KBIF 설립 및 현황 */
+  .kbif_history:before {
+    display: none;
+  }
+  .kbif_history .top_year {
+    left: 0;
+    width: 100%;
+    margin-left: 0;
+  }
+  .kbif_history .year_list {
+    padding: 125px 0 0;
+  }
+  .kbif_history .year_list:after {
+    display: none;
+  }
+  .kbif_history:after {
+    display: none;
+  }
+  .kbif_history .year_list > li {
+    margin-bottom: 30px;
+  }
+  .kbif_history .year_list > li .year_cont {
+    width: 100%;
+  }
+  .kbif_history .year_list > li .year_cont.al_left {
+    text-align: left;
+    padding-right: 0;
+  }
+  .kbif_history .year_list > li .year_cont.al_left:before {
+    display: none;
+  }
+  .kbif_history .year_list > li .year_cont.al_left:after {
+    display: none;
+  }
+  .kbif_history .year_list > li .year_cont.al_left dt:after {
+    display: none;
+  }
+  .kbif_history .year_list > li .year_cont.al_right {
+    float: left;
+    padding-left: 0;
+  }
+  .kbif_history .year_list > li .year_cont.al_right:before {
+    display: none;
+  }
+  .kbif_history .year_list > li .year_cont.al_right:after {
+    display: none;
+  }
+  .kbif_history .year_list > li .year_cont.al_right dt:after {
+    display: none;
+  }
+  .kbif_history .year_list > li .year_cont.al_left dd {
+    padding-right: 0;
+    padding-left: 70px;
+  }
+  .kbif_history .year_list > li .year_cont.al_left dd .month {
+    right: auto;
+    left: 0;
+  }
+  .kbif_history .year_list > li .year_cont.al_left dd .month:after {
+    left: auto;
+    right: -10px;
+  }
+  /* KBIF 운영 */
+  .kbif_mission > ul > li {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .kbif_mission > ul > li .inner_box {
+    height: auto;
+    padding: 40px 30px 35px;
+    min-height: 135px;
+  }
+  /* GBIF 데이터 포털 */
+  .gbif_bg > ul > li {
+    float: left;
+    width: 100%;
+  }
+  .gbif_bg > ul > li .bg_box {
+    height: 360px;
+  }
+  .gbif_bg > ul > li .bg_box .bg_info {
+    padding: 0 10px;
+  }
+  .gbif_bg > ul > li .bg_box .bg_info dd {
+    height: auto;
+  }
+  .gbif_bg > ul > li:hover .bg_box .bg_info dd {
+    height: auto;
+  }
+  /* 찾아오시는길 */
+  .location_info {
+    font-size: 14px;
+  }
+  /* 게시판 - 리스트 */
+  .board_list > ul > li .inner_box {
+    padding-left: 55px;
+  }
+  .board_list > ul > li .inner_box .post_opt {
+    margin-left: 0;
+  }
+  .board_list > ul > li .inner_box .post_opt dd {
+    float: none;
+    padding: 0;
+  }
+  .board_list > ul > li .inner_box .post_opt dd:after {
+    display: none;
+  }
+  /* 게시판 - 뷰 */
+  .board_view .post_subject {
+    margin-bottom: 20px;
+  }
+  .board_view .post_subject .subject {
+    padding: 0;
+  }
+  .board_view .post_subject .subject span {
+    font-size: 20px;
+  }
+  .board_view .post_subject:before {
+    display: none;
+  }
+  .board_view .info_area .regi_info {
+    padding: 17px 0;
+  }
+  .board_view .info_area .regi_info dt {
+    margin-right: 10px;
+    padding-left: 0;
+    border-left: none;
+    width: 50px;
+  }
+  .board_view .info_area .regi_info dd {
+    margin-right: 10px;
+    float: none;
+    margin-bottom: 5px;
+  }
+  .board_view .info_area .regi_info dd:last-child {
+    margin-bottom: 0;
+  }
+  .board_view .info_area .regi_info.eng dt {
+    margin-right: 0;
+    width: auto;
+    float: none;
+  }
+  .board_view .info_area .regi_info.eng dd {
+    margin-right: 0;
+    min-height: 19px;
+  }
+  .board_view .info_area .file_info {
+    padding: 8px 0;
+    padding-left: 0;
+  }
+  .board_view .info_area .file_info dt {
+    display: none;
+  }
+  .board_view .info_area .file_info dd {
+    padding-left: 10px;
+  }
+  .board_view .info_area .file_info dd:before {
+    left: 0;
+  }
+  .board_view .detail_cont {
+    padding: 30px 0 40px;
+    text-align: center;
+  }
+  .board_view .detail_cont img {
+    margin: 20px 0;
+  }
+  .board_view .detail_cont video {
+    margin: 20px 0;
+  }
+  .board_view .detail_cont iframe {
+    margin: 20px 0;
+  }
+  .board_view .archive_list dl {
+    padding-left: 80px;
+  }
+  .board_view .archive_list dl dt {
+    width: 80px;
+  }
+  .board_view .archive_list dl dd {
+    padding-left: 20px;
+  }
+  .board_view .btnarea_left .btn_gray {
+    display: block;
+  }
+  .board_view .btnarea_left .btn_gray span {
+    padding: 15px 0 16px 0;
+  }
+  /* JAPB(학술지) */
+  .japb_history:before {
+    display: none;
+  }
+  .japb_history .top_year {
+    left: 0;
+    width: 100%;
+    margin-left: 0;
+  }
+  .japb_history .year_list {
+    padding: 125px 0 0;
+  }
+  .japb_history .year_list:after {
+    display: none;
+  }
+  .japb_history:after {
+    display: none;
+  }
+  .japb_history .year_list > li {
+    margin-bottom: 30px;
+  }
+  .japb_history .year_list > li .year_cont {
+    width: 100%;
+  }
+  .japb_history .year_list > li .year_cont.al_left {
+    text-align: left;
+    padding-right: 0;
+  }
+  .japb_history .year_list > li .year_cont.al_left:before {
+    display: none;
+  }
+  .japb_history .year_list > li .year_cont.al_left:after {
+    display: none;
+  }
+  .japb_history .year_list > li .year_cont.al_left dt:after {
+    display: none;
+  }
+  .japb_history .year_list > li .year_cont.al_right {
+    float: left;
+    padding-left: 0;
+  }
+  .japb_history .year_list > li .year_cont.al_right:before {
+    display: none;
+  }
+  .japb_history .year_list > li .year_cont.al_right:after {
+    display: none;
+  }
+  .japb_history .year_list > li .year_cont.al_right dt:after {
+    display: none;
+  }
+  /* 학술지 - 리스트 */
+  .journal_list .normal li {
+    width: 100%;
+  }
+  .journal_list .normal li .inner {
+    margin: 0 0 10px 30px;
+  }
+  /* 갤러리 - 리스트 */
+  .gallery_list .normal li {
+    width: 100%;
+  }
+  .gallery_list .normal li .inner {
+    margin: 0 0 10px 30px;
+  }
+}
+
+/* pop_layer 1000px */
+
+@media all and (max-width: 1000px) {
+  .pop_layer.wid1000 {
+    width: 100% !important;
+    height: 100%;
+  }
+  .pop_layer.wid1000 .pop_container {
+    height: 100%;
+    min-height: 0;
+    max-height: none;
+  }
+  /* 표본정보 - 리스트 */
+  .pop_specimen_list {
+    padding: 0;
+  }
+  .specimen_side {
+    position: relative;
+    right: auto;
+    top: auto;
+    width: 100%;
+    height: auto;
+    padding: 0 20px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+  }
+  .specimen_side .side_tit {
+    margin-bottom: 0;
+  }
+  .specimen_side .side_tit .tit {
+    display: none;
+  }
+  .specimen_side .side_tit .respon_tit {
+    display: block;
+    font-family: notosans;
+    font-weight: normal;
+    letter-spacing: -0.5px;
+    font-size: 14px;
+  }
+  .specimen_side .side_form {
+    display: none;
+  }
+  .specimen_side .side_form .form_area {
+    padding: 20px 0 25px;
+    border-top: 1px solid #ddd;
+  }
+  .specimen_side .func_btn .btn_white span {
+    padding-top: 16px;
+    padding-bottom: 15px;
+    font-size: 14px;
+  }
+  .specimen_side .func_btn .btn_gray span {
+    padding-top: 16px;
+    padding-bottom: 15px;
+    font-size: 14px;
+  }
+  .specimen_list {
+    padding: 20px 0 80px;
+  }
+  .specimen_result {
+    padding: 0 20px;
+  }
+  .specimen_result .search_area {
+    display: none;
+  }
+  .specimen_list_ty1 > ul > li .inner_box .info_data li {
+    display: block;
+    float: none;
+    padding: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .specimen_list_ty1 > ul > li .inner_box .info_data li:before {
+    display: none;
+  }
+  .specimen_list_ty1 > ul > li .inner_box .tit {
+    padding-top: 0;
+  }
+  .specimen_list_ty1 > ul > li .inner_box .info_data {
+    margin-bottom: 10px;
+  }
+  /* 표본정보 - 뷰 */
+  .pop_specimen_view {
+    padding: 20px 20px 80px 20px;
+  }
+  .pop_specimen_view .sec_base {
+    padding-left: 0;
+  }
+  .pop_specimen_view .sec_base .photo_area {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: auto;
+    padding: 0;
+    margin-bottom: 40px;
+    border: none;
+  }
+  .pop_specimen_view .sec_base .summury_info .info_cont {
+    padding: 9px 0;
+    padding-left: 0;
+    min-height: auto;
+  }
+  .pop_specimen_view .sec_base .summury_info .info_cont > dt {
+    position: relative;
+    left: auto;
+    width: auto;
+    padding: 9px 0;
+  }
+  .pop_specimen_view .sec_base .summury_info .info_cont > dd {
+    padding: 0 0 9px 5px;
+  }
+  .pop_specimen_view .sec_base .summury_info .info_cont > dd:before {
+    top: 9px;
+  }
+  .pop_specimen_view .sec_base .summury_info .other_btn li {
+    width: 100%;
+  }
+  .pop_specimen_view .sec_base .summury_info .other_btn li .btn_white span {
+    padding: 15px 0 16px 0;
+  }
+  .pop_specimen_view .sec_barcode .barcode_info .info_cont {
+    padding: 9px 0;
+    padding-left: 0;
+    min-height: auto;
+    border-left: none;
+    border-right: none;
+  }
+  .pop_specimen_view .sec_barcode .barcode_info .info_cont > dt {
+    position: relative;
+    left: auto;
+    width: auto;
+    padding: 9px 0;
+  }
+  .pop_specimen_view .sec_barcode .barcode_info .info_cont > dd {
+    padding: 0 0 9px 5px;
+  }
+  .pop_specimen_view .sec_barcode .barcode_info .info_cont > dd:before {
+    top: 9px;
+  }
+  .pop_specimen_view .sec_barcode .barcode_info .info_cont > dd.barcode_img {
+    padding-left: 0;
+  }
+  /* 동영상보기 */
+  .pop_video {
+    padding: 20px 20px 80px 20px;
+  }
+  .video_side {
+    position: relative;
+    right: auto;
+    top: auto;
+    width: 100%;
+    height: auto;
+    background: none;
+    padding: 0;
+    border: none;
+    margin-top: 40px;
+  }
+  /* 음성듣기 */
+  .pop_sound {
+    padding: 20px 20px 80px 20px;
+  }
+  .sound_side {
+    position: relative;
+    right: auto;
+    top: auto;
+    width: 100%;
+    height: auto;
+    background: none;
+    padding: 0;
+    border: none;
+    margin-top: 40px;
+  }
+}
+
+/* pop_layer 600px */
+
+@media all and (max-width: 600px) {
+  .pop_layer.wid600 {
+    width: 100% !important;
+    height: 100%;
+  }
+  .pop_layer.wid600 .pop_container {
+    height: 100%;
+  }
+  .pop_layer.wid600 .pop_container .pop_cont {
+    min-height: 0;
+    max-height: none;
+    height: 100%;
+  }
+}
+
+/* pop_layer 600px */
+
+@media all and (min-width: 1200px) {
+  .search_side .side_form {
+    display: block !important;
+  }
+}

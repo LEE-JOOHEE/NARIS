@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>국가자연사 연구종합정보 시스템</title>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/common.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-gnb.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-footer.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/datepicker.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-main.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-popup.css"
+      media="all"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/contents.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/layout.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/table.css"
+      media="all"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/response.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/custom-ui.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/jquery.ui.custom.naris.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/cmmn/css/lightgallery/lightgallery.css"
+      media="all"
+    />
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="./resources/favicon-multi.ico"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="./resources/favicon-152.png"
+    />
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/2.2.4/jquery-2.2.4.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/easing/jquery-easing.1.3.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/slick/slick.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/waypoints/waypoints.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/counter/counter.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/gray/jquery.gray.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery-ui.js"
+    ></script>
+    <script type="text/javascript" src="./resources/srvc/js/ui.js"></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/srvc/js/searchQuery.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery.validate.js"
+    ></script>
+    <script type="text/javascript" src="./resources/cmmn/js/common.js"></script>
+    <script
+      type="text/javascript"
+      src="./resources/srvc/js/jquery.modalLayer.custom.response.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lightgallery.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-thumbnail.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-fullscreen.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-zoom.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-autoplay.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery.blockUI.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery.cookie.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/iscroll/iscroll.js"
+    ></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        // 퍼블리싱용 공통 헤더ㆍ푸터 블라오기
+        $("#headers").load("header.html");
+        $("#footers").load("footer.html");
+
+        // SNS 공유 visibility
+        const togBtn = document.getElementById("snsShare");
+        const list = document.getElementById("shareList");
+        togBtn.addEventListener("click", function () {
+          list.classList.toggle("visible");
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="dialogMsg" title="알림" style="display: none">
+      <span id="messageSpan"></span>
+    </div>
+    <div id="dialogMsgConfirm" title="확인" style="display: none">
+      <span id="messageSpanConfirm"></span>
+    </div>
+
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- skipNav -->
+      <div id="skipnavi">
+        <a href="#container">본문바로가기</a>
+      </div>
+      <!-- //skipNav -->
+
+      <div id="headers"></div>
+
+      <!-- container -->
+      <div id="container">
+        <!-- depth_location -->
+        <div class="depth_location-new">
+          <div class="location_hero">
+            <button
+              type="button"
+              class="home"
+              onclick="javascript:location.href='/index.html';"
+            >
+              <span>홈</span>
+            </button>
+            <button type="button" class="depth depth1">1뎁스명</button>
+            <button type="button" class="depth depth2">2뎁스명</button>
+
+            <article class="share-area">
+              <button title="공유하기" type="button" id="snsShare">
+                <img src="./resources/srvc/images-new/common/icon_share.svg" />
+              </button>
+              <ul id="shareList" class="share-list">
+                <li>
+                  <button type="button" title="블로그 공유 새창 열림">
+                    <img
+                      src="./resources/srvc/images-new/common/icon_share_01.svg"
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button type="button" title="유튜브 공유 새창 열림">
+                    <img
+                      src="./resources/srvc/images-new/common/icon_share_02.svg"
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button type="button" title="인스타그램 공유 새창 열림">
+                    <img
+                      src="./resources/srvc/images-new/common/icon_share_03.svg"
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button type="button" title="카카오채널 공유 새창 열림">
+                    <img
+                      src="./resources/srvc/images-new/common/icon_share_04.svg"
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button type="button" title="트위터 공유 새창 열림">
+                    <img
+                      src="./resources/srvc/images-new/common/icon_share_05.svg"
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button type="button" title="페이스북 공유 새창 열림">
+                    <img
+                      src="./resources/srvc/images-new/common/icon_share_06.svg"
+                    />
+                  </button>
+                </li>
+              </ul>
+              <button
+                title="화면 프린트"
+                type="button"
+                onclick="javascript:window.print();"
+              >
+                <img src="./resources/srvc/images-new/common/icon_print.svg" />
+              </button>
+              <button title="이 컨텐츠 주소복사" type="button">
+                <img src="./resources/srvc/images-new/common/icon_url.svg" />
+              </button>
+            </article>
+          </div>
+        </div>
+        <!-- //depth_location -->
+
+        <!-- 페이지 큰 타이틀 -->
+        <article class="page-title">
+          <div class="inner">
+            <h2 class="tit"><span>NARIS 소개</span></h2>
+          </div>
+        </article>
+        <!-- //페이지 큰 타이틀 -->
+
+        <!-- scontents -->
+        <div id="scontents">
+          <!-- scontents_inner -->
+          <div class="scontents_inner">
+            <!-- 개발자 컨텐츠 영역 -->
+            <div class="naris_intro">
+
+              <!-- info_txt01 -->
+              <p class="info_txt01">
+                나리스(NARIS)는 국가자연사연구정보시스템 (Korean Natural History
+                Research Information System)의 약어로,<br />분산된 국내 자연사
+                관련정보를 통합 데이터베이스로 연계 구축하여 서비스 하는
+                시스템입니다&#46;
+              </p>
+
+              <!-- info_txt02 -->
+              <p class="info_txt02 mgb50">
+                국내 기 구축 자료 및 지방자연사박물관, 대학, 과학관에 소장된
+                자연사 정보를 세계박물관협회(ICOM) 및
+                세계생물다양성정보기구(GBIF)기준에 따른 표준자연사
+                DB시스템입니다&#46;<br />또한, 국립중앙과학관이 GBIF Data
+                Node로서의 역할을 수행함으로 전 세계적인 네트워크를 통해 연동할
+                수 있는 시스템입니다&#46;
+              </p>
+
+              <!-- stit_area -->
+              <div class="sstit_area">
+                <h5 class="sstit">추진배경</h5>
+              </div>
+
+              <!-- naris_bg -->
+              <div class="naris_bg">
+                <ul>
+                  <li>
+                    <!-- bg_box -->
+                    <div class="bg_box img1">
+                      <!-- bg_info -->
+                      <dl class="bg_info">
+                        <dt>생물다양성 자원의 중요성 확대</dt>
+                        <dd>
+                          기후변화 대응, 저탄소녹색성장 생물주권 등에 의한
+                          생물자원의확보, 관리 및 활용 증가
+                        </dd>
+                      </dl>
+                    </div>
+                    <!-- //bg_box -->
+                  </li>
+                  <li>
+                    <!-- bg_box -->
+                    <div class="bg_box img2">
+                      <!-- bg_info -->
+                      <dl class="bg_info">
+                        <dt>국가간 생물다양성<br />자원 확보 경쟁 가속화</dt>
+                        <dd>
+                          바이오산업의 원천소재 등으로 선진국은 국가 생물자원의
+                          발굴과 확보 및 관리를 위한 중점 기관별 보존관리 센터
+                          육성
+                        </dd>
+                      </dl>
+                    </div>
+                    <!-- //bg_box -->
+                  </li>
+                  <li>
+                    <!-- bg_box -->
+                    <div class="bg_box img3">
+                      <!-- bg_info -->
+                      <dl class="bg_info">
+                        <dt>
+                          생물다양성 자원으로<br />생물다양성<br />자원의 정보화
+                          구축
+                        </dt>
+                        <dd>
+                          OECD 선진국은 생물다양성자원을 미래 생명산업의
+                          핵심소재로 인식하여 국가적 종합관리 및 전략화를
+                          추진하고 있으며, 생물다양성자원 보존 및 활용을 위한
+                          체계적인 관리시스템 구축
+                        </dd>
+                      </dl>
+                    </div>
+                    <!-- //bg_box -->
+                  </li>
+                  <li>
+                    <!-- bg_box -->
+                    <div class="bg_box img4">
+                      <!-- bg_info -->
+                      <dl class="bg_info">
+                        <dt>
+                          국제기구 공조,<br />국제표준화,<br />생물주권의 실현
+                        </dt>
+                        <dd>
+                          GBIF (세계생물다양성정보기구) Global Biodiversity
+                          Infomation Facility SciColl (국제과학수집물기구)
+                        </dd>
+                      </dl>
+                    </div>
+                    <!-- //bg_box -->
+                  </li>
+                </ul>
+              </div>
+              <!-- //naris_bg -->
+
+              <!-- stit_area -->
+              <div class="sstit_area">
+                <h5 class="sstit">연혁</h5>
+              </div>
+
+              <!-- naris_history -->
+              <div class="naris_history">
+                <!-- top_year -->
+
+                <div class="top_year">
+                  <strong class="nums">2024</strong>
+                </div>
+                <!-- year_list -->
+                <ul class="year_list">
+                  <li>
+                    <dl class="year_cont al_left">
+                      <dt>2021</dt>
+
+                      <dd>
+                        국립중앙과학관-세종수목원,<br />
+                        산림생물 정보 글로벌 확산 협약
+                      </dd>
+                    </dl>
+                  </li>
+
+                  <li>
+                    <dl class="year_cont al_right">
+                      <dt>2020</dt>
+
+                      <dd>
+                        국립생태원, 웅진씽크빅, 국립해양생물자원관 등<br />
+                        3개 기관과 연구협력 체결
+                      </dd>
+                    </dl>
+                  </li>
+
+                  <li>
+                    <dl class="year_cont al_left">
+                      <dt>2019</dt>
+
+                      <dd>
+                        산&middot;학&middot;연&middot;관&middot; 자연사자원 활용
+                        협력체계 구축<br />
+                        (무주곤충박물관, 경북대자연사박물관)
+                      </dd>
+                    </dl>
+                  </li>
+
+                  <li>
+                    <dl class="year_cont al_right">
+                      <dt>2018</dt>
+
+                      <dd>
+                        산&middot;학&middot;연&middot;관&middot; 자연사자원 활용
+                        협력체계 구축<br />
+                        (다살이생물자원연구소, 한남대학교 동물분류학실험실)
+                      </dd>
+                    </dl>
+                  </li>
+
+                  <li>
+                    <dl class="year_cont al_left">
+                      <dt>2017</dt>
+
+                      <dd>
+                        국외 과학관․자연사박물관과의 연구 협력 네트워크 구축<br />
+                        - 몽골과의 연구협력을 통한 몽골 국가보호지역(IBA)<br />
+                        공동 연구조사<br />
+                        - 몽골의 자연사자원 전문연구인력 초청연수
+                      </dd>
+                    </dl>
+                  </li>
+
+                  <li>
+                    <dl class="year_cont al_right">
+                      <dt>2016</dt>
+
+                      <dd>
+                        세계생물다양성정보기구(GBIF)에서 채택된 국제 표준양식인
+                        DarwinCore 2&#46;0 과 DiGIR protocol을 적용하여
+                        표준관리체계로 DB 구축<br />
+                      </dd>
+                    </dl>
+                  </li>
+
+                  <li>
+                    <dl class="year_cont al_left">
+                      <dt>2015</dt>
+
+                      <dd>다음카카오 백과사전과의 업무협정</dd>
+                    </dl>
+                  </li>
+
+                  <li>
+                    <dl class="year_cont al_right">
+                      <dt>2014</dt>
+
+                      <dd>
+                        국가생물다양성기관 연합확대(45개 기관), 분양시스템 구축
+                      </dd>
+                    </dl>
+                  </li>
+
+                  <li>
+                    <dl class="year_cont al_left">
+                      <dt>2013</dt>
+
+                      <dd>곤충백과, 곤충도감, 조류도감 어플리케이션 앱 개발</dd>
+
+                      <dd>과학연구수집물 국제협력기구(SciColl) MOU체결</dd>
+                    </dl>
+                  </li>
+
+                  <li>
+                    <dl class="year_cont al_right">
+                      <dt>2011</dt>
+
+                      <dd>네이버 지식백과와 업무협정</dd>
+                    </dl>
+                  </li>
+
+                  <li>
+                    <dl class="year_cont al_left">
+                      <dt>2010</dt>
+
+                      <dd>국가생물다양성보존관리기관 1호 지정(교과부)</dd>
+                    </dl>
+                  </li>
+
+                  <li>
+                    <dl class="year_cont al_right">
+                      <dt>2008</dt>
+
+                      <dd>GBIF한국사무국(KBIF) 설립</dd>
+                    </dl>
+                  </li>
+
+                  <li>
+                    <dl class="year_cont al_left">
+                      <dt>2007</dt>
+
+                      <dd>국가생물다양성 기관연합 발족</dd>
+
+                      <dd>초 중등교재 생물전자백과 사전 구축</dd>
+                    </dl>
+                  </li>
+
+                  <li>
+                    <dl class="year_cont al_right">
+                      <dt>2006</dt>
+
+                      <dd>국가생명자원확보 관리체제 구축방안 마련</dd>
+                    </dl>
+                  </li>
+
+                  <li>
+                    <dl class="year_cont al_left">
+                      <dt>2004</dt>
+
+                      <dd>
+                        국가자연사 연구종합정보 시스템 개발 및 연계시스템 구축
+                      </dd>
+                    </dl>
+                  </li>
+
+                  <li>
+                    <dl class="year_cont al_right">
+                      <dt>2001</dt>
+
+                      <dd>생물다양성 정보기구(GBIF) 가입</dd>
+                    </dl>
+                  </li>
+                </ul>
+
+                <!-- //year_list -->
+              </div>
+              <!-- //naris_history -->
+            </div>
+            <!-- //개발자 컨텐츠 영역 -->
+          </div>
+          <!-- //scontents_inner -->
+        </div>
+        <!-- //scontents -->
+      </div>
+      <!-- //container -->
+    </div>
+    <!-- //wrap -->
+    <div id="footers"></div>
+  </body>
+</html>

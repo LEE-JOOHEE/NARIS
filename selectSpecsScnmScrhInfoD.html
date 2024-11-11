@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>국가자연사 연구종합정보 시스템</title>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/common.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-gnb.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-footer.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/datepicker.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-main.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-popup.css"
+      media="all"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/contents.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/layout.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/table.css"
+      media="all"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/response.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/custom-ui.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/jquery.ui.custom.naris.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/cmmn/css/lightgallery/lightgallery.css"
+      media="all"
+    />
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="./resources/favicon-multi.ico"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="./resources/favicon-152.png"
+    />
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/2.2.4/jquery-2.2.4.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/easing/jquery-easing.1.3.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/slick/slick.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/waypoints/waypoints.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/counter/counter.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/gray/jquery.gray.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery-ui.js"
+    ></script>
+    <script type="text/javascript" src="./resources/srvc/js/ui.js"></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/srvc/js/searchQuery.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery.validate.js"
+    ></script>
+    <script type="text/javascript" src="./resources/cmmn/js/common.js"></script>
+    <script
+      type="text/javascript"
+      src="./resources/srvc/js/jquery.modalLayer.custom.response.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lightgallery.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-thumbnail.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-fullscreen.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-zoom.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-autoplay.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery.blockUI.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery.cookie.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/iscroll/iscroll.js"
+    ></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        // 퍼블리싱용 공통 헤더ㆍ푸터 블라오기
+        $("#headers").load("header.html");
+        $("#footers").load("footer.html");
+
+        // SNS 공유 visibility
+        const togBtn = document.getElementById("snsShare");
+        const list = document.getElementById("shareList");
+        togBtn.addEventListener("click", function () {
+          list.classList.toggle("visible");
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- skipNav -->
+      <div id="skipnavi">
+        <a href="#container">본문바로가기</a>
+      </div>
+      <!-- //skipNav -->
+
+      <div id="headers"></div>
+
+      <!-- container -->
+      <div id="container">
+        <!-- depth_location -->
+        <div class="depth_location-new">
+          <div class="location_hero">
+            <button
+              type="button"
+              class="home"
+              onclick="javascript:location.href='/index.html';"
+            >
+              <span>홈</span>
+            </button>
+            <button type="button" class="depth depth1">1뎁스명</button>
+            <button type="button" class="depth depth2">2뎁스명</button>
+
+            <article class="share-area">
+              <button title="공유하기" type="button" id="snsShare">
+                <img src="./resources/srvc/images-new/common/icon_share.svg" />
+              </button>
+              <ul id="shareList" class="share-list">
+                <li>
+                  <button type="button" title="블로그 공유 새창 열림">
+                    <img
+                      src="./resources/srvc/images-new/common/icon_share_01.svg"
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button type="button" title="유튜브 공유 새창 열림">
+                    <img
+                      src="./resources/srvc/images-new/common/icon_share_02.svg"
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button type="button" title="인스타그램 공유 새창 열림">
+                    <img
+                      src="./resources/srvc/images-new/common/icon_share_03.svg"
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button type="button" title="카카오채널 공유 새창 열림">
+                    <img
+                      src="./resources/srvc/images-new/common/icon_share_04.svg"
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button type="button" title="트위터 공유 새창 열림">
+                    <img
+                      src="./resources/srvc/images-new/common/icon_share_05.svg"
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button type="button" title="페이스북 공유 새창 열림">
+                    <img
+                      src="./resources/srvc/images-new/common/icon_share_06.svg"
+                    />
+                  </button>
+                </li>
+              </ul>
+              <button
+                title="화면 프린트"
+                type="button"
+                onclick="javascript:window.print();"
+              >
+                <img src="./resources/srvc/images-new/common/icon_print.svg" />
+              </button>
+              <button title="이 컨텐츠 주소복사" type="button">
+                <img src="./resources/srvc/images-new/common/icon_url.svg" />
+              </button>
+            </article>
+          </div>
+        </div>
+        <!-- //depth_location -->
+
+        <!-- 페이지 큰 타이틀 -->
+        <article class="page-title">
+          <div class="inner">
+            <h2 class="tit"><span>자원사 자원 검색</span></h2>
+          </div>
+        </article>
+        <!-- //페이지 큰 타이틀 -->
+
+        <!-- scontents -->
+        <div id="scontents">
+          <form
+            id="ormrcSearchVO"
+            name="ormrcSearchVO"
+            action="/resc/selectInsttBySrch.do"
+            method="post"
+          >
+            <input id="pageIndex" name="pageIndex" type="hidden" value="1" />
+            <input
+              id="recordCountPerPage"
+              name="recordCountPerPage"
+              type="hidden"
+              value="10"
+            />
+            <input
+              id="pageTypeValue"
+              name="pageTypeValue"
+              type="hidden"
+              value="1"
+            />
+            <input
+              id="searchPhlmCd"
+              name="searchPhlmCd"
+              type="hidden"
+              value=""
+            />
+            <input
+              id="searchCatgryCd"
+              name="searchCatgryCd"
+              type="hidden"
+              value=""
+            />
+            <input
+              id="searchInsttCd"
+              name="searchInsttCd"
+              type="hidden"
+              value=""
+            />
+            <input
+              id="specsEssntInfoId"
+              name="specsEssntInfoId"
+              type="hidden"
+              value="23038"
+            />
+            <input
+              id="specsEssntId"
+              name="specsEssntId"
+              type="hidden"
+              value="23038"
+            />
+            <!-- scontents_inner -->
+            <div class="scontents_inner">
+              <!-- 개발자 컨텐츠 영역 -->
+              <div class="resources_view">
+                <!-- view_head -->
+                <div class="view_head">
+                  <!-- photo_area -->
+                  <div class="photo_area">
+                    <!-- photo_slider -->
+                    <div class="photo_slider" id="photo_slide_area">
+                      <!-- 썸네일 사이즈 제한 없음 -->
+                      <img
+                        src="./resources/srvc//images-new/contents/sample_img_1.jpg"
+                        alt="임시이미지1"
+                        class="thum"
+                      />
+                      <img
+                        src="./resources/srvc//images-new/contents/sample_img_1.jpg"
+                        alt="임시이미지2"
+                        class="thum"
+                      />
+                      <img
+                        src="./resources/srvc//images-new/contents/sample_img_1.jpg"
+                        alt="임시이미지3"
+                        class="thum"
+                      />
+                    </div>
+                    <!-- view_type -->
+                    <ul class="view_type">
+                      <!-- 버튼 비활성화시 off클래스 사용 -->
+                      <li>
+                        <a
+                          href="#imageDiv"
+                          class="btn_view01"
+                          title="이미지상세보기"
+                          id="imagedetailbtn"
+                        >
+                          <span class="blind">이미지상세보기</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#mvpctDiv"
+                          class="btn_view03"
+                          title="동영상보기"
+                          id="moviedetailbtn"
+                        >
+                          <span class="blind">동영상보기</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#naris"
+                          class="btn_view04 off"
+                          title="음성듣기"
+                          id="sounddetailbtn"
+                        >
+                          <span class="blind">음성듣기</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- //photo_area -->
+                  <!-- summury_info -->
+                  <div class="summury_info">
+                    <!-- view_subject -->
+                    <div class="view_subject">
+                      <!-- subject -->
+                      <h3 class="subject">
+                        <span class="kor">피라미</span>
+                        <span class="eng italic_style">Zacco</span>
+                        <span class="eng italic_style">platypus</span>
+                        <span class="eng">(Temminck And Schlegel, 1846 </span>
+                      </h3>
+                    </div>
+                    <!-- //view_subject -->
+
+                    <!-- info_list -->
+                    <dl class="info_cont">
+                      <dt>분류체계(라틴명)</dt>
+                      <dd>
+                        Animalia &gt;Chordata &gt;Actinopterygii
+                        &gt;Cypriniformes &gt;Cyprinidae
+                      </dd>
+                      <dt>분류체계(국문명)</dt>
+                      <dd>
+                        동물계 &gt;척삭동물문 &gt;조기강 &gt;잉어목 &gt;잉어과
+                      </dd>
+                      <dt>학명</dt>
+                      <dd>
+                        <span class="italic_style">Zacco</span>
+                        <span class="italic_style">platypus</span>
+                        (Temminck And Schlegel, 1846
+                      </dd>
+                      <dt>국명</dt>
+                      <dd>피라미</dd>
+                    </dl>
+                    <!-- other_btn -->
+                    <ul class="other_btn">
+                      <!-- 버튼 비활성화시 off클래스 사용 -->
+                      <li>
+                        <a
+                          href="#brcdDiv"
+                          class="btn_white spider"
+                          title="DNA바코드정보 팝업창 열기"
+                          id="dnabrcddetailbtn"
+                        >
+                          <span>DNA 바코드정보</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#smplDiv"
+                          class="btn_white spider"
+                          title="표본정보 팝업창 열기"
+                          id="smpldetailbtn"
+                        >
+                          <span>표본정보</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#obsrvDiv"
+                          class="btn_white spider"
+                          title="관찰정보 팝업창 열기"
+                          id="obsrvdetailbtn"
+                        >
+                          <span>관찰정보</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- //summury_info -->
+                </div>
+                <!-- //view_head -->
+                <!-- view_body -->
+                <div class="view_body">
+                  <!-- feature_cont -->
+                  <div class="feature_cont">
+                    <div class="section">
+                      <!-- feature_tit -->
+                      <div class="feature_tit">
+                        <h4 class="tit">일반적 특징</h4>
+                      </div>
+                      <!-- feature_info -->
+                      <div class="feature_info">
+                        <p class="cont_info">
+                          || 크기 : 몸 길이는 약 12~17cm이다.<br />
+                          || 체색과 무늬 : 몸 색깔은 푸른 갈색으로 등 쪽은 더
+                          짙고 배는 은백색이다.<br />
+                          동공 위에 붉은 반점이 있다.<br />
+                          몸에는 10~13개의 청갈색 횡반이 있으며, 그 중간에 끝이
+                          뾰족한 분홍색 무늬가 불규칙하게 나 있다.<br />
+                          가슴지느러미, 배지느러미, 뒷지느러미의 기조 막은 밝은
+                          적색을 띤다.<br />
+                          || 주요 형질 : 몸은 길며, 옆으로 납작하다.<br />
+                          등지느러미 연조 수 7개, 뒷지느러미 연조 수 9개, 측선
+                          비늘 수 42~45개, 새파 수 13~16개이다.<br />
+                          주둥이는 짧고, 입은 크다.<br />
+                          입수염은 없고, 위턱이 아래턱보다 약간 길다.<br />
+                          눈은 비교적 작다.<br />
+                          측선은 완전하며, 배쪽으로 심하게 휘어 있다.<br />
+                        </p>
+                      </div>
+                    </div>
+                    <div class="section">
+                      <!-- feature_tit -->
+                      <div class="feature_tit">
+                        <h4 class="tit">생태적 특징</h4>
+                      </div>
+                      <!-- feature_info -->
+                      <div class="feature_info">
+                        <p class="cont_info">
+                          || 서식지 : 하천 중류의 여울 지역이나 저수지, 댐에
+                          서식한다.<br />
+                          || 먹이습성 : 잡식성으로 부착 조류, 수서 곤충의 애벌레
+                          등을 섭식한다.<br />
+                          || 행동습성 : 산란기는 5~8월로 암수가 작은 무리를
+                          이루어 얕은 여울의 잔자갈을 뒷지느러미로 파헤치며 알을
+                          낳는다.<br />
+                          번식기에 수컷의 주둥이와 빰에는 딱딱한 돌기가 돋아나고
+                          뒷지느러미는 커진다.<br />
+                          또한 주둥이 주변은 검은색으로 변하고 몸통에는 청록색과
+                          붉은색을 더 많이 띤다.<br />
+                          || 국내분포 : 서해, 남해, 동해로 흐르는 전국의 하천과
+                          저수지에 분포한다.<br />
+                          || 국외분포 : 중국, 대만, 일본에 분포한다.<br />
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- //feature_cont -->
+                  <!-- map_wrap -->
+                  <div class="map_wrap">
+                    <!-- map_tit -->
+                    <div class="map_tit">
+                      <h4 class="tit">지리 정보</h4>
+                    </div>
+                    <!-- map_area -->
+                    <div class="map_area">
+                      <!-- map size w:100%,h:600px -->
+                      <script
+                        type="text/javascript"
+                        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b2c07a426bb50848b1af24eb15596e47"
+                      ></script>
+                      <div
+                        id="mapViewer"
+                        style="width: 100%; height: 600px"
+                      ></div>
+                    </div>
+                  </div>
+                  <!-- //map_wrap -->
+                </div>
+                <!-- //view_body -->
+
+                <!-- 목록 bar -->
+                <article class="cont_bar_warp">
+                  <a href="#naris" class="btn_white nobor">
+                    <span class="middle back">이전글</span>
+                  </a>
+                  <span class="cont_tit_area"
+                    >이전글 공지사항 제목 60bye 이후 말줄이(...)표기</span
+                  >
+                  <a href="#naris" class="btn_white" id="returnbtn">
+                    <span class="middle">목록</span>
+                  </a>
+                  <span class="cont_tit_area"
+                    >다음글 공지사항 제목 60bye 이후 말줄이(...)표기</span
+                  >
+                  <a href="#naris" class="btn_white nobor">
+                    <span class="middle next">다음글</span>
+                  </a>
+                </article>
+                <!-- //목록 bar -->
+              </div>
+              <!-- //개발자 컨텐츠 영역 -->
+            </div>
+          </form>
+          <!-- //scontents_inner -->
+        </div>
+        <!-- //scontents -->
+      </div>
+      <!-- //container -->
+    </div>
+    <!-- //wrap -->
+    <div id="footers"></div>
+  </body>
+</html>

@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=1, target-densitydpi=medium-dpi"
+    />
+    <title>[NARIS] 퍼블리싱</title>
+
+    <style type="text/css">
+      /* base */
+      body,
+      div,
+      th,
+      td {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        padding: 0 1em;
+        -webkit-text-size-adjust: none;
+        color: #373737;
+        font-size: 13px;
+        background-color: #fff;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-weight: normal;
+        font-size: 100%;
+      }
+
+      input,
+      select,
+      textarea,
+      button,
+      label {
+        font-size: 16px;
+        vertical-align: middle;
+      }
+
+      input,
+      select {
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+      }
+
+      fieldset,
+      img,
+      iframe {
+        border: 0 none;
+      }
+
+      img {
+        vertical-align: top;
+      }
+
+      textarea {
+        resize: none;
+      }
+
+      th,
+      td {
+        text-align: left;
+      }
+
+      em,
+      address {
+        font-style: normal;
+      }
+
+      a,
+      a:hover,
+      a:active,
+      a:focus,
+      label {
+        text-decoration: none;
+        -webkit-tap-highlight-color: transparent;
+      }
+      table {
+        border-spacing: 0;
+        border-collapse: collapse;
+      }
+
+      table.dataTable.no-footer {
+        padding-top: 10px;
+      }
+
+      body,
+      html,
+      table td,
+      table th {
+        font-family: "Roboto", "Noto Sans KR", "Noto+Sans", "맑은 고딕",
+          sans-serif;
+      }
+
+      h1 {
+        width: 100%;
+        height: 2em;
+        line-height: 2em;
+        text-align: center;
+        font-size: 1.5em;
+        font-weight: bold;
+      }
+
+      th {
+        background: #eee;
+        text-align: center;
+      }
+
+      th,
+      td {
+        padding: 3px 5px;
+        border-top: 1px solid #e1e1e1;
+        border-left: 1px solid #f7f7f7;
+        font-size: 14px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      table {
+        width: 100%;
+        table-layout: fixed;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .guide-table {
+        width: auto;
+      }
+
+      table th,
+      table td {
+        vertical-align: middle;
+      }
+
+      table thead th {
+        text-align: center !important;
+        border-bottom: 1px solid #ccc;
+        border-left: 1px solid #ddd;
+      }
+
+      table tbody tr:hover {
+        /* background-color: #f7f7f7; */
+        outline: 1px dashed #f44336;
+      }
+
+      table tbody td:nth-child(1),
+      table tbody td:nth-child(2),
+      table tbody td:nth-child(8),
+      table tbody td:nth-child(9),
+      table tbody td:nth-child(10),
+      table tbody td:nth-child(11) {
+        text-align: center;
+      }
+      table tbody td:nth-child(2) {
+        font-weight: 600;
+        color: #000;
+      }
+      table tbody td:nth-child(7) {
+        text-align: left;
+        font-weight: 600;
+        color: #000;
+      }
+      td.page-link a {
+        color: #0086f9;
+      }
+      td.over-date {
+        color: #f94200;
+      }
+
+      td.page-link a:hover {
+        text-decoration: underline;
+      }
+
+      .header {
+        position: relative;
+      }
+
+      .legend-list {
+        display: block;
+        margin-bottom: 1em;
+        font-size: 13px;
+        color: #777;
+      }
+
+      .state-pub,
+      .state-inspect {
+        background: #fefccf;
+        color: #222;
+        text-align: center;
+      }
+
+      .state-dev {
+        background: #daedfa;
+        color: #111;
+        text-align: center;
+      }
+
+      .state-update {
+        background: #daedfa;
+      }
+
+      .state-update .txt-state {
+        position: relative;
+      }
+
+      .state-update .txt-state:after {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 2px;
+        right: 2px;
+        width: 10px;
+        height: 10px;
+        border-radius: 10px;
+        background: #f44336;
+        animation-name: bounce-6;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        transform-origin: bottom;
+        animation-timing-function: ease;
+      }
+
+      .state-ing .over-date,
+      .state-pub .over-date,
+      .state-inspect .over-date,
+      .state-dev .over-date,
+      .state-update .over-date {
+        color: #373737;
+      }
+      .state-2024-03-21 {
+        color: #ccc;
+        background-color: #f7f7f7;
+      }
+
+      span.state-ing {
+        border: 1px solid #eee;
+      }
+
+      span.state-ing,
+      span.state-pub,
+      span.state-inspect,
+      span.state-dev,
+      span.state-update {
+        display: inline-block;
+        padding: 0 0.3em;
+        border-radius: 4px;
+        font-size: 12px;
+      }
+
+      @keyframes bounce-6 {
+        0% {
+          transform: scale(1, 1) translateY(0);
+        }
+
+        10% {
+          transform: scale(1.05, 0.95) translateY(0);
+        }
+
+        30% {
+          transform: scale(0.95, 1.05) translateY(-20%);
+        }
+
+        50% {
+          transform: scale(1.05, 0.95) translateY(20%);
+        }
+
+        57% {
+          transform: scale(1, 1) translateY(-10%);
+        }
+
+        64% {
+          transform: scale(1, 1) translateY(10%);
+        }
+
+        100% {
+          transform: scale(1, 1) translateY(0);
+        }
+      }
+
+      span.state-pub,
+      span.state-inspect {
+        background: #fefccf;
+        color: #222;
+        text-align: center;
+      }
+
+      span.state-update {
+        background: #daedfa;
+        color: #111;
+        text-align: center;
+      }
+
+      span.state-update {
+        background: #daedfa;
+        border: 2px solid #f00;
+        color: #111;
+        text-align: center;
+      }
+
+      p.help {
+        margin-top: 4px;
+        padding: 0;
+        color: #777;
+        font-size: 12px;
+      }
+      .help.is-danger {
+        color: #da100b;
+      }
+      .table-header {
+        padding: 10px 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .process {
+        display: flex;
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 450px;
+        justify-content: flex-end;
+      }
+      .process > span {
+        padding: 3px 10px;
+        border-radius: 0;
+        border: 1px solid #d9d9d9;
+        font-weight: 400;
+        color: #888;
+        border-left: none;
+        text-align: center;
+      }
+      .process > span strong {
+        font-weight: 700;
+        color: #111;
+      }
+      .process > span em {
+        white-space: nowrap;
+      }
+      .process > span:first-child {
+        border-left: 1px solid #d9d9d9;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+      }
+      .process > span:last-child {
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+      }
+      @media screen and (max-width: 1080px) {
+        .table-header {
+          display: block;
+        }
+        .process {
+          margin-bottom: 1em;
+        }
+      }
+      @media screen and (max-width: 800px) {
+        colgroup {
+          display: none;
+        }
+        table {
+          width: 100%;
+          border-top: 1px solid #aaa;
+        }
+        table thead {
+          display: none;
+        }
+        table thead,
+        table tbody {
+          width: 100%;
+        }
+        table tr {
+          display: block;
+          padding: 5px;
+          text-align: left !important;
+          border-bottom: 1px solid #aaa;
+        }
+        table td,
+        table th {
+          display: inline-block;
+          padding: 2px 0;
+          border: none;
+        }
+        .page-link {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- 퍼블리싱 용(추후 삭제) -->
+    <a
+      href="./index.html"
+      style="
+        position: absolute;
+        top: 10px;
+        right: 13px;
+        z-index: 9999999999999999999;
+        background: #000;
+        color: #fff;
+        padding: 0 6px;
+      "
+      >메인으로 돌아가기</a
+    >
+
+    <header class="table-header">
+      <div class="legend-list">
+        <p>날짜형식 : yyyy-mm-dd</p>
+        <p>
+          상태 : <span class="state-ing">진행중</span>,
+          <span class="state-pub">퍼블완료</span>,
+          <span class="state-inspect">검수중</span>,
+          <span class="state-dev">개발가능</span>,
+          <span class="state-update">수정</span>(진행중 후 수정된 경우)
+        </p>
+        <p class="help">
+          상태에 진행상태 입력시 : 작업이 진행중인 경우 진행중 입력(선택 사항).
+          상태에는 텍스트만 입력할 것(스크립트를 통해 클래스 적용됨)
+        </p>
+      </div>
+      <div class="process">
+        <span class="state-total"><em>전체</em></span>
+        <span class="state-ing"><em>진행중</em></span>
+        <span class="state-pub"><em>퍼블완료</em></span>
+        <span class="state-inspect"><em>검수중</em></span>
+        <span class="state-dev"><em>개발가능</em></span>
+        <span class="state-update"><em>수정</em></span>
+      </div>
+    </header>
+
+    <table cellpadding="0" cellspacing="0" width="100%">
+      <colgroup>
+        <col style="width: 3%" />
+        <col style="width: 5%" />
+        <col style="width: 10%" />
+        <col style="width: 12%" />
+        <col style="width: 10%" />
+        <col />
+        <col style="width: 11%" />
+        <col style="width: 5%" />
+        <col style="width: 6%" />
+        <col style="width: 6%" />
+        <col style="width: 4%" />
+      </colgroup>
+      <thead>
+        <tr>
+          <th scope="col">No</th>
+          <th scope="col">사이트명</th>
+          <th scope="col">depth01</th>
+          <th scope="col">depth02</th>
+          <th scope="col">depth03</th>
+          <th scope="col">비고</th>
+          <th scope="col">페이지 링크(화면ID)</th>
+          <th scope="col">상태</th>
+          <th scope="col">완료예정일</th>
+          <th scope="col">작업완료일</th>
+          <th scope="col">담당자</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td></td>
+          <td>나리스</td>
+          <td>메인화면</td>
+          <td></td>
+          <td></td>
+          <td>PC버전 메인페이지 작업 완료(모바일, 테블릿 대기중)</td>
+          <td class="page-link">index</td>
+          <td class="txt-state">퍼블완료</td>
+          <td>2024-08-23</td>
+          <td>2024-08-23</td>
+          <td>이주희</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>(NARIS)</td>
+          <td>컨텐츠 헤더</td>
+          <td></td>
+          <td></td>
+          <td>New 디자인 적용완료(sub페이지 헤더 class="sub" 추가)</td>
+          <td class="page-link">header</td>
+          <td class="txt-state">퍼블완료</td>
+          <td>2024-08-22</td>
+          <td>2024-08-22</td>
+          <td>이주희</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>컨텐츠 푸터</td>
+          <td></td>
+          <td></td>
+          <td>개인정보처리방침, 전자우편무단수집거부 팝업 수정완료</td>
+          <td class="page-link">footer</td>
+          <td class="txt-state">퍼블완료</td>
+          <td></td>
+          <td>2024-08-12</td>
+          <td>이주희</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>자연사 종합정보</td>
+          <td>자원사 자원 검색</td>
+          <td>목록</td>
+          <td></td>
+          <td class="page-link">selectClassBySrch(resc)</td>
+          <td class="txt-state">퍼블완료</td>
+          <td></td>
+          <td>2024-08-13</td>
+          <td>이주희</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>자연사 종합정보</td>
+          <td>자원사 자원 검색</td>
+          <td>결과값 없음</td>
+          <td>검색결과 없을때 예시 화면</td>
+          <td class="page-link">selectClassBySrch(nodata)</td>
+          <td class="txt-state">퍼블완료</td>
+          <td></td>
+          <td>2024-08-13</td>
+          <td>이주희</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>자연사 종합정보</td>
+          <td>자원사 자원 검색</td>
+          <td>상세보기</td>
+          <td>특징 및 지리정보를 제공하는 상세보기 페이지</td>
+          <td class="page-link">selectSpecsScnmScrhInfoD</td>
+          <td class="txt-state">퍼블완료</td>
+          <td>2024-08-16</td>
+          <td>2024-08-14</td>
+          <td>이주희</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>자연사 종합정보</td>
+          <td>자원사 자원 검색</td>
+          <td>상세보기 팝업</td>
+          <td>lightgallery 라이브러리를 사용한 이미지 상세보기 팝업</td>
+          <td class="page-link">modal_ImageDetail</td>
+          <td class="txt-state">퍼블완료</td>
+          <td>2024-08-16</td>
+          <td>2024-08-21</td>
+          <td>이주희</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>자연사 종합정보</td>
+          <td>자원사 자원 검색</td>
+          <td>동영상보기</td>
+          <td>모달 팝업 화면</td>
+          <td class="page-link">modal_Movie</td>
+          <td class="txt-state">퍼블완료</td>
+          <td>2024-08-16</td>
+          <td>2024-08-20</td>
+          <td>이주희</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>자연사 종합정보</td>
+          <td>자원사 자원 검색</td>
+          <td>음성듣기</td>
+          <td>모달 팝업 화면</td>
+          <td class="page-link">modal_Sound</td>
+          <td class="txt-state">퍼블완료</td>
+          <td>2024-08-16</td>
+          <td>2024-08-20</td>
+          <td>이주희</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>자연사 종합정보</td>
+          <td>자원사 자원 검색</td>
+          <td>DNA 바코드 정보</td>
+          <td>모달 팝업 화면</td>
+          <td class="page-link">modal_Dna</td>
+          <td class="txt-state">퍼블완료</td>
+          <td>2024-08-16</td>
+          <td>2024-08-20</td>
+          <td>이주희</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>자연사 종합정보</td>
+          <td>자원사 자원 검색</td>
+          <td>표본상세정보</td>
+          <td>윈도우 팝업 화면</td>
+          <td class="page-link">modal_DnaDetail</td>
+          <td class="txt-state">퍼블완료</td>
+          <td>2024-08-16</td>
+          <td>2024-08-20</td>
+          <td>이주희</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>정보이용/표본대여</td>
+          <td>정보이용 신청 서비스</td>
+          <td>정보이용 서비스</td>
+          <td></td>
+          <td class="page-link"></td>
+          <td class="txt-state"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>정보이용/표본대여</td>
+          <td>정보이용 신청 서비스</td>
+          <td>수장시설 현황</td>
+          <td></td>
+          <td class="page-link"></td>
+          <td class="txt-state"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>정보이용/표본대여</td>
+          <td>자연사 표본대여 서비스</td>
+          <td>목록</td>
+          <td></td>
+          <td class="page-link">selectBoardList(data)</td>
+          <td class="txt-state">퍼블완료</td>
+          <td>2024-08-16</td>
+          <td>2024-08-14</td>
+          <td>이주희</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>정보이용/표본대여</td>
+          <td>자연사 표본대여 서비스</td>
+          <td>목록(달력)</td>
+          <td>달력(Calendar) 디자인 확인 페이지(기능개발 필요)</td>
+          <td class="page-link">selectBoardList(notice)</td>
+          <td class="txt-state">퍼블완료</td>
+          <td>2024-08-16</td>
+          <td>2024-08-19</td>
+          <td>이주희</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>정보이용/표본대여</td>
+          <td>자연사 표본대여 서비스</td>
+          <td>상세정보</td>
+          <td>상세보기 뷰 페이지</td>
+          <td class="page-link">selectBoardInfo(data)</td>
+          <td class="txt-state">퍼블완료</td>
+          <td>2024-08-16</td>
+          <td>2024-08-14</td>
+          <td>이주희</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>자연사 종합정보</td>
+          <td>해외 유용성 자원정보</td>
+          <td>목록</td>
+          <td></td>
+          <td class="page-link">selectBoardList(notice)</td>
+          <td class="txt-state">퍼블완료</td>
+          <td>2024-08-16</td>
+          <td>2024-08-14</td>
+          <td>이주희</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>자연사 종합정보</td>
+          <td>해외 유용성 자원정보</td>
+          <td>상세보기</td>
+          <td>첨부파일 다운로드 버튼 및 컨텐츠(이미지) 추가 페이지</td>
+          <td class="page-link">selectBoardInfo(notice)</td>
+          <td class="txt-state">퍼블완료</td>
+          <td>2024-08-16</td>
+          <td>2024-08-14</td>
+          <td>이주희</td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td>JAPB(학술지)</td>
+          <td>JAPB 소개</td>
+          <td></td>
+          <td></td>
+          <td class="page-link"></td>
+          <td class="txt-state"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>JAPB(학술지)</td>
+          <td>JAPB 보기</td>
+          <td></td>
+          <td></td>
+          <td class="page-link">selectBoardList(jrnl)</td>
+          <td class="txt-state">퍼블완료</td>
+          <td>2024-08-26</td>
+          <td>2024-08-26</td>
+          <td>이주희</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>자료실</td>
+          <td>영상&지식 개발서</td>
+          <td>목록</td>
+          <td></td>
+          <td class="page-link">selectBoardList(pubmtl)</td>
+          <td class="txt-state">퍼블완료</td>
+          <td>2024-08-26</td>
+          <td>2024-08-26</td>
+          <td>이주희</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>자료실</td>
+          <td>영상&지식 개발서</td>
+          <td>상세보기</td>
+          <td></td>
+          <td class="page-link">selectBoardInfo(pubmtl)</td>
+          <td class="txt-state">퍼블완료</td>
+          <td>2024-08-26</td>
+          <td>2024-08-26</td>
+          <td>이주희</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>자료실</td>
+          <td>통계</td>
+          <td>보유자원현황</td>
+          <td>차트</td>
+          <td class="page-link">selectStaticChart(resource)</td>
+          <td class="txt-state">퍼블완료</td>
+          <td>2024-08-27</td>
+          <td>2024-08-26</td>
+          <td>이주희</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>자료실</td>
+          <td>통계</td>
+          <td>기관별구축현황</td>
+          <td>차트</td>
+          <td class="page-link">selectStaticChart(company)</td>
+          <td class="txt-state">퍼블완료</td>
+          <td>2024-08-27</td>
+          <td>2024-08-26</td>
+          <td>이주희</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>자료실</td>
+          <td>통계</td>
+          <td>분류군별현황</td>
+          <td>차트</td>
+          <td class="page-link">selectStaticChart(classby)</td>
+          <td class="txt-state">퍼블완료</td>
+          <td>2024-08-27</td>
+          <td>2024-08-26</td>
+          <td>이주희</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>NARIS</td>
+          <td>NARIS 소개</td>
+          <td></td>
+          <td></td>
+          <td class="page-link"></td>
+          <td class="txt-state"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>반응형O</td>
+          <td>NARIS</td>
+          <td>NARIS 네트워크</td>
+          <td></td>
+          <td></td>
+          <td class="page-link">selectNarisNetwork</td>
+          <td class="txt-state">퍼블완료</td>
+          <td>2024-08-28</td>
+          <td>2024-08-27</td>
+          <td>이주희</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>반응형O</td>
+          <td>NARIS</td>
+          <td>데이터 구축 현황</td>
+          <td>연계기관별 구축현황</td>
+          <td></td>
+          <td class="page-link">selectPrtcInttActtoDbCnstcForCnt</td>
+          <td class="txt-state">퍼블완료</td>
+          <td>2024-08-29</td>
+          <td>2024-08-28</td>
+          <td>이주희</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>반응형O</td>
+          <td>NARIS</td>
+          <td>데이터 구축 현황</td>
+          <td>보유자원별 DB구축현황</td>
+          <td></td>
+          <td class="page-link">selectHoldResrceDbCnstcForCnt</td>
+          <td class="txt-state">퍼블완료</td>
+          <td>2024-08-30</td>
+          <td>2024-08-29</td>
+          <td>이주희</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>NARIS</td>
+          <td>Open API</td>
+          <td></td>
+          <td></td>
+          <td class="page-link"></td>
+          <td class="txt-state"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // 단계별 상태 표현 및 갯수 카운트
+        trsGuide = document.querySelectorAll("table.guide-table tbody tr");
+        trs = document.querySelectorAll("table:not(.guide-table) tbody tr");
+        let countTotal = 0,
+          countIng = 0,
+          countPub = 0,
+          countInspect = 0,
+          countDev = 0,
+          countUpdate = 0;
+        let elTodo = "";
+        // 날짜 표시
+        const today = new Date();
+
+        const tYear = today.getFullYear();
+        const tMonth = ("0" + (today.getMonth() + 1)).slice(-2);
+        const tDay = ("0" + today.getDate()).slice(-2);
+        const todayStr = tYear + "-" + tMonth + "-" + tDay;
+        console.log(todayStr);
+
+        Array.prototype.forEach.call(trsGuide, function (el, index, array) {
+          try {
+            el.querySelector("td:first-child").innerText = index + 1;
+          } catch (error) {
+            console.log(error);
+          }
+
+          let elLink = el.querySelector(".page-link");
+          let elLinkText = null;
+          if (elLink !== null && elLink !== undefined) {
+            try {
+              elLinkText = elLink.innerText;
+              const newEl = document.createElement("a");
+              newEl.innerHTML =
+                '<a href="./' +
+                elLinkText +
+                '.html" target="_blank">' +
+                elLinkText +
+                "</a>";
+              elLink.innerHTML = "";
+              elLink.appendChild(newEl);
+            } catch (error) {
+              console.log(error);
+            }
+          }
+        });
+
+        Array.prototype.forEach.call(trs, function (el, index, array) {
+          elTodoTd = el.querySelector("td:nth-child(9)");
+          try {
+            el.querySelector("td:first-child").innerText = index + 1;
+            // 현재 날짜와 비교
+            elTodo = elTodoTd.innerText;
+            var todoDate = new Date(elTodo);
+            if (today >= todoDate) {
+              elTodoTd.classList.add("over-date");
+            }
+          } catch (error) {
+            console.log(error);
+          }
+
+          let elLink = el.querySelector(".page-link");
+          let elLinkText = null;
+          if (elLink !== null && elLink !== undefined) {
+            try {
+              elLinkText = elLink.innerText;
+              const newEl = document.createElement("a");
+              newEl.innerHTML =
+                '<a href="./' +
+                elLinkText +
+                '.html" target="_blank">' +
+                elLinkText +
+                "</a>";
+              elLink.innerHTML = "";
+              elLink.appendChild(newEl);
+            } catch (error) {
+              console.log(error);
+            }
+          }
+          let elState = el.querySelector(".txt-state");
+          let elStateText = null;
+          if (elState !== null && elState !== undefined) {
+            elStateText = elState.innerText;
+          }
+          if (
+            elStateText !== null &&
+            elStateText !== undefined &&
+            elStateText !== ""
+          ) {
+            if (elStateText === "개발가능") {
+              countDev += 1;
+              el.classList.add("state-dev");
+            } else if (elStateText === "퍼블완료") {
+              countPub += 1;
+              el.classList.add("state-pub");
+            } else if (elStateText === "검수중") {
+              countInspect += 1;
+              el.classList.add("state-inspect");
+            } else if (elStateText === "수정") {
+              countUpdate += 1;
+              el.classList.add("state-update");
+            } else if (elStateText === "진행중") {
+              countIng += 1;
+            } else if (elStateText === "2024-03-21") {
+              el.classList.add("state-2024-03-21");
+            }
+          }
+        });
+        // countTotal = countIng + countPub + countInspect + countDev + countUpdate
+        countTotal = trs.length;
+        document
+          .querySelector(".process")
+          .querySelector(".state-total").innerHTML =
+          "<em>전체</em> <strong>" + countTotal + "</strong>";
+        document
+          .querySelector(".process")
+          .querySelector(".state-ing").innerHTML =
+          "<em>진행중</em> <strong>" + countIng + "</strong>";
+        document
+          .querySelector(".process")
+          .querySelector(".state-pub").innerHTML =
+          "<em>퍼블완료</em> <strong>" + countPub + "</strong>";
+        document
+          .querySelector(".process")
+          .querySelector(".state-inspect").innerHTML =
+          "<em>검수중</em> <strong>" + countInspect + "</strong>";
+        document
+          .querySelector(".process")
+          .querySelector(".state-dev").innerHTML =
+          "<em>개발가능</em> <strong>" + countDev + "</strong>";
+        document
+          .querySelector(".process")
+          .querySelector(".state-update").innerHTML =
+          "<em>수정</em> <strong>" + countUpdate + "</strong>";
+      });
+    </script>
+  </body>
+</html>

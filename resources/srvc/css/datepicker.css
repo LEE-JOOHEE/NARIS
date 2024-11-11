@@ -1,0 +1,477 @@
+.datepicker-area {
+  display: none;
+  position: relative;
+  z-index: 1000;
+  top: 50px;
+  left: -302px;
+}
+.datepicker-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #c6c6c6;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  box-sizing: border-box;
+}
+.datepicker-wrap:focus {
+  outline-offset: -4px;
+  outline: 2px solid rgba(36, 107, 235, 0.8);
+}
+.datepicker-wrap.bottom {
+  top: 0;
+  bottom: -20px;
+}
+.datepicker-wrap .datepicker-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  flex-direction: row;
+  position: relative;
+  height: 64px;
+  padding: 0 12px;
+  background-color: #edf1f5;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  font-size: 19px;
+}
+.datepicker-wrap .datepicker-head .btn-cal-move {
+  width: 40px;
+  height: 40px;
+  background: url("../images-new/common/ico_cal_move.svg") no-repeat center;
+  background-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+.datepicker-wrap .datepicker-head .btn-cal-move.next {
+  transform: rotate(180deg);
+}
+.datepicker-wrap .datepicker-head .datepicker-switch-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+  padding: 0 12px;
+}
+.datepicker-wrap .datepicker-head .datepicker-switch-wrap .btn-cal-switch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 50%;
+  height: 38px;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  text-align: center;
+  transition: 0.4s ease-in-out;
+  font-size: 19px;
+  cursor: pointer;
+}
+.datepicker-wrap
+  .datepicker-head
+  .datepicker-switch-wrap
+  .btn-cal-switch::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  margin-left: 4px;
+  background: url("../images-new/common/ico_cal_dropdown.svg") no-repeat center;
+  background-size: 16px;
+}
+.datepicker-wrap
+  .datepicker-head
+  .datepicker-switch-wrap
+  .btn-cal-switch:hover {
+  background-color: #cdd7e4;
+}
+.datepicker-wrap .datepicker-head .datepicker-switch-wrap .btn-cal-switch:focus,
+.datepicker-wrap
+  .datepicker-head
+  .datepicker-switch-wrap
+  .btn-cal-switch:active {
+  background-color: #cdd7e4;
+}
+.datepicker-wrap .datepicker-tbl {
+  background: #fff;
+  width: 100%;
+}
+.datepicker-wrap .datepicker-tbl-wrap {
+  padding: 0 12px;
+}
+.datepicker-wrap .datepicker-tbl-wrap .datepicker-tbl th,
+.datepicker-wrap .datepicker-tbl-wrap .datepicker-tbl td {
+  /* width: 14.2857142857%; */
+  width: calc(100% / 7);
+  padding-top: 4px;
+  width: 48px;
+  height: 48px;
+  font-size: 17px;
+  text-align: center;
+}
+.datepicker-wrap .datepicker-tbl-wrap .datepicker-tbl th > button,
+.datepicker-wrap .datepicker-tbl-wrap .datepicker-tbl td > button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 48px;
+  height: 48px;
+  font-size: 17px;
+  font-family: Pretendard;
+  border: 0;
+  background: #fff;
+  cursor: pointer;
+}
+.datepicker-wrap .datepicker-tbl-wrap .datepicker-tbl th.old,
+.datepicker-wrap .datepicker-tbl-wrap .datepicker-tbl th.new,
+.datepicker-wrap .datepicker-tbl-wrap .datepicker-tbl td.old,
+.datepicker-wrap .datepicker-tbl-wrap .datepicker-tbl td.new {
+  color: rgba(113, 113, 113, 0.3);
+}
+.datepicker-wrap .datepicker-tbl-wrap .datepicker-tbl th.old > button,
+.datepicker-wrap .datepicker-tbl-wrap .datepicker-tbl th.new > button,
+.datepicker-wrap .datepicker-tbl-wrap .datepicker-tbl td.old > button,
+.datepicker-wrap .datepicker-tbl-wrap .datepicker-tbl td.new > button {
+  color: rgba(113, 113, 113, 0.3);
+}
+.datepicker-wrap .datepicker-tbl-wrap .datepicker-tbl th.period .btn-set-date,
+.datepicker-wrap .datepicker-tbl-wrap .datepicker-tbl td.period .btn-set-date {
+  background-color: #d3e1fb;
+}
+.datepicker-wrap
+  .datepicker-tbl-wrap
+  .datepicker-tbl
+  th.period.start
+  > .btn-set-date,
+.datepicker-wrap
+  .datepicker-tbl-wrap
+  .datepicker-tbl
+  th.period.end
+  > .btn-set-date,
+.datepicker-wrap
+  .datepicker-tbl-wrap
+  .datepicker-tbl
+  td.period.start
+  > .btn-set-date,
+.datepicker-wrap
+  .datepicker-tbl-wrap
+  .datepicker-tbl
+  td.period.end
+  > .btn-set-date {
+  background-color: #246beb;
+  color: #fff;
+}
+.datepicker-wrap
+  .datepicker-tbl-wrap
+  .datepicker-tbl
+  th.period.start
+  > .btn-set-date:focus,
+.datepicker-wrap
+  .datepicker-tbl-wrap
+  .datepicker-tbl
+  th.period.end
+  > .btn-set-date:focus,
+.datepicker-wrap
+  .datepicker-tbl-wrap
+  .datepicker-tbl
+  td.period.start
+  > .btn-set-date:focus,
+.datepicker-wrap
+  .datepicker-tbl-wrap
+  .datepicker-tbl
+  td.period.end
+  > .btn-set-date:focus {
+  outline-offset: 4px;
+  outline: 2px solid rgba(255, 255, 255, 0.9);
+}
+.datepicker-wrap
+  .datepicker-tbl-wrap
+  .datepicker-tbl
+  th.period.start
+  > .btn-set-date,
+.datepicker-wrap
+  .datepicker-tbl-wrap
+  .datepicker-tbl
+  td.period.start
+  > .btn-set-date {
+  border-top-left-radius: 100%;
+  border-bottom-left-radius: 100%;
+}
+.datepicker-wrap
+  .datepicker-tbl-wrap
+  .datepicker-tbl
+  th.period.end
+  > .btn-set-date,
+.datepicker-wrap
+  .datepicker-tbl-wrap
+  .datepicker-tbl
+  td.period.end
+  > .btn-set-date {
+  border-top-right-radius: 100%;
+  border-bottom-right-radius: 100%;
+}
+.datepicker-wrap .datepicker-body {
+  position: relative;
+}
+.datepicker-wrap .datepicker-body .sel.year {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  width: 140px;
+  margin: 0 auto;
+}
+.datepicker-wrap .datepicker-body .sel.year li,
+.datepicker-wrap .datepicker-body .sel.year .btn {
+  width: 100%;
+}
+.datepicker-wrap .datepicker-body .sel.month {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 12px;
+  row-gap: 8px;
+  padding: 20px 14px;
+}
+.datepicker-wrap .datepicker-body .sel.month > li {
+  flex: 1;
+}
+.datepicker-wrap .datepicker-body .sel.month > li .btn {
+  width: 100%;
+}
+.datepicker-wrap .datepicker-body .sel .btn {
+  background-color: transparent;
+  border-color: transparent;
+  color: #1d1d1d;
+  font-size: 17px;
+  height: 40px;
+  padding: 0 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.datepicker-wrap .datepicker-body .sel .btn.active {
+  background-color: #246beb;
+  border: 1px solid #246beb;
+  color: #fff;
+}
+.datepicker-wrap .datepicker-body .datepicker-conts {
+  position: absolute;
+  top: 0;
+  left: -1px;
+  visibility: hidden;
+  opacity: 0;
+  z-index: -1;
+  width: calc(100% + 2px);
+  height: 366px;
+  transition: 0.4s ease-in-out;
+  background: #fff;
+  border: 1px solid #c6c6c6;
+  box-sizing: border-box;
+  padding: 0 11px;
+}
+.datepicker-wrap .datepicker-body .datepicker-conts.active {
+  visibility: visible;
+  opacity: 1;
+  z-index: auto;
+}
+.datepicker-wrap .datepicker-mon-wrap,
+.datepicker-wrap .datepicker-year-wrap {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.datepicker-wrap .datepicker-mon-wrap {
+  padding: 20px 24px 0;
+}
+.datepicker-wrap .datepicker-btn-wrap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  flex-direction: row;
+  gap: 8px;
+  padding: 16px;
+  border-top: 1px solid #e4e4e4;
+  border: 1px solid #c6c6c6;
+  background: #fff;
+  width: calc(100% - 10px);
+  position: relative;
+  left: -12px;
+}
+.datepicker-wrap .datepicker-btn-wrap:last-child {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.datepicker-wrap .datepicker-btn-wrap .btn.tertiary,
+.datepicker-wrap .datepicker-btn-wrap .btn.primary {
+  height: 40px;
+  padding: 0 12px;
+  border-radius: 6px;
+  font-size: 17px;
+  background-color: #fff;
+  border: 1px solid #1d1d1d;
+  color: #000b17;
+  cursor: pointer;
+}
+.datepicker-wrap .datepicker-btn-wrap .btn.primary {
+  background: #246beb;
+  border: 1px solid #246beb;
+  color: #fff;
+}
+.datepicker-wrap .datepicker-btn-wrap .btn.primary:hover {
+  background: #1d56bc;
+  border: 1px solid #1d56bc;
+}
+
+.datepicker-area.active {
+  display: block;
+}
+
+.row .datepicker-wrap.bottom {
+  bottom: 128px;
+}
+
+@media (min-width: 361px) {
+  .datepicker-wrap {
+    width: 360px;
+  }
+}
+@media (min-width: 1024px) {
+  .datepicker-year-wrap::-webkit-scrollbar {
+    width: 8px;
+  }
+  .datepicker-year-wrap::-webkit-scrollbar-thumb {
+    background-color: #c6c6c6;
+    border-radius: 8px;
+  }
+  .datepicker-year-wrap::-webkit-scrollbar-track {
+    background-color: #d8d8d8;
+  }
+}
+
+/* 날짜선택 */
+.form-group {
+  display: flex;
+  flex-direction: row;
+}
+.form-group .form-tit {
+  width: 100%;
+}
+.form-group .form-conts {
+  display: flex;
+  flex-direction: row;
+}
+.form-group .form-conts.datepicker-conts {
+}
+
+.datepicker-input {
+  position: relative;
+  z-index: 1;
+  width: 262px;
+}
+.datepicker-input .form-control {
+  background-image: none;
+}
+.datepicker-input .form-btn-datepicker {
+  position: relative;
+  top: 22px;
+  right: 4px;
+  width: 42px;
+  height: 45px;
+  padding: 0;
+  border: 0;
+  transform: translateY(-50%);
+  background: url("../images-new/common/ico_calendar.png") no-repeat center;
+  background-size: 24px;
+  cursor: pointer;
+}
+.datepicker-input .range::after {
+  display: none;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+}
+.input-group.range {
+  align-items: flex-end;
+  position: relative;
+}
+.input-group.range > li:not(.mark) {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  flex: 2;
+}
+.input-group.range > li:not(.mark):last-child {
+  flex: 1;
+  width: 42px;
+  min-width: 42px;
+  max-width: 42px;
+}
+.input-group.range > li.mark {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex: none;
+  text-align: center;
+}
+.input-group.range.set {
+  background-color: #fff;
+  border: 1px solid #717171;
+  border-radius: 4px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  padding: 0 0 0 14px;
+}
+
+.inputxt_normal input {
+  margin: 0;
+  border: 0;
+  border-radius: 4px;
+  padding: 1px 10px;
+  text-align: left;
+  font-size: 17px;
+  color: #1d1d1d;
+  box-sizing: border-box;
+  font-weight: normal;
+  background: #fff;
+}
+
+.input-group.range.set .form-control {
+  background-color: transparent;
+  border: 0;
+  height: 45px;
+  width: 100%;
+  font-size: 17px;
+  color: #1d1d1d;
+  box-sizing: border-box;
+}
+.input-group.range.set .form-control::placeholder {
+  font-size: 15px;
+}
+.input-group.range.set::after {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  content: "";
+  width: 24px;
+  height: 24px;
+  background: url("../images-new/common/ico_calendar.png") no-repeat;
+  background-size: contain;
+  transform: translateY(-50%);
+}
+
+.row .input-group {
+  flex-direction: column;
+}
+.row .input-group.range > li {
+  width: 100%;
+}

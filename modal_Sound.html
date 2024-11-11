@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DNA바코드정보</title>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/common.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-gnb.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-footer.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/datepicker.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-main.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-popup.css"
+      media="all"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/contents.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/layout.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/table.css"
+      media="all"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/response.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/custom-ui.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/jquery.ui.custom.naris.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/cmmn/css/lightgallery/lightgallery.css"
+      media="all"
+    />
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="./resources/favicon-multi.ico"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="./resources/favicon-152.png"
+    />
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/2.2.4/jquery-2.2.4.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/easing/jquery-easing.1.3.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/slick/slick.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/waypoints/waypoints.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/counter/counter.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/gray/jquery.gray.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery-ui.js"
+    ></script>
+    <script type="text/javascript" src="./resources/srvc/js/ui.js"></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/srvc/js/searchQuery.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery.validate.js"
+    ></script>
+    <script type="text/javascript" src="./resources/cmmn/js/common.js"></script>
+    <script
+      type="text/javascript"
+      src="./resources/srvc/js/jquery.modalLayer.custom.response.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lightgallery.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-thumbnail.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-fullscreen.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-zoom.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-autoplay.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery.blockUI.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery.cookie.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/iscroll/iscroll.js"
+    ></script>
+  </head>
+  <body>
+    <!-- 음성듣기 레이어팝업 -->
+    <div id="soundDiv" class="layer_wrap hiddens" style="display: block">
+      <!-- pop_layer / wid1000은 가로 사이즈 500px (600, 700, 800, 1000으로 사용) -->
+      <div class="pop_layer wid1000">
+        <!-- pop_header -->
+        <div class="pop_header">
+          <h1 class="pop_tit">음성듣기</h1>
+          <a href="#naris" class="pop_close">
+            <span class="blind">닫기</span>
+          </a>
+        </div>
+        <!-- //pop_header -->
+
+        <!-- pop_container -->
+        <div class="pop_container" id="sound_pop_container">
+          <!-- pop_sound -->
+          <div class="pop_sound">
+            <!-- sound_cont -->
+            <div class="sound_cont">
+              <!-- sound_real -->
+              <div class="sound_real">
+                <audio
+                  src="https://naris.go.kr/sound/naris/specs/24057/SD_20160309100421716.mp3"
+                  controls
+                  preload="auto"
+                  id="audio_area"
+                ></audio>
+              </div>
+
+              <!-- tit -->
+              <strong class="tit" id="soundTitle"
+                >숲속에 숨어 있다 날아오르며 꿩 1개체의 소리</strong
+              >
+              <!-- info_detail -->
+              <div class="info_detail">
+                <p class="cont_txt" id="soundContents">
+                  도시공원, 낮은 언덕, 산의 풀밭 등에서 산다. 번식기에는 수컷이
+                  붉은 피부를 부풀려서 구애한다. 둥지는 숲 속의 지면을 오목하게
+                  파서 만든다. 알을 낳는 시기는 5~6월이다. 알은 갈색을 띤
+                  녹회색으로 6~10개 낳는다. 먹이는 곡식의 낟알이나 개미, 메뚜기
+                  등이다. 수컷은 높은 소리를 내고 암컷은 낮은 소리를 낸다.
+                </p>
+              </div>
+            </div>
+            <!-- //sound_cont -->
+
+            <!-- sound_side -->
+            <div class="sound_side" id="sound_pop_side">
+              <!-- sound_list -->
+              <ul class="sound_list">
+                <li>
+                  <!-- inner_box -->
+                  <a
+                    href="javascript:detailAudioSelect('24057','1');"
+                    class="inner_box"
+                  >
+                    <div class="thum_area">
+                      <!-- 썸네일 사이즈  w:120px,h:68px -->
+
+                      <img
+                        src="data:image/jpg;base64,/9j/4AAQSkZJRgABAgAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAArAD8DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDfApaKKYhaKKKBC5pDRRTAKRhmiigBOfSl96rm3uN3zT7R7yU0gxNmTU4gpGCvWsfbRNfZSLOaJpEggeeVgkUalnc9AB1qq09uV+a/dxnnanWq8jWEki7bSa4dhsAKjGDwevSl7Zdh+yfc01ZWAKOrA9CrAg0pI9RWJFPaWMKotjHbqnCJ5o+X8BUjasjybYIAw7MykD8z/hR7Zdh+xfc0ZbmKLOWBIwMA1Qmubq5Z0iY2qKAdxHLHPr2qFr65AbzPJA9EQH9ap3F2rjlQCfUZqHiL7Giw5cazjth/pl+y+pkfn8gBUM76f5QSKGeRgMFwNoYnoTu5/IVUijRHwqKP3YJOOSfk6mnygNEZD9/Gcjjt7Vm6nYpU+4ouJQGjtrOONB93cDISPXJ4p0SyvkXNzKVUYKK+0c/SrYUcR4ypXofzqvc8xynunANYurJ6GqhFFcRW8blIXUuDk7uRSzJIIlcqQe+05Apvlps83aA4wAQMcHrTLomK5Xy2ZcdMH2pFpDkAmkAaVYx/ecHH6VTllcj5Oo7/ANKsyKCM4545qi3EpX+HAOKpAz//2Q=="
+                        class="thum"
+                        alt="숲속에 숨어 있다 날아오르며 꿩 1개체의 소리"
+                      />
+                    </div>
+
+                    <strong class="tit"
+                      >숲속에 숨어 있다 날아오르며 꿩 1개체의 소리</strong
+                    >
+                    <span class="time"></span>
+                  </a>
+                </li>
+
+                <li>
+                  <!-- inner_box -->
+                  <a
+                    href="javascript:detailAudioSelect('24057','2');"
+                    class="inner_box"
+                  >
+                    <div class="thum_area">
+                      <!-- 썸네일 사이즈  w:120px,h:68px -->
+
+                      <img
+                        src="data:image/jpg;base64,/9j/4AAQSkZJRgABAgAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAArAD8DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDfApaKKYhaKKKBC5pDRRTAKRhmiigBOfSl96rm3uN3zT7R7yU0gxNmTU4gpGCvWsfbRNfZSLOaJpEggeeVgkUalnc9AB1qq09uV+a/dxnnanWq8jWEki7bSa4dhsAKjGDwevSl7Zdh+yfc01ZWAKOrA9CrAg0pI9RWJFPaWMKotjHbqnCJ5o+X8BUjasjybYIAw7MykD8z/hR7Zdh+xfc0ZbmKLOWBIwMA1Qmubq5Z0iY2qKAdxHLHPr2qFr65AbzPJA9EQH9ap3F2rjlQCfUZqHiL7Giw5cazjth/pl+y+pkfn8gBUM76f5QSKGeRgMFwNoYnoTu5/IVUijRHwqKP3YJOOSfk6mnygNEZD9/Gcjjt7Vm6nYpU+4ouJQGjtrOONB93cDISPXJ4p0SyvkXNzKVUYKK+0c/SrYUcR4ypXofzqvc8xynunANYurJ6GqhFFcRW8blIXUuDk7uRSzJIIlcqQe+05Apvlps83aA4wAQMcHrTLomK5Xy2ZcdMH2pFpDkAmkAaVYx/ecHH6VTllcj5Oo7/ANKsyKCM4545qi3EpX+HAOKpAz//2Q=="
+                        class="thum"
+                        alt="꿩의 소리"
+                      />
+                    </div>
+
+                    <strong class="tit">꿩의 소리</strong>
+                    <span class="time"></span>
+                  </a>
+                </li>
+
+                <li>
+                  <!-- inner_box -->
+                  <a
+                    href="javascript:detailAudioSelect('24057','3');"
+                    class="inner_box"
+                  >
+                    <div class="thum_area">
+                      <!-- 썸네일 사이즈  w:120px,h:68px -->
+
+                      <img
+                        src="data:image/jpg;base64,/9j/4AAQSkZJRgABAgAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAArAD8DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDfApaKKYhaKKKBC5pDRRTAKRhmiigBOfSl96rm3uN3zT7R7yU0gxNmTU4gpGCvWsfbRNfZSLOaJpEggeeVgkUalnc9AB1qq09uV+a/dxnnanWq8jWEki7bSa4dhsAKjGDwevSl7Zdh+yfc01ZWAKOrA9CrAg0pI9RWJFPaWMKotjHbqnCJ5o+X8BUjasjybYIAw7MykD8z/hR7Zdh+xfc0ZbmKLOWBIwMA1Qmubq5Z0iY2qKAdxHLHPr2qFr65AbzPJA9EQH9ap3F2rjlQCfUZqHiL7Giw5cazjth/pl+y+pkfn8gBUM76f5QSKGeRgMFwNoYnoTu5/IVUijRHwqKP3YJOOSfk6mnygNEZD9/Gcjjt7Vm6nYpU+4ouJQGjtrOONB93cDISPXJ4p0SyvkXNzKVUYKK+0c/SrYUcR4ypXofzqvc8xynunANYurJ6GqhFFcRW8blIXUuDk7uRSzJIIlcqQe+05Apvlps83aA4wAQMcHrTLomK5Xy2ZcdMH2pFpDkAmkAaVYx/ecHH6VTllcj5Oo7/ANKsyKCM4545qi3EpX+HAOKpAz//2Q=="
+                        class="thum"
+                        alt="꿩의 소리"
+                      />
+                    </div>
+
+                    <strong class="tit">꿩의 소리</strong>
+                    <span class="time"></span>
+                  </a>
+                </li>
+
+                <li>
+                  <!-- inner_box -->
+                  <a
+                    href="javascript:detailAudioSelect('24057','4');"
+                    class="inner_box"
+                  >
+                    <div class="thum_area">
+                      <!-- 썸네일 사이즈  w:120px,h:68px -->
+
+                      <img
+                        src="data:image/jpg;base64,/9j/4AAQSkZJRgABAgAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAArAD8DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDfApaKKYhaKKKBC5pDRRTAKRhmiigBOfSl96rm3uN3zT7R7yU0gxNmTU4gpGCvWsfbRNfZSLOaJpEggeeVgkUalnc9AB1qq09uV+a/dxnnanWq8jWEki7bSa4dhsAKjGDwevSl7Zdh+yfc01ZWAKOrA9CrAg0pI9RWJFPaWMKotjHbqnCJ5o+X8BUjasjybYIAw7MykD8z/hR7Zdh+xfc0ZbmKLOWBIwMA1Qmubq5Z0iY2qKAdxHLHPr2qFr65AbzPJA9EQH9ap3F2rjlQCfUZqHiL7Giw5cazjth/pl+y+pkfn8gBUM76f5QSKGeRgMFwNoYnoTu5/IVUijRHwqKP3YJOOSfk6mnygNEZD9/Gcjjt7Vm6nYpU+4ouJQGjtrOONB93cDISPXJ4p0SyvkXNzKVUYKK+0c/SrYUcR4ypXofzqvc8xynunANYurJ6GqhFFcRW8blIXUuDk7uRSzJIIlcqQe+05Apvlps83aA4wAQMcHrTLomK5Xy2ZcdMH2pFpDkAmkAaVYx/ecHH6VTllcj5Oo7/ANKsyKCM4545qi3EpX+HAOKpAz//2Q=="
+                        class="thum"
+                        alt="꿩의 비상"
+                      />
+                    </div>
+
+                    <strong class="tit">꿩의 비상</strong>
+                    <span class="time"></span>
+                  </a>
+                </li>
+
+                <li>
+                  <!-- inner_box -->
+                  <a
+                    href="javascript:detailAudioSelect('24057','5');"
+                    class="inner_box"
+                  >
+                    <div class="thum_area">
+                      <!-- 썸네일 사이즈  w:120px,h:68px -->
+
+                      <img
+                        src="data:image/jpg;base64,/9j/4AAQSkZJRgABAgAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAArAD8DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDfApaKKYhaKKKBC5pDRRTAKRhmiigBOfSl96rm3uN3zT7R7yU0gxNmTU4gpGCvWsfbRNfZSLOaJpEggeeVgkUalnc9AB1qq09uV+a/dxnnanWq8jWEki7bSa4dhsAKjGDwevSl7Zdh+yfc01ZWAKOrA9CrAg0pI9RWJFPaWMKotjHbqnCJ5o+X8BUjasjybYIAw7MykD8z/hR7Zdh+xfc0ZbmKLOWBIwMA1Qmubq5Z0iY2qKAdxHLHPr2qFr65AbzPJA9EQH9ap3F2rjlQCfUZqHiL7Giw5cazjth/pl+y+pkfn8gBUM76f5QSKGeRgMFwNoYnoTu5/IVUijRHwqKP3YJOOSfk6mnygNEZD9/Gcjjt7Vm6nYpU+4ouJQGjtrOONB93cDISPXJ4p0SyvkXNzKVUYKK+0c/SrYUcR4ypXofzqvc8xynunANYurJ6GqhFFcRW8blIXUuDk7uRSzJIIlcqQe+05Apvlps83aA4wAQMcHrTLomK5Xy2ZcdMH2pFpDkAmkAaVYx/ecHH6VTllcj5Oo7/ANKsyKCM4545qi3EpX+HAOKpAz//2Q=="
+                        class="thum"
+                        alt="초지로 날아들어온 꿩"
+                      />
+                    </div>
+
+                    <strong class="tit">초지로 날아들어온 꿩</strong>
+                    <span class="time"></span>
+                  </a>
+                </li>
+              </ul>
+              <!-- //sound_list -->
+            </div>
+            <!-- //sound_side -->
+          </div>
+          <!-- //pop_sound -->
+        </div>
+        <!-- //pop_container -->
+      </div>
+      <!-- //pop_layer -->
+    </div>
+    <!-- //음성듣기 레이어팝업 -->
+  </body>
+</html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DNA 바코드 상세정보</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/common.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-gnb.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-footer.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/datepicker.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-main.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-popup.css"
+      media="all"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/contents.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/layout.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/table.css"
+      media="all"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/response.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/custom-ui.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/jquery.ui.custom.naris.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/cmmn/css/lightgallery/lightgallery.css"
+      media="all"
+    />
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="./resources/favicon-multi.ico"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="./resources/favicon-152.png"
+    />
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/2.2.4/jquery-2.2.4.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/easing/jquery-easing.1.3.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/slick/slick.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/waypoints/waypoints.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/counter/counter.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/gray/jquery.gray.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery-ui.js"
+    ></script>
+    <script type="text/javascript" src="./resources/srvc/js/ui.js"></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/srvc/js/searchQuery.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery.validate.js"
+    ></script>
+    <script type="text/javascript" src="./resources/cmmn/js/common.js"></script>
+    <script
+      type="text/javascript"
+      src="./resources/srvc/js/jquery.modalLayer.custom.response.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lightgallery.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-thumbnail.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-fullscreen.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-zoom.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-autoplay.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery.blockUI.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery.cookie.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/iscroll/iscroll.js"
+    ></script>
+  </head>
+  <body>
+    <!-- winpopWrap -->
+    <div id="wrap">
+      <iframe
+        id="iframe_fileDownLoad"
+        name="iframe_fileDownLoad"
+        width="0"
+        height="0"
+        style="display: none"
+        src="about:blank"
+      ></iframe>
+      <!-- pop_layer -->
+      <div class="pop_win">
+        <!-- pop_header -->
+        <div class="pop_header">
+          <h1 class="pop_tit">DNA 바코드 상세정보</h1>
+          <a href="#naris" class="pop_close">
+            <span class="blind">닫기</span>
+          </a>
+        </div>
+        <!-- //pop_header -->
+
+        <!-- pop_container -->
+        <div class="pop_container">
+          <!-- pop_specimen_view -->
+          <div class="pop_specimen_view reset_h">
+            <div class="sec_base">
+              <!-- photo_area -->
+              <div class="photo_area">
+                <!-- photo_slider -->
+                <div class="photo_slider">
+                  <!-- 썸네일 사이즈 제한 없음 -->
+
+                  <div class="slider_box">
+                    <img
+                      class="thum"
+                      src="./resources/srvc/images-new/common/no-image.png"
+                      alt="Zacco platypus (Temminck And Schlegel, 1846) 표본 이미지 (1)"
+                    />
+                  </div>
+                </div>
+                <!-- view_type -->
+                <ul class="view_type">
+                  <!-- 버튼 비활성화시 off클래스 사용 -->
+                  <li>
+                    <a
+                      href="#naris"
+                      class="btn_view01"
+                      title="이미지상세보기"
+                      id="detailImagebtn"
+                      ><span class="blind">이미지상세보기</span></a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <!-- //photo_area -->
+              <!-- summury_info -->
+              <div class="summury_info">
+                <!-- info_list -->
+                <dl class="info_cont">
+                  <dt>표본번호</dt>
+                  <dd>NSMK_SMPL_000000000372191</dd>
+                  <dt>DB번호</dt>
+                  <dd>NSMK-PI-0158930</dd>
+                  <dt>학명</dt>
+                  <dd>
+                    <span style="font-style: italic">Zacco</span>
+                    <span style="font-style: italic"> platypus</span>
+                    (Temminck And Schlegel, 1846
+                  </dd>
+                  <dt>국명</dt>
+                  <dd>피라미</dd>
+                  <dt>소장기관</dt>
+                  <dd>국립중앙과학관</dd>
+                  <dt>동정자</dt>
+                  <dd>한정호</dd>
+                  <dt>동정일자</dt>
+                  <dd>2015-07-30</dd>
+                  <dt>채집일자</dt>
+                  <dd>2014-10-14</dd>
+                  <dt>채집자</dt>
+                  <dd>한정호, 고대근</dd>
+                  <dt>채집지</dt>
+                  <dd>경남 남해군 서면 정포리</dd>
+                </dl>
+              </div>
+              <!-- //summury_info -->
+            </div>
+            <div class="sec_barcode">
+              <!-- barcode_info -->
+              <div class="barcode_info">
+                <!-- info_list -->
+                <dl class="info_cont">
+                  <dt>Foward 명</dt>
+                  <dd>LCO1490</dd>
+                  <dt>Foward 서열</dt>
+                  <dd>GTCAACAAATCATAAAGATATTGG</dd>
+                  <dt>Reverse 명</dt>
+                  <dd>HCO2198</dd>
+                  <dt>Reverse 서열</dt>
+                  <dd>TAAACTTCAGGGTGACCAAAAAATCA</dd>
+                  <dt>핵산서열</dt>
+                  <dd class="barcode_img">
+                    <img
+                      src="./resources/srvc/images-new/contents/sample_img_dna.png"
+                      alt=""
+                      class="thum"
+                    />
+                  </dd>
+                </dl>
+              </div>
+              <!-- //barcode_info -->
+            </div>
+          </div>
+          <!-- //pop_specimen_view -->
+        </div>
+        <!-- //pop_container -->
+      </div>
+      <!-- //pop_layer -->
+    </div>
+  </body>
+</html>

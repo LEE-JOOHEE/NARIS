@@ -1,0 +1,1595 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>국가자연사 연구종합정보 시스템(영상&지식 개발서)</title>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/common.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-gnb.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-footer.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/datepicker.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-main.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-popup.css"
+      media="all"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/contents.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/layout.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/table.css"
+      media="all"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/response.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/custom-ui.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/jquery.ui.custom.naris.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/cmmn/css/lightgallery/lightgallery.css"
+      media="all"
+    />
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="./resources/favicon-multi.ico"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="./resources/favicon-152.png"
+    />
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/2.2.4/jquery-2.2.4.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/easing/jquery-easing.1.3.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/slick/slick.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/waypoints/waypoints.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/counter/counter.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/gray/jquery.gray.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery-ui.js"
+    ></script>
+    <script type="text/javascript" src="./resources/srvc/js/ui.js"></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/srvc/js/searchQuery.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery.validate.js"
+    ></script>
+    <script type="text/javascript" src="./resources/cmmn/js/common.js"></script>
+    <script
+      type="text/javascript"
+      src="./resources/srvc/js/jquery.modalLayer.custom.response.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lightgallery.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-thumbnail.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-fullscreen.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-zoom.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-autoplay.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery.blockUI.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery.cookie.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/iscroll/iscroll.js"
+    ></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        // 퍼블리싱용 공통 헤더ㆍ푸터 블라오기
+        $("#headers").load("header.html");
+        $("#footers").load("footer.html");
+
+        // SNS 공유 visibility
+        const togBtn = document.getElementById("snsShare");
+        const list = document.getElementById("shareList");
+        togBtn.addEventListener("click", function () {
+          list.classList.toggle("visible");
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- skipNav -->
+      <div id="skipnavi">
+        <a href="#container">본문바로가기</a>
+      </div>
+      <!-- //skipNav -->
+
+      <div id="headers"></div>
+
+      <!-- container -->
+      <div id="container">
+        <!-- depth_location -->
+        <div class="depth_location-new">
+          <div class="location_hero">
+            <button
+              type="button"
+              class="home"
+              onclick="javascript:location.href='/index.html';"
+            >
+              <span>홈</span>
+            </button>
+            <button type="button" class="depth depth1">1뎁스명</button>
+            <button type="button" class="depth depth2">2뎁스명</button>
+
+            <article class="share-area">
+              <button title="공유하기" type="button" id="snsShare">
+                <img src="./resources/srvc/images-new/common/icon_share.svg" />
+              </button>
+              <ul id="shareList" class="share-list">
+                <li>
+                  <button type="button" title="블로그 공유 새창 열림">
+                    <img
+                      src="./resources/srvc/images-new/common/icon_share_01.svg"
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button type="button" title="유튜브 공유 새창 열림">
+                    <img
+                      src="./resources/srvc/images-new/common/icon_share_02.svg"
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button type="button" title="인스타그램 공유 새창 열림">
+                    <img
+                      src="./resources/srvc/images-new/common/icon_share_03.svg"
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button type="button" title="카카오채널 공유 새창 열림">
+                    <img
+                      src="./resources/srvc/images-new/common/icon_share_04.svg"
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button type="button" title="트위터 공유 새창 열림">
+                    <img
+                      src="./resources/srvc/images-new/common/icon_share_05.svg"
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button type="button" title="페이스북 공유 새창 열림">
+                    <img
+                      src="./resources/srvc/images-new/common/icon_share_06.svg"
+                    />
+                  </button>
+                </li>
+              </ul>
+              <button
+                title="화면 프린트"
+                type="button"
+                onclick="javascript:window.print();"
+              >
+                <img src="./resources/srvc/images-new/common/icon_print.svg" />
+              </button>
+              <button title="이 컨텐츠 주소복사" type="button">
+                <img src="./resources/srvc/images-new/common/icon_url.svg" />
+              </button>
+            </article>
+          </div>
+        </div>
+        <!-- //depth_location -->
+
+        <!-- 페이지 큰 타이틀 -->
+        <article class="page-title">
+          <div class="inner">
+            <h2 class="tit"><span>영상&지식 개발서</span></h2>
+          </div>
+        </article>
+        <!-- //페이지 큰 타이틀 -->
+
+        <!-- scontents -->
+        <div id="scontents">
+          <form
+            id="boardSrvcVO"
+            name="boardSrvcVO"
+            action="/pubmtl/selectBoardList.do"
+            method="post"
+          >
+            <input id="pageIndex" name="pageIndex" type="hidden" value="1" />
+            <input
+              id="bbsId"
+              name="bbsId"
+              type="hidden"
+              value="BBSMSTR0000000000004"
+            />
+            <input id="insttCd" name="insttCd" type="hidden" value="" />
+            <input id="registDate" name="registDate" type="hidden" value="" />
+            <input id="nttNo" name="nttNo" type="hidden" value="" />
+            <div class="scontents_inner etc">
+              <!-- 개발자 컨텐츠 영역 -->
+              <div class="resources_search">
+                <!-- search_side -->
+                <div class="search_side">
+                  <!-- side_tit -->
+                  <div class="side_tit">
+                    <h3 class="tit">자료검색</h3>
+
+                    <!-- 모바일 사이즈에서 활성화 -->
+                    <button
+                      type="button"
+                      class="respon_tit"
+                      aria-taret="board-search-form"
+                    >
+                      <span>자료검색</span>
+                    </button>
+                  </div>
+
+                  <!-- side_form -->
+                  <div class="side_form" id="board-search-form">
+                    <!-- form_area -->
+                    <div class="form_area">
+                      <!-- 등록기관 -->
+                      <dl class="col">
+                        <dt>등록기관</dt>
+                        <dd>
+                          <!-- search_inner -->
+                          <div class="search_inner">
+                            <!-- select_normal -->
+                            <div class="select_normal spider">
+                              <select id="searchInsttCd" name="searchInsttCd">
+                                <option value="" selected="selected">
+                                  -전체-
+                                </option>
+                                <option value="ASJK">전남해양수산과학관</option>
+                                <option value="CEER">㈜한국생태네트워크</option>
+                                <option value="CNPD">충남도청</option>
+                                <option value="CNU">충남대학교</option>
+                                <option value="DNSM">국립대구과학관</option>
+                                <option value="DRIB">
+                                  다살이생물자원연구소
+                                </option>
+                                <option value="ENHM">
+                                  이화여자대학교 자연사박물관
+                                </option>
+                                <option value="GCSM">국립과천과학관</option>
+                                <option value="GFEI">경남산림환경연구원</option>
+                                <option value="GFRI">
+                                  경기도수산해양자원연구소
+                                </option>
+                                <option value="GMBO">군산철새연구소</option>
+                                <option value="GNHM">한국자연사박물관</option>
+                                <option value="GNWP">
+                                  전라남도 완도수목원
+                                </option>
+                                <option value="HBBG">
+                                  대전광역시 한밭수목원
+                                </option>
+                                <option value="HHNR">
+                                  한화 해양생물연구센터
+                                </option>
+                                <option value="HUNM">
+                                  한남대학교 자연사박물관
+                                </option>
+                                <option value="IBMRC">해외생물소재센터</option>
+                                <option value="IJIB">인제곤충바이오센터</option>
+                                <option value="JBRI">
+                                  제주테크노파크 생물종다양성연구소
+                                </option>
+                                <option value="JJHA">
+                                  제주자치시도 세계유산본부(한라수목원)
+                                </option>
+                                <option value="JNHM">
+                                  제주특별자치도 민속자연사박물관
+                                </option>
+                                <option value="KIBS">한국동굴생물연구소</option>
+                                <option value="KIDR">
+                                  한국과학기술정보연구원
+                                </option>
+                                <option value="KIEE">한국환경생태연구소</option>
+                                <option value="KIWE">
+                                  한국수자원공사K-water연구원
+                                </option>
+                                <option value="KNAM">국립수목원</option>
+                                <option value="KNUN">
+                                  경북대학교자연사박물관
+                                </option>
+                                <option value="KOBG">한국자생식물원</option>
+                                <option value="MJIN">무주곤충박물관</option>
+                                <option value="MMNH">몽골자연사박물관</option>
+                                <option value="MNHM">목포자연사박물관</option>
+                                <option value="NHCA">
+                                  국립문화재연구소 천연기념물센터
+                                </option>
+                                <option value="NHMC">
+                                  충남대학교 자연사박물관
+                                </option>
+                                <option value="NHMK">
+                                  경희대학교자연사박물관
+                                </option>
+                                <option value="NIE">국립생태원</option>
+                                <option value="NIFS">
+                                  국립산림과학원 난대・아열대산림연구소
+                                </option>
+                                <option value="NMNO">
+                                  별새꽃돌자연탐사과학관
+                                </option>
+                                <option value="NSMK">국립중앙과학관</option>
+                                <option value="SJNA">국립세종수목원</option>
+                                <option value="SMNH">서대문자연사박물관</option>
+                                <option value="SSNH">
+                                  성신여자대학교 자연사박물관
+                                </option>
+                                <option value="UWEP">우포늪생태관</option>
+                                <option value="WSHN">우석헌자연사박물관</option>
+                                <option value="YCEM">영월동굴생태관</option>
+                                <option value="YPIM">양평곤충박물관</option>
+                              </select>
+                              <label for="searchAgency" class="blind"
+                                >기관 선택</label
+                              >
+                            </div>
+                            <!-- //select_normal -->
+                          </div>
+                          <!-- //search_inner -->
+                        </dd>
+                      </dl>
+
+                      <!-- 달력 : 새로운 디자인 -->
+                      <!-- KRDS 가이드라인 中 달력(Date Range) 마크업 기준으로 작성하였습니다. -->
+                      <!-- 참고 : https://uiux.egovframe.go.kr/guide/component/component_04_03.html -->
+                      <!-- ui.js : datepicker 부분 추가하였습니다. (기능 개발 필요합니다.) -->
+                      <dl class="col">
+                        <!-- 등록기간 -->
+                        <dt>등록기간</dt>
+                        <dd>
+                          <div class="form-group">
+                            <div class="form-conts datepicker-conts">
+                              <div class="datepicker-input">
+                                <ul class="input-group range set">
+                                  <li>
+                                    <input
+                                      type="text"
+                                      class="form-control datepicker"
+                                      placeholder="YYYY-MM-DD"
+                                    />
+                                  </li>
+                                  <li class="mark">~</li>
+                                  <li>
+                                    <input
+                                      type="text"
+                                      class="form-control datepicker"
+                                      placeholder="YYYY-MM-DD"
+                                    />
+                                  </li>
+                                  <li>
+                                    <button
+                                      type="button"
+                                      class="form-btn-datepicker"
+                                    >
+                                      <span class="sr-only"></span>
+                                    </button>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="datepicker-area range">
+                                <div
+                                  class="datepicker-wrap bottom"
+                                  aria-hidden="true"
+                                  tabindex="-1"
+                                >
+                                  <div class="datepicker-head">
+                                    <button
+                                      type="button"
+                                      class="btn-cal-move prev"
+                                    >
+                                      <span class="sr-only">
+                                        <!-- 이전 달 -->
+                                      </span>
+                                    </button>
+                                    <div class="datepicker-switch-wrap">
+                                      <button
+                                        type="button"
+                                        class="btn-cal-switch year"
+                                      >
+                                        2023년
+                                      </button>
+                                      <button
+                                        type="button"
+                                        class="btn-cal-switch month"
+                                      >
+                                        12월
+                                      </button>
+                                    </div>
+                                    <button
+                                      type="button"
+                                      class="btn-cal-move next"
+                                    >
+                                      <span class="sr-only">
+                                        <!-- 다음 달 -->
+                                      </span>
+                                    </button>
+                                  </div>
+                                  <div class="datepicker-body">
+                                    <div
+                                      class="datepicker-conts datepicker-tbl-wrap"
+                                      aria-hidden="true"
+                                      tabindex="-1"
+                                    >
+                                      <table class="datepicker-tbl">
+                                        <thead>
+                                          <tr>
+                                            <th>Su</th>
+                                            <th>Mo</th>
+                                            <th>Tu</th>
+                                            <th>We</th>
+                                            <th>Th</th>
+                                            <th>Fr</th>
+                                            <th>Sa</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td class="old">
+                                              <button
+                                                type="button"
+                                                class="btn-set-date"
+                                              >
+                                                26
+                                              </button>
+                                            </td>
+                                            <td class="old">
+                                              <button
+                                                type="button"
+                                                class="btn-set-date"
+                                              >
+                                                27
+                                              </button>
+                                            </td>
+                                            <td class="old">
+                                              <button
+                                                type="button"
+                                                class="btn-set-date"
+                                              >
+                                                28
+                                              </button>
+                                            </td>
+                                            <td class="old">
+                                              <button
+                                                type="button"
+                                                class="btn-set-date"
+                                              >
+                                                29
+                                              </button>
+                                            </td>
+                                            <td class="old">
+                                              <button
+                                                type="button"
+                                                class="btn-set-date"
+                                              >
+                                                30
+                                              </button>
+                                            </td>
+                                            <td>
+                                              <button
+                                                type="button"
+                                                class="btn-set-date"
+                                              >
+                                                1
+                                              </button>
+                                            </td>
+                                            <td>
+                                              <button
+                                                type="button"
+                                                class="btn-set-date"
+                                              >
+                                                2
+                                              </button>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                              <button
+                                                type="button"
+                                                class="btn-set-date"
+                                              >
+                                                3
+                                              </button>
+                                            </td>
+                                            <td>
+                                              <button
+                                                type="button"
+                                                class="btn-set-date"
+                                              >
+                                                4
+                                              </button>
+                                            </td>
+                                            <td>
+                                              <button
+                                                type="button"
+                                                class="btn-set-date"
+                                              >
+                                                5
+                                              </button>
+                                            </td>
+                                            <td>
+                                              <button
+                                                type="button"
+                                                class="btn-set-date"
+                                              >
+                                                6
+                                              </button>
+                                            </td>
+                                            <td class="period start">
+                                              <button
+                                                type="button"
+                                                class="btn-set-date"
+                                              >
+                                                7
+                                              </button>
+                                            </td>
+                                            <td class="period">
+                                              <button
+                                                type="button"
+                                                class="btn-set-date"
+                                              >
+                                                8
+                                              </button>
+                                            </td>
+                                            <td class="period">
+                                              <button
+                                                type="button"
+                                                class="btn-set-date"
+                                              >
+                                                9
+                                              </button>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td class="period">
+                                              <button
+                                                type="button"
+                                                class="btn-set-date"
+                                              >
+                                                10
+                                              </button>
+                                            </td>
+                                            <td class="period">
+                                              <button
+                                                type="button"
+                                                class="btn-set-date"
+                                              >
+                                                11
+                                              </button>
+                                            </td>
+                                            <td class="period">
+                                              <button
+                                                type="button"
+                                                class="btn-set-date"
+                                              >
+                                                12
+                                              </button>
+                                            </td>
+                                            <td class="period">
+                                              <button
+                                                type="button"
+                                                class="btn-set-date"
+                                              >
+                                                13
+                                              </button>
+                                            </td>
+                                            <td class="period">
+                                              <button
+                                                type="button"
+                                                class="btn-set-date"
+                                              >
+                                                14
+                                              </button>
+                                            </td>
+                                            <td class="period">
+                                              <button
+                                                type="button"
+                                                class="btn-set-date"
+                                              >
+                                                15
+                                              </button>
+                                            </td>
+                                            <td class="period end">
+                                              <button
+                                                type="button"
+                                                class="btn-set-date"
+                                              >
+                                                16
+                                              </button>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                              <button
+                                                type="button"
+                                                class="btn-set-date"
+                                              >
+                                                17
+                                              </button>
+                                            </td>
+                                            <td>
+                                              <button
+                                                type="button"
+                                                class="btn-set-date"
+                                              >
+                                                18
+                                              </button>
+                                            </td>
+                                            <td>
+                                              <button
+                                                type="button"
+                                                class="btn-set-date"
+                                              >
+                                                19
+                                              </button>
+                                            </td>
+                                            <td>
+                                              <button
+                                                type="button"
+                                                class="btn-set-date"
+                                              >
+                                                20
+                                              </button>
+                                            </td>
+                                            <td>
+                                              <button
+                                                type="button"
+                                                class="btn-set-date"
+                                              >
+                                                21
+                                              </button>
+                                            </td>
+                                            <td>
+                                              <button
+                                                type="button"
+                                                class="btn-set-date"
+                                              >
+                                                22
+                                              </button>
+                                            </td>
+                                            <td>
+                                              <button
+                                                type="button"
+                                                class="btn-set-date"
+                                              >
+                                                23
+                                              </button>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                              <button
+                                                type="button"
+                                                class="btn-set-date"
+                                              >
+                                                24
+                                              </button>
+                                            </td>
+                                            <td>
+                                              <button
+                                                type="button"
+                                                class="btn-set-date"
+                                              >
+                                                25
+                                              </button>
+                                            </td>
+                                            <td>
+                                              <button
+                                                type="button"
+                                                class="btn-set-date"
+                                              >
+                                                26
+                                              </button>
+                                            </td>
+                                            <td>
+                                              <button
+                                                type="button"
+                                                class="btn-set-date"
+                                              >
+                                                27
+                                              </button>
+                                            </td>
+                                            <td>
+                                              <button
+                                                type="button"
+                                                class="btn-set-date"
+                                              >
+                                                28
+                                              </button>
+                                            </td>
+                                            <td>
+                                              <button
+                                                type="button"
+                                                class="btn-set-date"
+                                              >
+                                                29
+                                              </button>
+                                            </td>
+                                            <td>
+                                              <button
+                                                type="button"
+                                                class="btn-set-date"
+                                              >
+                                                30
+                                              </button>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                              <button
+                                                type="button"
+                                                class="btn-set-date"
+                                              >
+                                                31
+                                              </button>
+                                            </td>
+                                            <td class="new">
+                                              <button
+                                                type="button"
+                                                class="btn-set-date"
+                                              >
+                                                1
+                                              </button>
+                                            </td>
+                                            <td class="new">
+                                              <button
+                                                type="button"
+                                                class="btn-set-date"
+                                              >
+                                                2
+                                              </button>
+                                            </td>
+                                            <td class="new">
+                                              <button
+                                                type="button"
+                                                class="btn-set-date"
+                                              >
+                                                3
+                                              </button>
+                                            </td>
+                                            <td class="new">
+                                              <button
+                                                type="button"
+                                                class="btn-set-date"
+                                              >
+                                                4
+                                              </button>
+                                            </td>
+                                            <td class="new">
+                                              <button
+                                                type="button"
+                                                class="btn-set-date"
+                                              >
+                                                5
+                                              </button>
+                                            </td>
+                                            <td class="new">
+                                              <button
+                                                type="button"
+                                                class="btn-set-date"
+                                              >
+                                                6
+                                              </button>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                      <div class="datepicker-btn-wrap">
+                                        <button
+                                          type="button"
+                                          class="btn tertiary sm"
+                                        >
+                                          취소
+                                        </button>
+                                        <button
+                                          type="button"
+                                          class="btn primary sm"
+                                        >
+                                          확인
+                                        </button>
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="datepicker-conts datepicker-year-wrap"
+                                      aria-hidden="true"
+                                      tabindex="-1"
+                                    >
+                                      <ul class="sel year">
+                                        <li>
+                                          <button type="button" class="btn sm">
+                                            2001
+                                          </button>
+                                        </li>
+                                        <li>
+                                          <button
+                                            type="button"
+                                            class="btn sm active"
+                                          >
+                                            2002
+                                          </button>
+                                        </li>
+                                        <li>
+                                          <button type="button" class="btn sm">
+                                            2003
+                                          </button>
+                                        </li>
+                                        <li>
+                                          <button type="button" class="btn sm">
+                                            2004
+                                          </button>
+                                        </li>
+                                        <li>
+                                          <button type="button" class="btn sm">
+                                            2005
+                                          </button>
+                                        </li>
+                                        <li>
+                                          <button type="button" class="btn sm">
+                                            2006
+                                          </button>
+                                        </li>
+                                        <li>
+                                          <button type="button" class="btn sm">
+                                            2007
+                                          </button>
+                                        </li>
+                                        <li>
+                                          <button type="button" class="btn sm">
+                                            2008
+                                          </button>
+                                        </li>
+                                        <li>
+                                          <button type="button" class="btn sm">
+                                            2009
+                                          </button>
+                                        </li>
+                                        <li>
+                                          <button type="button" class="btn sm">
+                                            2010
+                                          </button>
+                                        </li>
+                                        <li>
+                                          <button type="button" class="btn sm">
+                                            2011
+                                          </button>
+                                        </li>
+                                        <li>
+                                          <button type="button" class="btn sm">
+                                            2012
+                                          </button>
+                                        </li>
+                                        <li>
+                                          <button type="button" class="btn sm">
+                                            2013
+                                          </button>
+                                        </li>
+                                        <li>
+                                          <button type="button" class="btn sm">
+                                            2014
+                                          </button>
+                                        </li>
+                                        <li>
+                                          <button type="button" class="btn sm">
+                                            2015
+                                          </button>
+                                        </li>
+                                        <li>
+                                          <button type="button" class="btn sm">
+                                            2016
+                                          </button>
+                                        </li>
+                                        <li>
+                                          <button type="button" class="btn sm">
+                                            2017
+                                          </button>
+                                        </li>
+                                        <li>
+                                          <button type="button" class="btn sm">
+                                            2018
+                                          </button>
+                                        </li>
+                                        <li>
+                                          <button type="button" class="btn sm">
+                                            2019
+                                          </button>
+                                        </li>
+                                        <li>
+                                          <button type="button" class="btn sm">
+                                            2020
+                                          </button>
+                                        </li>
+                                        <li>
+                                          <button type="button" class="btn sm">
+                                            2021
+                                          </button>
+                                        </li>
+                                        <li>
+                                          <button type="button" class="btn sm">
+                                            2022
+                                          </button>
+                                        </li>
+                                        <li>
+                                          <button type="button" class="btn sm">
+                                            2023
+                                          </button>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                    <div
+                                      class="datepicker-conts datepicker-mon-wrap"
+                                      aria-hidden="true"
+                                      tabindex="-1"
+                                    >
+                                      <ul class="sel month">
+                                        <li>
+                                          <button type="button" class="btn sm">
+                                            01월
+                                          </button>
+                                        </li>
+                                        <li>
+                                          <button type="button" class="btn sm">
+                                            02월
+                                          </button>
+                                        </li>
+                                        <li>
+                                          <button type="button" class="btn sm">
+                                            03월
+                                          </button>
+                                        </li>
+                                        <li>
+                                          <button
+                                            type="button"
+                                            class="btn sm active"
+                                          >
+                                            04월
+                                          </button>
+                                        </li>
+                                        <li>
+                                          <button type="button" class="btn sm">
+                                            05월
+                                          </button>
+                                        </li>
+                                        <li>
+                                          <button type="button" class="btn sm">
+                                            06월
+                                          </button>
+                                        </li>
+                                        <li>
+                                          <button type="button" class="btn sm">
+                                            07월
+                                          </button>
+                                        </li>
+                                        <li>
+                                          <button type="button" class="btn sm">
+                                            08월
+                                          </button>
+                                        </li>
+                                        <li>
+                                          <button type="button" class="btn sm">
+                                            09월
+                                          </button>
+                                        </li>
+                                        <li>
+                                          <button type="button" class="btn sm">
+                                            10월
+                                          </button>
+                                        </li>
+                                        <li>
+                                          <button type="button" class="btn sm">
+                                            11월
+                                          </button>
+                                        </li>
+                                        <li>
+                                          <button type="button" class="btn sm">
+                                            12월
+                                          </button>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </dd>
+                      </dl>
+
+                      <!-- 검색조건 -->
+                      <dl class="col">
+                        <dt>검색조건</dt>
+                        <dd>
+                          <!-- search_inner -->
+                          <div class="search_inner">
+                            <!-- select_normal -->
+                            <div class="select_normal spider mgb10">
+                              <select
+                                id="searchCondition"
+                                name="searchCondition"
+                              >
+                                <option value="">-전체-</option>
+                                <option value="1">작성자</option>
+                                <option value="2">제목</option>
+                                <option value="3">내용</option>
+                                <option value="4">제목+내용</option>
+                              </select>
+                              <label for="searchType" class="blind"
+                                >검색조건 분류 선택</label
+                              >
+                            </div>
+                            <!-- //select_normal -->
+
+                            <!-- inputxt_normal -->
+                            <div class="inputxt_normal spider">
+                              <input
+                                id="searchKeyword"
+                                name="searchKeyword"
+                                onkeypress="if(event.keyCode==13){fn_search(`&#39;1&#39;`);};"
+                                type="text"
+                                value=""
+                              />
+                              <label for="searchTypetxt" class="blind"
+                                >검색조건 입력</label
+                              >
+                            </div>
+                            <!-- //inputxt_normal -->
+                          </div>
+                          <!-- //search_inner -->
+                        </dd>
+                      </dl>
+
+                      <!-- func_btn -->
+                      <div class="func_btn">
+                        <div class="btn_l">
+                          <button
+                            type="button"
+                            class="btn_white spider"
+                            id="searchresetbtn"
+                          >
+                            <span class="reset">초기화</span>
+                          </button>
+                        </div>
+                        <div class="btn_r">
+                          <button
+                            type="button"
+                            class="btn_primary spider"
+                            id="searchbtn"
+                          >
+                            <span class="search">검색</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- //form_area -->
+                  </div>
+                  <!-- //side_form -->
+                </div>
+                <!-- //search_side -->
+
+                <!-- search_list -->
+                <div class="search_list">
+                  <!-- list_result -->
+                  <div class="list_result mgb00">
+                    <!-- total_area -->
+                    <!-- <div class="total_area">정보 검색 <span>66</span> 건</div> -->
+                    <div class="flex-row_center gap50">
+                      <div class="total_area">
+                        전체<span class="mgl10 mgr05">25</span>건
+                      </div>
+                      <div class="total_area">
+                        <span class="mgr05">1 / 3</span>페이지
+                      </div>
+                      <div class="total_area">
+                        단위 : <span class="mgl05 mgr05">10</span>건
+                      </div>
+                    </div>
+
+                    <!-- search_area -->
+                    <div class="search_area">
+                      <label for="listNums" class="sel_tit"
+                        ><span>목록개수</span></label
+                      >
+                      <!-- select -->
+                      <div class="select_normal wid100">
+                        <select
+                          id="recordCountPerPage"
+                          name="recordCountPerPage"
+                        >
+                          <option value="10" selected="selected">10</option>
+                          <option value="20">20</option>
+                          <option value="40">40</option>
+                          <option value="60">60</option>
+                          <option value="100">100</option>
+                        </select>
+                      </div>
+                    </div>
+                    <!-- //search_area -->
+                  </div>
+                  <!-- //list_result -->
+
+                  <!-- board_list -->
+                  <div class="board_list" id="data_table">
+                    <ul>
+                      <!-- list_0 -->
+                      <li>
+                        <!-- inner_box -->
+                        <a
+                          href="#naris"
+                          class="inner_box"
+                          onclick="javascript:fn_selectInfo('BBSMSTR0000000000004','PUBMTL00000000000027','NSMK');"
+                        >
+                          <!-- post_num -->
+                          <span class="post_num">1</span>
+
+                          <div class="flex-col_flex-stretch flex-1">
+                            <!-- post_tit -->
+                            <div class="post_tit">
+                              <strong class="tit"
+                                >2023년 국가생물다양성기관연합 공동학술조사
+                                보고서 "제주 곶자왈 일대의 생물다양성"</strong
+                              >
+                            </div>
+
+                            <!-- post_opt -->
+                            <dl class="post_opt">
+                              <dt>등록기관</dt>
+                              <dd>국립중앙과학관</dd>
+                              <dt>등록자</dt>
+                              <dd>관리자</dd>
+                              <dt>등록일자</dt>
+                              <dd>2024-08-08</dd>
+                            </dl>
+                          </div>
+                        </a>
+                        <!-- //inner_box -->
+                      </li>
+                      <!-- //list_0 -->
+
+                      <!-- list_1 -->
+                      <li>
+                        <!-- inner_box -->
+                        <a
+                          href="#naris"
+                          class="inner_box"
+                          onclick="javascript:fn_selectInfo('BBSMSTR0000000000004','PUBMTL00000000000026','NSMK');"
+                        >
+                          <!-- post_num -->
+                          <span class="post_num">2</span>
+
+                          <div class="flex-col_flex-stretch flex-1">
+                            <!-- post_tit -->
+                            <div class="post_tit">
+                              <strong class="tit"
+                                >국립중앙과학관 자연사자원 조사연구 "무주군의
+                                생물다양성"</strong
+                              >
+                            </div>
+
+                            <!-- post_opt -->
+                            <dl class="post_opt">
+                              <dt>등록기관</dt>
+                              <dd>국립중앙과학관</dd>
+                              <dt>등록자</dt>
+                              <dd>관리자</dd>
+                              <dt>등록일자</dt>
+                              <dd>2024-05-17</dd>
+                            </dl>
+                          </div>
+                        </a>
+                        <!-- //inner_box -->
+                      </li>
+                      <!-- //list_1 -->
+
+                      <!-- list_2 -->
+                      <li>
+                        <!-- inner_box -->
+                        <a
+                          href="./selectBoardInfo(pubmtl).html"
+                          class="inner_box"
+                          onclick="javascript:fn_selectInfo('BBSMSTR0000000000004','PUBMTL00000000000024','NSMK');"
+                        >
+                          <!-- post_num -->
+                          <span class="post_num">3</span>
+
+                          <div class="flex-col_flex-stretch flex-1">
+                            <!-- post_tit -->
+                            <div class="post_tit">
+                              <strong class="tit"
+                                >(**상세보기 샘플 클릭**)천연기념물·자연사자원
+                                조사 연구 제주 동부지역의 생물다양성 -
+                                성산일출봉, 비자림, 식산봉, 하도리 -
+                              </strong>
+                            </div>
+
+                            <!-- post_opt -->
+                            <dl class="post_opt">
+                              <dt>등록기관</dt>
+                              <dd>국립중앙과학관</dd>
+                              <dt>등록자</dt>
+                              <dd>관리자</dd>
+                              <dt>등록일자</dt>
+                              <dd>2024-01-16</dd>
+                            </dl>
+                          </div>
+                        </a>
+                        <!-- //inner_box -->
+                      </li>
+                      <!-- //list_2 -->
+
+                      <!-- list_3 -->
+                      <li>
+                        <!-- inner_box -->
+                        <a
+                          href="#naris"
+                          class="inner_box"
+                          onclick="javascript:fn_selectInfo('BBSMSTR0000000000004','PUBMTL00000000000023','NSMK');"
+                        >
+                          <!-- post_num -->
+                          <span class="post_num">4</span>
+
+                          <div class="flex-col_flex-stretch flex-1">
+                            <!-- post_tit -->
+                            <div class="post_tit">
+                              <strong class="tit">Science Review No.10</strong>
+                            </div>
+
+                            <!-- post_opt -->
+                            <dl class="post_opt">
+                              <dt>등록기관</dt>
+                              <dd>국립중앙과학관</dd>
+                              <dt>등록자</dt>
+                              <dd>관리자</dd>
+                              <dt>등록일자</dt>
+                              <dd>2024-01-16</dd>
+                            </dl>
+                          </div>
+                        </a>
+                        <!-- //inner_box -->
+                      </li>
+                      <!-- //list_3 -->
+
+                      <!-- list_4 -->
+                      <li>
+                        <!-- inner_box -->
+                        <a
+                          href="#naris"
+                          class="inner_box"
+                          onclick="javascript:fn_selectInfo('BBSMSTR0000000000004','PUBMTL00000000000025','NSMK');"
+                        >
+                          <!-- post_num -->
+                          <span class="post_num">5</span>
+
+                          <div class="flex-col_flex-stretch flex-1">
+                            <!-- post_tit -->
+                            <div class="post_tit">
+                              <strong class="tit"
+                                >국립중앙과학관 자연사자원 조사연구
+                                "덕산도립공원의 생물다양성"</strong
+                              >
+                            </div>
+
+                            <!-- post_opt -->
+                            <dl class="post_opt">
+                              <dt>등록기관</dt>
+                              <dd>국립중앙과학관</dd>
+                              <dt>등록자</dt>
+                              <dd>관리자</dd>
+                              <dt>등록일자</dt>
+                              <dd>2024-01-09</dd>
+                            </dl>
+                          </div>
+                        </a>
+                        <!-- //inner_box -->
+                      </li>
+                      <!-- //list_4 -->
+
+                      <!-- list_5 -->
+                      <li>
+                        <!-- inner_box -->
+                        <a
+                          href="#naris"
+                          class="inner_box"
+                          onclick="javascript:fn_selectInfo('BBSMSTR0000000000004','PUBMTL00000000000022','NSMK');"
+                        >
+                          <!-- post_num -->
+                          <span class="post_num">6</span>
+
+                          <div class="flex-col_flex-stretch flex-1">
+                            <!-- post_tit -->
+                            <div class="post_tit">
+                              <strong class="tit"
+                                >2022년 국가생물다양성기관연합 공동학술조사
+                                보고서 "경상북도 울릉군일대의
+                                생물다양성"</strong
+                              >
+                            </div>
+
+                            <!-- post_opt -->
+                            <dl class="post_opt">
+                              <dt>등록기관</dt>
+                              <dd>국립중앙과학관</dd>
+                              <dt>등록자</dt>
+                              <dd>관리자</dd>
+                              <dt>등록일자</dt>
+                              <dd>2023-08-03</dd>
+                            </dl>
+                          </div>
+                        </a>
+                        <!-- //inner_box -->
+                      </li>
+                      <!-- //list_5 -->
+
+                      <!-- list_6 -->
+                      <li>
+                        <!-- inner_box -->
+                        <a
+                          href="#naris"
+                          class="inner_box"
+                          onclick="javascript:fn_selectInfo('BBSMSTR0000000000004','PUBMTL00000000000021','NSMK');"
+                        >
+                          <!-- post_num -->
+                          <span class="post_num">7</span>
+
+                          <div class="flex-col_flex-stretch flex-1">
+                            <!-- post_tit -->
+                            <div class="post_tit">
+                              <strong class="tit"
+                                >2021년 국가생물다양성기관연합 공동학술조사
+                                보고서 "전라남도 신안군일대의
+                                생물다양성"</strong
+                              >
+                            </div>
+
+                            <!-- post_opt -->
+                            <dl class="post_opt">
+                              <dt>등록기관</dt>
+                              <dd>국립중앙과학관</dd>
+                              <dt>등록자</dt>
+                              <dd>관리자</dd>
+                              <dt>등록일자</dt>
+                              <dd>2023-08-03</dd>
+                            </dl>
+                          </div>
+                        </a>
+                        <!-- //inner_box -->
+                      </li>
+                      <!-- //list_6 -->
+
+                      <!-- list_7 -->
+                      <li>
+                        <!-- inner_box -->
+                        <a
+                          href="#naris"
+                          class="inner_box"
+                          onclick="javascript:fn_selectInfo('BBSMSTR0000000000004','PUBMTL00000000000018','NSMK');"
+                        >
+                          <!-- post_num -->
+                          <span class="post_num">8</span>
+
+                          <div class="flex-col_flex-stretch flex-1">
+                            <!-- post_tit -->
+                            <div class="post_tit">
+                              <strong class="tit">Science Review 2021</strong>
+                            </div>
+
+                            <!-- post_opt -->
+                            <dl class="post_opt">
+                              <dt>등록기관</dt>
+                              <dd>국립중앙과학관</dd>
+                              <dt>등록자</dt>
+                              <dd>관리자</dd>
+                              <dt>등록일자</dt>
+                              <dd>2023-07-14</dd>
+                            </dl>
+                          </div>
+                        </a>
+                        <!-- //inner_box -->
+                      </li>
+                      <!-- //list_7 -->
+
+                      <!-- list_8 -->
+                      <li>
+                        <!-- inner_box -->
+                        <a
+                          href="#naris"
+                          class="inner_box"
+                          onclick="javascript:fn_selectInfo('BBSMSTR0000000000004','PUBMTL00000000000017','NSMK');"
+                        >
+                          <!-- post_num -->
+                          <span class="post_num">9</span>
+
+                          <div class="flex-col_flex-stretch flex-1">
+                            <!-- post_tit -->
+                            <div class="post_tit">
+                              <strong class="tit">Science Review 2020</strong>
+                            </div>
+
+                            <!-- post_opt -->
+                            <dl class="post_opt">
+                              <dt>등록기관</dt>
+                              <dd>국립중앙과학관</dd>
+                              <dt>등록자</dt>
+                              <dd>관리자</dd>
+                              <dt>등록일자</dt>
+                              <dd>2022-11-29</dd>
+                            </dl>
+                          </div>
+                        </a>
+                        <!-- //inner_box -->
+                      </li>
+                      <!-- //list_8 -->
+
+                      <!-- list_9 -->
+                      <li>
+                        <!-- inner_box -->
+                        <a
+                          href="#naris"
+                          class="inner_box"
+                          onclick="javascript:fn_selectInfo('BBSMSTR0000000000004','PUBMTL00000000000016','NSMK');"
+                        >
+                          <!-- post_num -->
+                          <span class="post_num">10</span>
+
+                          <div class="flex-col_flex-stretch flex-1">
+                            <!-- post_tit -->
+                            <div class="post_tit">
+                              <strong class="tit">Science Review 2019</strong>
+                            </div>
+
+                            <!-- post_opt -->
+                            <dl class="post_opt">
+                              <dt>등록기관</dt>
+                              <dd>국립중앙과학관</dd>
+                              <dt>등록자</dt>
+                              <dd>관리자</dd>
+                              <dt>등록일자</dt>
+                              <dd>2022-11-29</dd>
+                            </dl>
+                          </div>
+                        </a>
+                        <!-- //inner_box -->
+                      </li>
+                      <!-- //list_9 -->
+                    </ul>
+                  </div>
+                  <!-- //board_list -->
+
+                  <!-- paging -->
+                  <div class="paging" style="z-index: 0">
+                    <a href="#naris" class="num active" id="page_1"
+                      ><span>1</span></a
+                    >&#160;<a
+                      href="?pageIndex=2"
+                      onclick="fn_search(2);return false;"
+                      id="page_2"
+                      class="num"
+                      ><span>2</span></a
+                    >&#160;<a
+                      href="?pageIndex=3"
+                      onclick="fn_search(3);return false;"
+                      id="page_3"
+                      class="num"
+                      ><span>3</span></a
+                    >
+                  </div>
+                  <!-- //paging -->
+                </div>
+                <!-- //search_list -->
+              </div>
+              <!-- //개발자 컨텐츠 영역 -->
+            </div>
+          </form>
+          <!-- //scontents_inner -->
+        </div>
+        <!-- //scontents -->
+      </div>
+      <!-- //container -->
+    </div>
+    <!-- //wrap -->
+    <div id="footers"></div>
+  </body>
+</html>

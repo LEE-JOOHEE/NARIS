@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DNA바코드정보</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/common.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-gnb.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-footer.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/datepicker.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-main.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-popup.css"
+      media="all"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/contents.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/layout.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/table.css"
+      media="all"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/response.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/custom-ui.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/jquery.ui.custom.naris.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/cmmn/css/lightgallery/lightgallery.css"
+      media="all"
+    />
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="./resources/favicon-multi.ico"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="./resources/favicon-152.png"
+    />
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/2.2.4/jquery-2.2.4.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/easing/jquery-easing.1.3.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/slick/slick.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/waypoints/waypoints.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/counter/counter.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/gray/jquery.gray.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery-ui.js"
+    ></script>
+    <script type="text/javascript" src="./resources/srvc/js/ui.js"></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/srvc/js/searchQuery.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery.validate.js"
+    ></script>
+    <script type="text/javascript" src="./resources/cmmn/js/common.js"></script>
+    <script
+      type="text/javascript"
+      src="./resources/srvc/js/jquery.modalLayer.custom.response.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lightgallery.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-thumbnail.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-fullscreen.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-zoom.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-autoplay.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery.blockUI.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery.cookie.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/iscroll/iscroll.js"
+    ></script>
+  </head>
+  <body>
+    <!-- DNA바코드정보 레이어팝업 -->
+    <div id="brcdDiv" class="layer_wrap" style="display: block">
+      <!-- pop_layer / wid1000은 가로 사이즈 500px (600, 700, 800, 1000으로 사용) -->
+      <div class="pop_layer wid1000">
+        <!-- pop_header -->
+        <div class="pop_header">
+          <h1 class="pop_tit">DNA바코드정보</h1>
+          <a href="#naris" class="pop_close">
+            <span class="blind">닫기</span>
+          </a>
+        </div>
+        <!-- //pop_header -->
+        <!-- pop_container -->
+        <div class="pop_container" id="dna_pop_container">
+          <form
+            id="ormrcDNASearchVO"
+            name="ormrcDNASearchVO"
+            action="/resc/selectSpecsScnmScrhInfoD.do"
+            method="post"
+          >
+            <input
+              type="hidden"
+              name="pageIndex"
+              id="brcdPageIndex"
+              value="1"
+            />
+            <input
+              type="hidden"
+              name="specsEssntId"
+              id="specsEssntId"
+              value="23038"
+            />
+            <input type="hidden" name="smplInfoSeq" id="smplInfoSeq" value="" />
+            <input type="hidden" name="brcdId" id="brcdId" value="" />
+            <!-- pop_specimen_list -->
+            <div class="pop_specimen_list">
+              <!-- specimen_side -->
+              <div class="specimen_side">
+                <!-- side_tit -->
+                <div class="side_tit">
+                  <h3 class="tit">자료검색</h3>
+                  <!-- 모바일 사이즈에서 활성화 -->
+                  <button
+                    type="button"
+                    class="respon_tit"
+                    aria-taret="dna-search-form"
+                  >
+                    <span>자료검색</span>
+                  </button>
+                </div>
+                <!-- side_form -->
+                <div class="side_form" id="dna-search-form">
+                  <!-- form_area -->
+                  <div class="form_area">
+                    <dl>
+                      <!-- 지역별 -->
+                      <dt>지역별</dt>
+                      <dd>
+                        <!-- search_inner -->
+                        <div class="search_inner">
+                          <!-- inputxt_normal -->
+                          <div class="inputxt_normal spider">
+                            <input
+                              type="text"
+                              id="searchArea"
+                              name="searchArea"
+                              value=""
+                              placeholder=""
+                            />
+                            <label for="searchArea" class="blind"
+                              >지역 입력</label
+                            >
+                          </div>
+                          <!-- //inputxt_normal -->
+                        </div>
+                        <!-- //search_inner -->
+                      </dd>
+                      <!-- 연도별 -->
+                      <dt>연도별</dt>
+                      <dd>
+                        <!-- search_inner -->
+                        <div class="search_inner">
+                          <!-- inputxt_normal -->
+                          <div class="inputxt_normal spider">
+                            <input
+                              type="text"
+                              id="searchYear"
+                              name="searchYear"
+                              value=""
+                              placeholder=""
+                              maxlength="4"
+                            />
+                            <label for="searchYear" class="blind"
+                              >연도 입력</label
+                            >
+                          </div>
+                          <!-- //inputxt_normal -->
+                        </div>
+                        <!-- //search_inner -->
+                      </dd>
+                      <!-- 기관별 -->
+                      <dt>기관별</dt>
+                      <dd>
+                        <!-- search_inner -->
+                        <div class="search_inner">
+                          <!-- select_normal -->
+                          <div class="select_normal spider">
+                            <select name="searchInsttCd" id="searchBrcdInsttCd">
+                              <option value="">-선택-</option>
+                              <option value="NSMK">국립중앙과학관</option>
+                            </select>
+                            <label for="searchBrcdInsttCd" class="blind"
+                              >기관 선택</label
+                            >
+                          </div>
+                          <!-- //select_normal -->
+                        </div>
+                        <!-- //search_inner -->
+                      </dd>
+                    </dl>
+                    <!-- func_btn -->
+                    <div class="func_btn">
+                      <div class="btn_l">
+                        <button
+                          type="button"
+                          class="btn_white spider btn-48"
+                          id="dnabrcdsearchresetbtn"
+                        >
+                          <span class="reset">초기화</span>
+                        </button>
+                      </div>
+                      <div class="btn_r">
+                        <button
+                          type="button"
+                          class="btn_primary spider btn-48"
+                          id="dnabrcdsearchbtn"
+                        >
+                          <span class="search">검색</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- //form_area -->
+                </div>
+                <!-- //side_form -->
+              </div>
+              <!-- //specimen_side -->
+              <!-- specimen_list -->
+              <div class="specimen_list" id="brcdPopCont">
+                <!-- specimen_result -->
+                <div class="specimen_result">
+                  <!-- total_area -->
+                  <div class="total_area">총 <span>4</span>건</div>
+                  <!-- search_area -->
+                  <div class="search_area">
+                    <label for="listNums" class="sel_tit">
+                      <span>목록 개수</span>
+                    </label>
+                    <!-- select -->
+                    <div class="select_normal wid100">
+                      <select
+                        name="recordCountPerPage"
+                        id="brcdRecordCountPerPage"
+                        style="width: 120px"
+                      >
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="40">40</option>
+                        <option value="60">60</option>
+                        <option value="100">100</option>
+                      </select>
+                    </div>
+                  </div>
+                  <!-- //search_area -->
+                </div>
+                <!-- //specimen_result -->
+
+                <!-- specimen_list_ty1 (데이터 없을때) -->
+                <div
+                  class="specimen_list_ty1 nodata"
+                  id="dnadatatable"
+                  style="display: none"
+                >
+                  <ul>
+                    <li>
+                      <div class="nodata-text">해당 데이터가 없습니다.</div>
+                    </li>
+                  </ul>
+                </div>
+                <!-- //specimen_list_ty1 -->
+
+                <!-- specimen_list_ty1 (데이터 있을때) -->
+                <div class="specimen_list_ty1" id="dnadatatable">
+                  <ul>
+                    <li>
+                      <!-- inner_box -->
+                      <a
+                        href="#naris"
+                        class="inner_box"
+                        title=""
+                        id="dna-0-0-BRCD_000000000000905-SMPL_000000000372191"
+                      >
+                        <!-- thum_area -->
+                        <div class="thum_area">
+                          <!-- <img src="" class="thum" alt="대표이미지" /> -->
+                          <img
+                            src="./resources/srvc/images-new/contents/sample_img_1.jpg"
+                            class="thum"
+                            alt="피라미"
+                          />
+                        </div>
+
+                        <strong class="tit">NSMK-PI-0158930</strong>
+                        <ul class="info_data">
+                          <li>피라미</li>
+                          <li>경남 남해군 서면 정포리</li>
+                          <li>2014-10-14 /한정호, 고대근</li>
+                        </ul>
+                        <span class="etc">국립중앙과학관</span>
+                      </a>
+                      <!-- //inner_box -->
+                    </li>
+                  </ul>
+                </div>
+                <!-- //specimen_list_ty1 -->
+
+                <div class="paging mgb30">
+                  <a
+                    href="?pageIndex=1"
+                    onclick="fn_search(1);return false;"
+                    class="ctrl first"
+                    ><span class="blind">First</span></a
+                  >&nbsp;<a
+                    href="?pageIndex=1"
+                    onclick="fn_search(1);return false;"
+                    class="ctrl back"
+                    ><span class="blind">Back</span></a
+                  >&nbsp;<a href="#naris" class="num active" id="page_1"
+                    ><span>1</span></a
+                  >&nbsp;<a
+                    href="?pageIndex=2"
+                    onclick="fn_search(2);return false;"
+                    id="page_2"
+                    class="num"
+                    ><span>2</span></a
+                  >&nbsp;<a
+                    href="?pageIndex=3"
+                    onclick="fn_search(3);return false;"
+                    id="page_3"
+                    class="num"
+                    ><span>3</span></a
+                  >&nbsp;<a
+                    href="?pageIndex=4"
+                    onclick="fn_search(4);return false;"
+                    id="page_4"
+                    class="num"
+                    ><span>4</span></a
+                  >&nbsp;<a
+                    href="?pageIndex=5"
+                    onclick="fn_search(5);return false;"
+                    id="page_5"
+                    class="num"
+                    ><span>5</span></a
+                  ><a
+                    href="?pageIndex=11"
+                    onclick="fn_search(11);return false;"
+                    class="ctrl next"
+                    ><span class="blind">Next</span></a
+                  >&nbsp;<a
+                    href="?pageIndex=1381"
+                    onclick="fn_search(1381);return false;"
+                    class="ctrl last"
+                    ><span class="blind">Last</span></a
+                  >&nbsp;
+                </div>
+              </div>
+              <!-- //specimen_list -->
+            </div>
+            <!-- //pop_specimen_list -->
+          </form>
+        </div>
+        <!-- //pop_container -->
+      </div>
+      <!-- //pop_layer -->
+    </div>
+    <!-- //DNA바코드정보 레이어팝업 -->
+  </body>
+</html>

@@ -1,0 +1,237 @@
+/* footer */
+
+#footer {
+  position: relative;
+  /* overflow: hidden; */
+  z-index: 1;
+}
+
+#footer:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.foot_cont {
+  position: relative;
+}
+
+/* ************************************************** */
+/* new-footer */
+.foot_cont.gold {
+  background: #b3a177;
+}
+.foot_cont.gold .cont_inner .menu_area {
+  height: 58px;
+}
+/* ************************************************** */
+
+.foot_cont .cont_inner {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.foot_cont .cont_inner .menu_area {
+  position: relative;
+  /* height: 81px; */
+  /* border-bottom: 1px solid #ddd; */
+}
+
+.foot_cont .cont_inner .menu_area .logo a {
+  display: block;
+  background: url("../images-new/common/footer-logo.png") no-repeat 50% 50%;
+  background-size: contain;
+  width: 194px;
+  height: 47px;
+  transition: all 0.25s ease;
+}
+
+.foot_cont .cont_inner .menu_area .logo.eng a {
+  background: url("../images/common/footer-logo.png") no-repeat 50% 50%;
+  background-size: contain;
+  width: 194px;
+  height: 47px;
+}
+.flex-row_center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-right: 20px;
+  flex-wrap: wrap;
+}
+.foot_cont .cont_inner .menu_area .flex-row_center .new-menu_list {
+  display: flex;
+  gap: 20px;
+  margin-left: auto;
+}
+.foot_cont .cont_inner .menu_area .flex-row_center .new-menu_list li {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.foot_cont .cont_inner .menu_area .flex-row_center .new-menu_list li::after {
+  content: "";
+  background: url("../images-new/common/footer-live-area.png") no-repeat 50% 50%;
+  background-size: 15px 15px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  padding: 2px;
+}
+.foot_cont .cont_inner .menu_area .flex-row_center .new-menu_list li a {
+  font-family: Pretendard;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 150%;
+  cursor: pointer;
+}
+
+.foot_cont .cont_inner .menu_area .menu_list {
+  overflow: hidden;
+  padding-top: 16px;
+  border-top: 1px solid #d8d8d8;
+}
+
+.foot_cont .cont_inner .menu_area .menu_list li {
+  float: left;
+}
+
+.foot_cont .cont_inner .menu_area .menu_list li a {
+  display: block;
+  padding: 0 12px;
+  height: 22px;
+  transition: all 0.25s ease;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  color: #1d1d1d;
+  font-family: Pretendard;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -1px;
+}
+.foot_cont .cont_inner .menu_area .menu_list li a.strong,
+.foot_cont .cont_inner .menu_area .menu_list li a.strong:hover {
+  font-weight: 700;
+  color: #ee0000;
+}
+
+.foot_cont .cont_inner .menu_area .menu_list li a span {
+  font-family: Pretendard;
+  font-weight: normal;
+  letter-spacing: 0;
+}
+
+.foot_cont .cont_inner .menu_area .menu_list li a:hover {
+  color: #404040;
+}
+
+.foot_cont .cont_inner .menu_area .menu_list li:first-child a {
+  padding-left: 0;
+}
+
+.foot_cont .cont_inner .menu_area .menu_list li:last-child a {
+  border-right: none;
+}
+
+.foot_cont .cont_inner .menu_area .naris_web::after {
+  content: "";
+  background: url("../images-new/common/footer-live-area2.png") no-repeat 50%;
+  background-size: 16px 16px;
+  width: 16px;
+  height: 16px;
+  margin-left: auto;
+}
+
+.foot_cont .cont_inner .menu_area .naris_web .select_normal {
+  margin-right: 0;
+  width: 252px;
+}
+
+.foot_cont .cont_inner .det_info {
+  padding: 34px 0 29px 0;
+}
+
+.foot_cont .cont_inner .det_info .addr_info dd {
+  color: #1d1d1d;
+  font-family: Pretendard;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 100%;
+}
+.foot_cont .cont_inner .det_info .addr_info dd.strong {
+  font-weight: 700;
+}
+
+.foot_cont .cont_inner .site_intent {
+  color: #15555e;
+  letter-spacing: -0.5px;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 100%;
+  padding-bottom: 40px;
+}
+
+.foot_cont .cont_inner .copyright {
+  font-size: 15px;
+  color: #555;
+  font-family: Pretendard;
+  font-weight: normal;
+  letter-spacing: 0;
+  line-height: 100%;
+  margin-top: 16px;
+  margin-bottom: 35px;
+}
+
+#footer .page_top {
+  display: block;
+  position: absolute;
+  top: -60px;
+  right: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  border-radius: none;
+  cursor: pointer;
+  padding-top: 6px;
+  width: 50px;
+  height: 50px;
+  background: #222;
+}
+
+#footer .page_top span {
+  display: block;
+  font-weight: 700;
+  font-family: Pretendard;
+  letter-spacing: normal;
+  font-size: 12px;
+  color: #fff;
+  padding-top: 4px;
+  background: url("../images-new/common/wingpush_top.png") no-repeat 50% -40%;
+  background-size: 13px 13px;
+}
+
+.foot_cont button.naris_web {
+  display: flex;
+  width: 300px;
+  height: 58px;
+  padding: 0px 24px;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+  background: #b3a177;
+  border: 0;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+  color: #fff;
+  font-family: Pretendard;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 150%;
+  cursor: pointer;
+}

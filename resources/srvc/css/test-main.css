@@ -1,0 +1,463 @@
+.main-wrap {
+  width: 100%;
+  height: 100%;
+  /* background: pink; */
+}
+.container {
+  display: flex;
+  width: 1070px;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+  gap: 130px;
+  /* border: 1px solid blue; */
+}
+.container section {
+  /* border: 1px solid red; */
+}
+
+/* 검색영역 */
+.search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+}
+.search .hello {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+}
+.search .hello > span {
+  color: #fff;
+  font-family: Pretendard;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: -0.19px;
+}
+.search .hello > span.col {
+  max-width: 120px;
+  word-break: keep-all;
+}
+.search .hello > img {
+}
+
+/* 컨텐츠 */
+.contents {
+  height: 256px;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.contents a {
+}
+.contents .icon-wrap {
+  display: flex;
+  width: 170px;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  /* border: 1px solid green; */
+}
+.contents .icon-wrap .icon-img {
+  background-image: url("../images-new/main/polygon.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 170px;
+  height: 165px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contents .icon-wrap .icon-img > img {
+  object-fit: contain;
+}
+
+.contents .icon-wrap .icon-data {
+  display: flex;
+  width: 149px;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+.contents .icon-wrap .icon-data .number {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+  font-family: Pretendard;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: -0.32px;
+}
+.contents .icon-wrap .icon-data .text {
+  color: #fff;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 100%;
+}
+
+.contents {
+  visibility: hidden;
+}
+.contents > * {
+  visibility: visible;
+}
+.contents > * {
+  transition: opacity 150ms linear 100ms, transform 150ms ease-in-out 100ms;
+}
+.contents > * {
+  opacity: 1;
+  transform: scale(0.9);
+}
+.contents > *:hover {
+  opacity: 1;
+  transform: scale(1);
+  transition-delay: 0ms, 0ms;
+  /* background: rgba(226, 226, 226, 0.3); */
+  /* background: rgba(0, 0, 0, 0.3); */
+  /* background: rgba(21, 85, 94, 0.8); */
+  /* padding: 30px 100px; */
+  /* border-radius: 10px; */
+  /* transition: all 0.2s ease-in-out; */
+}
+.contents > *:hover .icon-data {
+}
+
+/* msearch */
+.mfocus .msearch {
+  position: relative;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.mfocus .msearch .msearch_area {
+  position: relative;
+}
+
+.mfocus .msearch .msearch_area .msearch_inp {
+  display: flex;
+  align-items: center;
+  width: 430px;
+  height: 50px;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  text-align: left;
+  font-size: 17px;
+  color: #1d1d1d;
+  letter-spacing: -0.5px;
+  font-weight: 400;
+  background: #fff;
+  border-radius: 10px 0px 0px 10px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  text-indent: 20px;
+  transition: all 0.25s ease;
+}
+
+.mfocus .msearch .msearch_area .msearch_inp:focus {
+  background: #fff;
+}
+
+.mfocus .msearch .msearch_area .msearch_inp::-webkit-input-placeholder,
+.mfocus .msearch .msearch_area .msearch_inp::-moz-placeholder,
+.mfocus .msearch .msearch_area .msearch_inp:-ms-input-placeholder,
+.mfocus .msearch .msearch_area .msearch_inp:-moz-placeholder {
+  color: #898989;
+}
+
+.mfocus .msearch .msearch_area .msearch_btn button {
+  display: block;
+  width: 78px;
+  height: 50px;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  background: #15555e url("../images-new/common/search-w.png") no-repeat 50% 50%;
+  background-size: 48px 48px;
+  border-radius: 50%;
+  border-radius: 0px 10px 10px 0px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  transition: all 0.25s ease;
+}
+
+.mfocus .msearch .msearch_area .msearch_btn button:hover {
+  background: #388f95 url("../images-new/common/search-w.png") no-repeat 50% 50%;
+}
+
+.mfocus .msearch .msearch_area .recent_search {
+  position: absolute;
+  left: 0;
+  top: 65px;
+  width: 100%;
+  min-height: 100px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  box-sizing: border-box;
+  z-index: 4;
+}
+
+.mfocus .msearch .msearch_area .recent_search .recent_list {
+  padding: 18px 20px;
+}
+
+.mfocus .msearch .msearch_area .recent_search .recent_list ul li a {
+  display: block;
+  position: relative;
+  color: #fff;
+  padding: 4px 0;
+  padding-left: 8px;
+  font-size: 13px;
+  letter-spacing: -0.5px;
+  line-height: 150%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.mfocus .msearch .msearch_area .recent_search .recent_list ul li a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 3px;
+  height: 3px;
+  margin-top: -1.5px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.mfocus .msearch .msearch_area .recent_search .recent_list ul li a:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background: #fff;
+  transition: all 0.25s ease;
+}
+
+.mfocus .msearch .msearch_area .recent_search .recent_time {
+  display: none;
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  color: #878787;
+  line-height: 150%;
+  letter-spacing: -0.5px;
+}
+
+.mfocus .msearch .msearch_area .recent_search .recent_time span {
+  font-family: Pretendard;
+  font-weight: normal;
+  letter-spacing: normal;
+  padding-left: 5px;
+  font-size: 13px;
+}
+
+/* main-slide-wrap */
+.main-slide-wrap {
+  /* border: 1px solid red; */
+  padding-top: 100px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* main-slide */
+.main-bg .content {
+  position: absolute;
+  width: 100%;
+  height: 980px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.main-bg .slider {
+  margin: 0;
+}
+
+.main-bg .slick-initialized .slick-slide {
+  height: 980px;
+}
+
+.main-bg img {
+  width: 100%;
+  height: 130%;
+  object-fit: cover;
+}
+
+.main-bg .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* 메인 슬라이드 - 프로그레스 바 */
+.main-bg .progress {
+  display: block;
+  width: 120px;
+  height: 4px;
+  border-radius: 10px;
+  overflow: hidden;
+
+  background-color: #f5f5f5;
+  background-image: linear-gradient(to right, #15555e, #15555e);
+  background-repeat: no-repeat;
+  background-size: 0 100%;
+
+  transition: background-size 0.4s ease-in-out;
+  position: absolute;
+  z-index: 2;
+  top: 862px;
+  right: calc(10% + 130px);
+}
+
+/* 메인 슬라이드 - prev / next 버튼 */
+.main-bg .slick-arrow {
+  display: block;
+  position: absolute;
+  top: 850px;
+  border-radius: 50%;
+  padding: 0;
+  width: 28px;
+  height: 28px;
+  font-size: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  z-index: 333;
+  transition: all 0.25s ease;
+}
+.main-bg .slick-prev {
+  right: calc(10% + 80px);
+  background: rgba(51, 57, 73, 0) url("../images/main/btn_mfocus_left.png")
+    no-repeat 50% 50%;
+  background-size: 12px 16px;
+  /* border: 2px solid rgba(255, 255, 255, 0.3); */
+  border: 0;
+}
+
+.main-bg .slick-next {
+  right: 10%;
+  background: rgba(51, 57, 73, 0) url("../images/main/btn_mfocus_right.png")
+    no-repeat 50% 50%;
+  background-size: 12px 16px;
+  /* border: 2px solid rgba(255, 255, 255, 0.3); */
+  border: 0;
+}
+
+.main-bg .slick-prev:hover,
+.main-bg .slick-prev:focus {
+  background: rgba(51, 57, 73, 0) url("../images/main/btn_mfocus_left.png")
+    no-repeat 50% 50%;
+  background-size: 12px 16px;
+  /* border: 2px solid rgba(255, 255, 255, 1); */
+}
+
+.main-bg .slick-next:hover,
+.main-bg .slick-next:focus {
+  background: rgba(51, 57, 73, 0) url("../images/main/btn_mfocus_right.png")
+    no-repeat 50% 50%;
+  background-size: 12px 16px;
+  /* border: 2px solid rgba(255, 255, 255, 1); */
+}
+
+/* 메인 슬라이드 - 재생/일시정지 버튼 */
+.main-bg .controler {
+  position: absolute;
+  top: 850px;
+  right: calc(10% + 40px);
+  z-index: 333;
+}
+.main-bg .controler .play,
+.main-bg .controler .stop {
+  width: 28px;
+  height: 28px;
+  border: 0;
+  cursor: pointer;
+}
+.main-bg .controler .play {
+  display: none;
+  background: url("../images-new/main/btn-play.png") no-repeat 50% 50%;
+  background-size: 30px 30px;
+}
+.main-bg .controler .stop {
+  display: block;
+  background: url("../images-new/main/btn-stop.png") no-repeat 50% 50%;
+  background-size: 24px 24px;
+}
+
+/* 메인 슬라이드 - 페이징 */
+.main-bg .slick--visual__paging {
+  position: absolute;
+  top: 853px;
+  right: calc(10% + 270px);
+  letter-spacing: 2px;
+  font-family: Pretendard;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 150%;
+  z-index: 2;
+  width: 50px;
+}
+.main-bg .slick--visual__paging .slick-dots li {
+  display: none;
+  justify-content: space-between;
+  color: #fff;
+}
+.main-bg .slick--visual__paging .slick-dots li.slick-active {
+  display: flex;
+}
+.main-bg
+  .slick--visual__paging
+  .slick-dots
+  li.slick-active
+  > span:first-of-type {
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+/* 메인 슬라이드 - 이미지 설명 */
+.main-bg .content .slide-text {
+  position: absolute;
+  top: 853px;
+  right: calc(10% + 370px);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+}
+.main-bg .slide-text::before {
+  content: "";
+  background-image: url("../images-new/main/triangle.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 11px;
+  height: 16px;
+  margin-right: 2px;
+}
+
+.main-bg .slide-text .info_txt {
+  color: #fff;
+  font-family: Pretendard;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 150%;
+}
+.main-bg .slide-text .info_txt .eng {
+  font-family: Pretendard;
+  letter-spacing: normal;
+}

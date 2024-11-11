@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NEW 메인화면</title>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/common.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-gnb.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-footer.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/datepicker.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-main.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-popup.css"
+      media="all"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/contents.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/layout.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/table.css"
+      media="all"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/response.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/custom-ui.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/jquery.ui.custom.naris.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/cmmn/css/lightgallery/lightgallery.css"
+      media="all"
+    />
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="./resources/favicon-multi.ico"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="./resources/favicon-152.png"
+    />
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/2.2.4/jquery-2.2.4.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/easing/jquery-easing.1.3.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/slick/slick.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/waypoints/waypoints.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/counter/counter.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/gray/jquery.gray.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery-ui.js"
+    ></script>
+    <script type="text/javascript" src="./resources/srvc/js/ui.js"></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/srvc/js/searchQuery.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery.validate.js"
+    ></script>
+    <script type="text/javascript" src="./resources/cmmn/js/common.js"></script>
+    <script
+      type="text/javascript"
+      src="./resources/srvc/js/jquery.modalLayer.custom.response.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lightgallery.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-thumbnail.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-fullscreen.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-zoom.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-autoplay.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery.blockUI.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery.cookie.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/iscroll/iscroll.js"
+    ></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        // 퍼블리싱용 공통 헤더ㆍ푸터 블라오기
+        $("#headers").load("header.html");
+        $("#footers").load("footer.html");
+
+        /* 숫자 카운팅 */
+        $(".counting").counterUp({
+          delay: 10,
+          time: 1000,
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="main-wrap">
+      <div class="container">
+        <section class="search">
+          <div class="hello">
+            <span class="col">국립중앙과학관 자연사연구정보</span>
+            <img
+              src="./resources/srvc/images-new/main/webintro_naris_symbol.png"
+              alt="나리스 로고"
+            />
+            <span>방문을 환영합니다.</span>
+          </div>
+
+          <div class="mfocus">
+            <!-- msearch -->
+            <div class="msearch">
+              <!-- msearch_area -->
+              <div class="msearch_area" id="search_area_filed">
+                <form
+                  id="mainVO"
+                  name="mainVO"
+                  action="/cmm/selectUnitySearchResult.do"
+                  method="post"
+                >
+                  <input
+                    type="hidden"
+                    name="srchwrdConectUrl"
+                    id="srchwrdConectUrl"
+                    value="/main.do"
+                  />
+
+                  <fieldset>
+                    <legend>NARIS 통합검색</legend>
+
+                    <div class="flex-row_center pd00">
+                      <input
+                        type="text"
+                        class="msearch_inp"
+                        title="통합검색"
+                        name="query"
+                        id="query"
+                        maxlength="50"
+                        placeholder="검색어를 입력하세요"
+                      />
+                      <!-- msearch_btn -->
+                      <div class="msearch_btn">
+                        <button type="button" id="intergrateSrchBtn">
+                          <span class="blind">자료검색</span>
+                        </button>
+                      </div>
+                      <label for="searchKey" class="blind" id="searchKey"
+                        >통합검색</label
+                      >
+                    </div>
+
+                    <!-- recent_search -->
+                    <div
+                      class="recent_search"
+                      style="display: none"
+                      id="recent_search_result1"
+                    >
+                      <!-- recent_list -->
+                      <div class="recent_list" id="search_ul_info">
+                        <ul>
+                          <li>
+                            <input
+                              type="hidden"
+                              id="keyword-1-0"
+                              name="keyword_0"
+                              value="Pinus strobus"
+                            />
+                            <a href="#naris" id="search-1-0">Pinus strobus</a>
+                          </li>
+
+                          <li>
+                            <input
+                              type="hidden"
+                              id="keyword-1-1"
+                              name="keyword_1"
+                              value="카멜레온풍뎅이"
+                            />
+                            <a href="#naris" id="search-1-1">카멜레온풍뎅이</a>
+                          </li>
+
+                          <li>
+                            <input
+                              type="hidden"
+                              id="keyword-1-2"
+                              name="keyword_2"
+                              value="다리긴노린재"
+                            />
+                            <a href="#naris" id="search-1-2">다리긴노린재</a>
+                          </li>
+
+                          <li>
+                            <input
+                              type="hidden"
+                              id="keyword-1-3"
+                              name="keyword_3"
+                              value="두줄짤룩가지나방"
+                            />
+                            <a href="#naris" id="search-1-3"
+                              >두줄짤룩가지나방</a
+                            >
+                          </li>
+
+                          <li>
+                            <input
+                              type="hidden"
+                              id="keyword-1-4"
+                              name="keyword_4"
+                              value="꼬리명주나비"
+                            />
+                            <a href="#naris" id="search-1-4">꼬리명주나비</a>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <!-- recent_time -->
+                    </div>
+                    <!-- //recent_search -->
+
+                    <!-- recent_search -->
+                    <div
+                      class="recent_search"
+                      style="display: none"
+                      id="recent_search_result2"
+                    >
+                      <!-- recent_list -->
+                      <div class="recent_list" id="result_ul_info">
+                        <ul id="resultUl"></ul>
+                      </div>
+                    </div>
+                    <!-- //recent_search -->
+
+                    <!-- ※ msearch_btn → 위쪽 input으로 버튼 이동 -->
+                    <!-- <div class="msearch_btn">
+                      <button type="button" id="intergrateSrchBtn">
+                        <span class="blind">자료검색</span>
+                      </button>
+                    </div> -->
+                  </fieldset>
+                </form>
+              </div>
+              <!-- //msearch_area -->
+            </div>
+            <!-- //msearch -->
+          </div>
+          <!-- //mfocus -->
+        </section>
+
+        <section class="contents">
+          <a href="./index.html">
+            <div class="icon-wrap">
+              <div class="icon-img">
+                <img src="./resources/srvc/images-new/main/main-conts-1.png" />
+              </div>
+              <div class="icon-data">
+                <div class="number counting">13,876</div>
+                <div class="text">종정보</div>
+              </div>
+            </div>
+          </a>
+
+          <a href="./index.html">
+            <div class="icon-wrap">
+              <div class="icon-img">
+                <img src="./resources/srvc/images-new/main/main-conts-2.png" />
+              </div>
+              <div class="icon-data">
+                <div class="number counting">31,876</div>
+                <div class="text">표본정보</div>
+              </div>
+            </div>
+          </a>
+
+          <a href="./index.html">
+            <div class="icon-wrap">
+              <div class="icon-img">
+                <img src="./resources/srvc/images-new/main/main-conts-3.png" />
+              </div>
+              <div class="icon-data">
+                <div class="number counting">7,876</div>
+                <div class="text">관찰정보</div>
+              </div>
+            </div>
+          </a>
+
+          <a href="./index.html">
+            <div class="icon-wrap">
+              <div class="icon-img">
+                <img src="./resources/srvc/images-new/main/main-conts-4.png" />
+              </div>
+              <div class="icon-data">
+                <div class="number counting">3,876</div>
+                <div class="text">동영상</div>
+              </div>
+            </div>
+          </a>
+
+          <a href="./index.html">
+            <div class="icon-wrap">
+              <div class="icon-img">
+                <img src="./resources/srvc/images-new/main/main-conts-5.png" />
+              </div>
+              <div class="icon-data">
+                <div class="number counting">13,876</div>
+                <div class="text">음성</div>
+              </div>
+            </div>
+          </a>
+
+          <a href="./index.html">
+            <div class="icon-wrap">
+              <div class="icon-img">
+                <img src="./resources/srvc/images-new/main/main-conts-6.png" />
+              </div>
+              <div class="icon-data">
+                <div class="number counting">31,876</div>
+                <div class="text">DNA</div>
+              </div>
+            </div>
+          </a>
+        </section>
+      </div>
+      <!-- //container -->
+      <!-- 공백(나중에 삭제!!) : 간격 확인하려고 만들어 놓은 mgt50 mgb50 간격 일뿐 -->
+      <div class="mgt50 mgb50"></div>
+    </div>
+    <!-- //main-wrap -->
+  </body>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      // input 선택시 recent_list 제어
+      $(".msearch_inp").on("click focus", function () {
+        $("#recent_search_result1").css("display", "block");
+      });
+      $(".msearch_inp").focusout(function () {
+        $("#recent_search_result1").css("display", "none");
+      });
+    });
+  </script>
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DNA바코드정보</title>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/common.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-gnb.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-footer.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/datepicker.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-main.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-popup.css"
+      media="all"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/contents.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/layout.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/table.css"
+      media="all"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/response.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/custom-ui.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/jquery.ui.custom.naris.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/cmmn/css/lightgallery/lightgallery.css"
+      media="all"
+    />
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="./resources/favicon-multi.ico"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="./resources/favicon-152.png"
+    />
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/2.2.4/jquery-2.2.4.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/easing/jquery-easing.1.3.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/slick/slick.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/waypoints/waypoints.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/counter/counter.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/gray/jquery.gray.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery-ui.js"
+    ></script>
+    <script type="text/javascript" src="./resources/srvc/js/ui.js"></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/srvc/js/searchQuery.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery.validate.js"
+    ></script>
+    <script type="text/javascript" src="./resources/cmmn/js/common.js"></script>
+    <script
+      type="text/javascript"
+      src="./resources/srvc/js/jquery.modalLayer.custom.response.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lightgallery.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-thumbnail.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-fullscreen.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-zoom.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-autoplay.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery.blockUI.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery.cookie.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/iscroll/iscroll.js"
+    ></script>
+  </head>
+  <body>
+    <!-- 동영상보기 레이어팝업 -->
+    <div id="mvpctDiv" class="layer_wrap hiddens" style="display: block">
+      <!-- pop_layer / wid1000은 가로 사이즈 500px (600, 700, 800, 1000으로 사용) -->
+      <div class="pop_layer wid1000">
+        <!-- pop_header -->
+        <div class="pop_header">
+          <h1 class="pop_tit">동영상보기</h1>
+          <a href="#naris" class="pop_close">
+            <span class="blind">닫기</span>
+          </a>
+        </div>
+        <!-- //pop_header -->
+
+        <!-- pop_container -->
+        <div class="pop_container" id="video_pop_container">
+          <!-- pop_video -->
+          <div class="pop_video">
+            <!-- video_cont -->
+            <div class="video_cont">
+              <!-- video_real -->
+              <div class="video_real">
+                <video
+                  src="/movie/naris/specs/23038/MV_20160321012811473.mp4"
+                  controls
+                  preload="auto"
+                  id="videos"
+                ></video>
+              </div>
+              <!-- tit -->
+              <strong class="tit" id="movieTitle">피라미</strong>
+              <!-- info_detail -->
+              <div class="info_detail">
+                <p class="cont_txt" id="movieCon">
+                  하천의 중하류에 서식하며 중국,일본,타이완 등지에 분포하는
+                  피라미는 내성이 강한 특징을 지니고 있습니다. 몸길이는 8~12cm
+                  정도로 길고 날씬하며 옆으로 납작합니다. 측선은 배쪽으로 치우쳐
+                  있으며, 비늘은 큰 육각형으로 수정 광택이 있고, 뒷지느러미는
+                  매우 큽니다. 몸빛깔은 전체적으로 은백색이며 등쪽은 푸른색이
+                  도는 갈색입니다. 눈의 홍채는 붉게 보이며, 몸의 측면에는
+                  10~13개의 옅은 붉은 색의 횡단무늬가 있습니다. 피라미는
+                  잡식성으로 주로 돌이나 모래에 붙어 사는 미생물을 먹지만
+                  수생곤충도 잡아먹습니다. 일반적으로 6~8월에 유속이 느린 바닥의
+                  모래나 자갈 위에 지름 30∼50cm의 산란장을 만들고 암수가 함께
+                  들어가 30초 동안에 알을 낳습니다. 그러나 알을 보호하지는 않기
+                  때문에 피라미의 알은 다른 물고기들의 먹이가 되곤 합니다.
+                </p>
+              </div>
+            </div>
+            <!-- //video_cont -->
+
+            <!-- video_side -->
+            <div class="video_side" id="video_pop_side">
+              <!-- video_list -->
+              <ul class="video_list">
+                <li>
+                  <!-- inner_box -->
+                  <a
+                    href="javascript:detailMovieSelect('23038','1');"
+                    class="inner_box"
+                  >
+                    <div class="thum_area">
+                      <!-- 썸네일 사이즈  w:120px,h:68px -->
+
+                      <img
+                        src="data:image/jpg;base64,/9j/4AAQSkZJRgABAgAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAArAD8DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDyIQvx8tKbeUEjYcjtXRw+HZXjRjN95QcBfarI8PZ+/K5Pc4FYOuiuVnJrbyscKhNWBpd4UDiH5T33D/GujfQsMMMRz16U4aPLGd0T5I7Uvb9g5WcpJaTxDLx4H1BphhkC7tvFdXJbBYnSWLlu5rJBk026dJIkZgCMOMjnvVRqXJZlpBI5wq5P1p7WVwqFjHwPcVtx6zcOx229rxzxD/8AXqveXs10kkzQqo4BKLhRV3l0Hp1OwghmeCEDj5FyR04Aoks5zjL7UFX7YH7LAeeY0/8AQRTZQSMc556GuV7jKTzKYFAYthzHkHjIAz/PH50txH5ZgTIwx+Yg9P8APNOktsLAqr8irjA7ZOT+pq5JFHlCVWVewYfeHuKduon2Mq2W9MEsOoxw7kkOxkfdlB79/r1rJ1uyDp9pQEbMBsjqPrXTGGR3ZoogNx+72H0qprukOmjvK1nMZNucq/Cn1I9KV/euUrJGZ4VtIGWaWZc9hmqfiu5Rbg2cAVYI8EgD7zdya6HTVi03wy8rkfKhdvc+lcHdO1w8k0hJdzuPPvWq1kQzsIfFujR28StNcblRQQID1AFJJ4v0gsNrzt6kwkVwNFX7KI7nfxeMNKVfmkmz3xAcVct/F3hkAPdXN5I/9xbUgfnXmlFHsYiPTm8e6KLgeW06wr0X7Of5U298f6TPGscZn2E/MPJI49q8zopewiB1uueJLC7tFtdPEiRE5fdGVJ9q5ySeMxkAnP0qrRVqmlsDP//Z"
+                        class="thum"
+                        alt="동영상 섬네일 이미지입니다."
+                      />
+                    </div>
+
+                    <strong class="tit">피라미</strong>
+                    <span class="time">01:10</span>
+                  </a>
+                </li>
+
+                <li>
+                  <!-- inner_box -->
+                  <a
+                    href="javascript:detailMovieSelect('23038','2');"
+                    class="inner_box"
+                  >
+                    <div class="thum_area">
+                      <!-- 썸네일 사이즈  w:120px,h:68px -->
+
+                      <img
+                        src="data:image/jpg;base64,/9j/4AAQSkZJRgABAgAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAArAD8DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDxQRMcYWgxMP4atW0E1zMkUKlnPp2+p7V0lv4dgt4lnvHMjH+AfKufTPeolNR3A5e30+6uiRBAz45OMcVJ/ZN5u2+Uu7OMeYvX866qNo7eXfxGCeEj42j0p+beJHmjJIkZgysAVA7c/XtWXtWOxyL6XeRruaDjGSQwOPyNRrZXDDIj4+orp/PtrmHG0JOBklXIB9iKpxSNbSs6RRvwQUkGce4HeqjUb3CyMdNOupfuRA/8CH+NPk0e+iiMkkAVB1O9T/Wuih1y5Jx9ntACecQ//Xqe+uvtFrLIVQMVUfKuB1HQUpVGmWopor6aI7aCOG1KtMyBnJ7nHNJevcOm6OK4ZSduGGOlQaUjXFwHUqqRgbnxgKMV0/8AwklvZzJGbdSMKu93Cg+p6cfjWTvzGZg2Wl6lfzDzLeTy8ffYY246dau3ug6g1pFEJLdWT72WI3V0reJNFdJNuorhBliAxAGcdQOfp1rKu9Z0RHBe/ZgyhgI4mbIPIp+82K5x17bXdi6pPAY2wdr9Q2fQ96SIJPH5W4mbjyyTgHj7v+Fa+u6tZ3tokNsGJjOd0vDEew6Y6d+1Y9tcxKzHgt0I4IrRXsMltZWkyrDLr1q07j7LMvfg/qKLOwSee4njuI4reGATvI6l8AnG3A6tnOOmayri5klRj90eg+tTy3ZanZHYabrvgqysSk8DXU0oHmeZYkhSB255xTdW1HwDqojMUl/YOCCxhtWZT64UtxmvPh0FFa+yRB11u/gm1kBmutTvgG+60BiUj6Kc/rVfU5PC91fpJY3N1Z2xAVovs7PsPquTnHtXM0U+TzA7K6PgVrVEtrzUknCkGRonIJ7ZGMflXUaF4+8P6X4fjsftcqSwx7EAsGZD7k8Hn6V5LRUukno2wPQvEXifRdY0zZDqcyT4QNGbAqJAuSFLg+pzyPyrh5p42Hyk/lVWinGmo7Af/9k="
+                        class="thum"
+                        alt="동영상 섬네일 이미지입니다."
+                      />
+                    </div>
+
+                    <strong class="tit">피라미의 외형</strong>
+                    <span class="time">01:10</span>
+                  </a>
+                </li>
+              </ul>
+              <!-- //video_list -->
+            </div>
+            <!-- //video_side -->
+          </div>
+          <!-- //pop_video -->
+        </div>
+        <!-- //pop_container -->
+      </div>
+      <!-- //pop_layer -->
+    </div>
+    <!-- //동영상보기 레이어팝업 -->
+  </body>
+</html>

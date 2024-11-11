@@ -1,0 +1,3251 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      국가자연사 연구종합정보 시스템(데이터 구축 현황-보유자원별 DB구축현황)
+    </title>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/common.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-gnb.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-footer.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/datepicker.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-main.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/test-popup.css"
+      media="all"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/contents.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/layout.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/table.css"
+      media="all"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/response.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/custom-ui.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/srvc/css/jquery.ui.custom.naris.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./resources/cmmn/css/lightgallery/lightgallery.css"
+      media="all"
+    />
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="./resources/favicon-multi.ico"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="./resources/favicon-152.png"
+    />
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/2.2.4/jquery-2.2.4.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/easing/jquery-easing.1.3.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/slick/slick.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/waypoints/waypoints.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/counter/counter.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/gray/jquery.gray.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery-ui.js"
+    ></script>
+    <script type="text/javascript" src="./resources/srvc/js/ui.js"></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/srvc/js/searchQuery.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery.validate.js"
+    ></script>
+    <script type="text/javascript" src="./resources/cmmn/js/common.js"></script>
+    <script
+      type="text/javascript"
+      src="./resources/srvc/js/jquery.modalLayer.custom.response.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lightgallery.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-thumbnail.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-fullscreen.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-zoom.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/lightgallery/lg-autoplay.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery.blockUI.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery.cookie.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="./resources/cmmn/js/jquery/iscroll/iscroll.js"
+    ></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        // 퍼블리싱용 공통 헤더ㆍ푸터 블라오기
+        $("#headers").load("header.html");
+        $("#footers").load("footer.html");
+
+        // SNS 공유 visibility
+        const togBtn = document.getElementById("snsShare");
+        const list = document.getElementById("shareList");
+        togBtn.addEventListener("click", function () {
+          list.classList.toggle("visible");
+        });
+
+        /* 숫자 카운팅 */
+        $(".counting").counterUp({
+          delay: 10,
+          time: 1000,
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- wrap -->
+    <div id="wrap">
+      <!-- skipNav -->
+      <div id="skipnavi">
+        <a href="#container">본문바로가기</a>
+      </div>
+      <!-- //skipNav -->
+
+      <div id="headers"></div>
+
+      <!-- container -->
+      <div id="container">
+        <!-- depth_location -->
+        <div class="depth_location-new">
+          <div class="location_hero">
+            <button
+              type="button"
+              class="home"
+              onclick="javascript:location.href='/index.html';"
+            >
+              <span>홈</span>
+            </button>
+            <button type="button" class="depth depth1">1뎁스명</button>
+            <button type="button" class="depth depth2">2뎁스명</button>
+
+            <article class="share-area">
+              <button title="공유하기" type="button" id="snsShare">
+                <img src="./resources/srvc/images-new/common/icon_share.svg" />
+              </button>
+              <ul id="shareList" class="share-list">
+                <li>
+                  <button type="button" title="블로그 공유 새창 열림">
+                    <img
+                      src="./resources/srvc/images-new/common/icon_share_01.svg"
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button type="button" title="유튜브 공유 새창 열림">
+                    <img
+                      src="./resources/srvc/images-new/common/icon_share_02.svg"
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button type="button" title="인스타그램 공유 새창 열림">
+                    <img
+                      src="./resources/srvc/images-new/common/icon_share_03.svg"
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button type="button" title="카카오채널 공유 새창 열림">
+                    <img
+                      src="./resources/srvc/images-new/common/icon_share_04.svg"
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button type="button" title="트위터 공유 새창 열림">
+                    <img
+                      src="./resources/srvc/images-new/common/icon_share_05.svg"
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button type="button" title="페이스북 공유 새창 열림">
+                    <img
+                      src="./resources/srvc/images-new/common/icon_share_06.svg"
+                    />
+                  </button>
+                </li>
+              </ul>
+              <button
+                title="화면 프린트"
+                type="button"
+                onclick="javascript:window.print();"
+              >
+                <img src="./resources/srvc/images-new/common/icon_print.svg" />
+              </button>
+              <button title="이 컨텐츠 주소복사" type="button">
+                <img src="./resources/srvc/images-new/common/icon_url.svg" />
+              </button>
+            </article>
+          </div>
+        </div>
+        <!-- //depth_location -->
+
+        <!-- 페이지 큰 타이틀 -->
+        <article class="page-title">
+          <div class="inner">
+            <h2 class="tit"><span>데이터 구축 현황</span></h2>
+          </div>
+        </article>
+        <!-- //페이지 큰 타이틀 -->
+
+        <!-- scontents -->
+        <div id="scontents">
+          <div class="scontents_inner etc">
+            <!-- 개발자 컨텐츠 영역 -->
+            <div class="data_status">
+              <!-- cm_tab_ty1 -->
+              <div class="cm_tab_ty2 tab_num2">
+                <ul>
+                  <li id="tab1">
+                    <a href="./selectPrtcInttActtoDbCnstcForCnt.html"
+                      >연계기관별 구축현황</a
+                    >
+                  </li>
+                  <li id="tab2" class="active">
+                    <a href="./selectHoldResrceDbCnstcForCnt.html"
+                      >보유자원별 DB구축현황</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <!-- stit_area -->
+              <div class="sstit_area explan">
+                <h5 class="sstit">보유자원별 DB구축현황</h5>
+              </div>
+
+              <!-- data_total -->
+              <div class="data_total">
+                <ul>
+                  <!-- 종 -->
+                  <li class="jong">
+                    <div class="data_box">
+                      <span class="infog_ico">
+                        <img
+                          src="./resources/srvc/images-new/main/main-conts-1.png"
+                        />
+                      </span>
+                      <strong class="number counting"> 13,798 </strong>
+                      <p class="tit">종정보</p>
+                    </div>
+                  </li>
+
+                  <!-- 표본 -->
+                  <li class="specimen">
+                    <div class="data_box">
+                      <span class="infog_ico">
+                        <img
+                          src="./resources/srvc/images-new/main/main-conts-2.png"
+                        />
+                      </span>
+                      <strong class="number counting"> 593,181 </strong>
+                      <p class="tit">표본정보</p>
+                    </div>
+                  </li>
+
+                  <!-- 관찰 -->
+                  <li class="observe">
+                    <div class="data_box">
+                      <span class="infog_ico">
+                        <img
+                          src="./resources/srvc/images-new/main/main-conts-3.png"
+                        />
+                      </span>
+                      <strong class="number counting"> 666,524 </strong>
+                      <p class="tit">관찰정보</p>
+                    </div>
+                  </li>
+
+                  <!-- 이미지 -->
+                  <li class="image">
+                    <div class="data_box">
+                      <span class="infog_ico">
+                        <img
+                          src="./resources/srvc/images-new/main/main-conts-7.png"
+                        />
+                      </span>
+                      <strong class="number counting"> 1,098,835 </strong>
+                      <p class="tit">이미지</p>
+                    </div>
+                  </li>
+
+                  <!-- 동영상 -->
+                  <li class="video">
+                    <div class="data_box">
+                      <span class="infog_ico">
+                        <img
+                          src="./resources/srvc/images-new/main/main-conts-4.png"
+                        />
+                      </span>
+                      <strong class="number counting"> 2,089 </strong>
+                      <p class="tit">동영상</p>
+                    </div>
+                  </li>
+
+                  <!-- 음성 -->
+                  <li class="sound">
+                    <div class="data_box">
+                      <span class="infog_ico">
+                        <img
+                          src="./resources/srvc/images-new/main/main-conts-5.png"
+                        />
+                      </span>
+                      <strong class="number counting"> 245 </strong>
+                      <p class="tit">음성</p>
+                    </div>
+                  </li>
+
+                  <!-- DNA -->
+                  <li class="dna">
+                    <div class="data_box">
+                      <span class="infog_ico">
+                        <img
+                          src="./resources/srvc/images-new/main/main-conts-6.png"
+                        />
+                      </span>
+                      <strong class="number counting"> 7,285 </strong>
+                      <p class="tit">DNA</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <!-- //data_total -->
+
+              <!-- data_result -->
+              <div class="data_result mgb100">
+                <ul>
+                  <li>
+                    <!-- result_tit -->
+                    <strong class="result_tit">규조식물문</strong>
+
+                    <!-- result_detail -->
+                    <ul class="result_detail">
+                      <!-- jong -->
+                      <li class="jong">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>34</dd>
+                        </dl>
+                      </li>
+
+                      <!-- specimen -->
+                      <li class="specimen">
+                        <dl class="data_info">
+                          <dt>표본</dt>
+                          <dd>757</dd>
+                        </dl>
+                      </li>
+
+                      <!-- observe -->
+                      <li class="observe">
+                        <dl class="data_info">
+                          <dt>관찰</dt>
+                          <dd>363</dd>
+                        </dl>
+                      </li>
+
+                      <!-- image -->
+                      <li class="image">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>25</dd>
+                          <dt>표본</dt>
+                          <dd>1,514</dd>
+                          <dt>관찰</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- video -->
+                      <li class="video">
+                        <dl class="data_info">
+                          <dt>동영상</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- sound -->
+                      <li class="sound">
+                        <dl class="data_info">
+                          <dt>음성</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- dna -->
+                      <li class="dna">
+                        <dl class="data_info">
+                          <dt>DNA</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- 합계 -->
+                      <li class="total">
+                        <dl class="data_info">
+                          <dt>합계</dt>
+                          <dd>2,634</dd>
+                        </dl>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <!-- result_tit -->
+                    <strong class="result_tit">규조식물문</strong>
+
+                    <!-- result_detail -->
+                    <ul class="result_detail">
+                      <!-- jong -->
+                      <li class="jong">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>4</dd>
+                        </dl>
+                      </li>
+
+                      <!-- specimen -->
+                      <li class="specimen">
+                        <dl class="data_info">
+                          <dt>표본</dt>
+                          <dd>11</dd>
+                        </dl>
+                      </li>
+
+                      <!-- observe -->
+                      <li class="observe">
+                        <dl class="data_info">
+                          <dt>관찰</dt>
+                          <dd>1</dd>
+                        </dl>
+                      </li>
+
+                      <!-- image -->
+                      <li class="image">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>2</dd>
+                          <dt>표본</dt>
+                          <dd>10</dd>
+                          <dt>관찰</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- video -->
+                      <li class="video">
+                        <dl class="data_info">
+                          <dt>동영상</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- sound -->
+                      <li class="sound">
+                        <dl class="data_info">
+                          <dt>음성</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- dna -->
+                      <li class="dna">
+                        <dl class="data_info">
+                          <dt>DNA</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- 합계 -->
+                      <li class="total">
+                        <dl class="data_info">
+                          <dt>합계</dt>
+                          <dd>22</dd>
+                        </dl>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <!-- result_tit -->
+                    <strong class="result_tit">극피동물문</strong>
+
+                    <!-- result_detail -->
+                    <ul class="result_detail">
+                      <!-- jong -->
+                      <li class="jong">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>44</dd>
+                        </dl>
+                      </li>
+
+                      <!-- specimen -->
+                      <li class="specimen">
+                        <dl class="data_info">
+                          <dt>표본</dt>
+                          <dd>1,658</dd>
+                        </dl>
+                      </li>
+
+                      <!-- observe -->
+                      <li class="observe">
+                        <dl class="data_info">
+                          <dt>관찰</dt>
+                          <dd>28</dd>
+                        </dl>
+                      </li>
+
+                      <!-- image -->
+                      <li class="image">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>4</dd>
+                          <dt>표본</dt>
+                          <dd>919</dd>
+                          <dt>관찰</dt>
+                          <dd>20</dd>
+                        </dl>
+                      </li>
+
+                      <!-- video -->
+                      <li class="video">
+                        <dl class="data_info">
+                          <dt>동영상</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- sound -->
+                      <li class="sound">
+                        <dl class="data_info">
+                          <dt>음성</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- dna -->
+                      <li class="dna">
+                        <dl class="data_info">
+                          <dt>DNA</dt>
+                          <dd>39</dd>
+                        </dl>
+                      </li>
+
+                      <!-- 합계 -->
+                      <li class="total">
+                        <dl class="data_info">
+                          <dt>합계</dt>
+                          <dd>2,664</dd>
+                        </dl>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <!-- result_tit -->
+                    <strong class="result_tit">나자식물문</strong>
+
+                    <!-- result_detail -->
+                    <ul class="result_detail">
+                      <!-- jong -->
+                      <li class="jong">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>78</dd>
+                        </dl>
+                      </li>
+
+                      <!-- specimen -->
+                      <li class="specimen">
+                        <dl class="data_info">
+                          <dt>표본</dt>
+                          <dd>693</dd>
+                        </dl>
+                      </li>
+
+                      <!-- observe -->
+                      <li class="observe">
+                        <dl class="data_info">
+                          <dt>관찰</dt>
+                          <dd>2,254</dd>
+                        </dl>
+                      </li>
+
+                      <!-- image -->
+                      <li class="image">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>63</dd>
+                          <dt>표본</dt>
+                          <dd>958</dd>
+                          <dt>관찰</dt>
+                          <dd>86</dd>
+                        </dl>
+                      </li>
+
+                      <!-- video -->
+                      <li class="video">
+                        <dl class="data_info">
+                          <dt>동영상</dt>
+                          <dd>4</dd>
+                        </dl>
+                      </li>
+
+                      <!-- sound -->
+                      <li class="sound">
+                        <dl class="data_info">
+                          <dt>음성</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- dna -->
+                      <li class="dna">
+                        <dl class="data_info">
+                          <dt>DNA</dt>
+                          <dd>21</dd>
+                        </dl>
+                      </li>
+
+                      <!-- 합계 -->
+                      <li class="total">
+                        <dl class="data_info">
+                          <dt>합계</dt>
+                          <dd>4,016</dd>
+                        </dl>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <!-- result_tit -->
+                    <strong class="result_tit">난균문</strong>
+
+                    <!-- result_detail -->
+                    <ul class="result_detail">
+                      <!-- jong -->
+                      <li class="jong">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>1</dd>
+                        </dl>
+                      </li>
+
+                      <!-- specimen -->
+                      <li class="specimen">
+                        <dl class="data_info">
+                          <dt>표본</dt>
+                          <dd>30</dd>
+                        </dl>
+                      </li>
+
+                      <!-- observe -->
+                      <li class="observe">
+                        <dl class="data_info">
+                          <dt>관찰</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- image -->
+                      <li class="image">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>0</dd>
+                          <dt>표본</dt>
+                          <dd>0</dd>
+                          <dt>관찰</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- video -->
+                      <li class="video">
+                        <dl class="data_info">
+                          <dt>동영상</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- sound -->
+                      <li class="sound">
+                        <dl class="data_info">
+                          <dt>음성</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- dna -->
+                      <li class="dna">
+                        <dl class="data_info">
+                          <dt>DNA</dt>
+                          <dd>9</dd>
+                        </dl>
+                      </li>
+
+                      <!-- 합계 -->
+                      <li class="total">
+                        <dl class="data_info">
+                          <dt>합계</dt>
+                          <dd>39</dd>
+                        </dl>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <!-- result_tit -->
+                    <strong class="result_tit">남조식물문, 남세균문</strong>
+
+                    <!-- result_detail -->
+                    <ul class="result_detail">
+                      <!-- jong -->
+                      <li class="jong">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>25</dd>
+                        </dl>
+                      </li>
+
+                      <!-- specimen -->
+                      <li class="specimen">
+                        <dl class="data_info">
+                          <dt>표본</dt>
+                          <dd>577</dd>
+                        </dl>
+                      </li>
+
+                      <!-- observe -->
+                      <li class="observe">
+                        <dl class="data_info">
+                          <dt>관찰</dt>
+                          <dd>149</dd>
+                        </dl>
+                      </li>
+
+                      <!-- image -->
+                      <li class="image">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>3</dd>
+                          <dt>표본</dt>
+                          <dd>1,154</dd>
+                          <dt>관찰</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- video -->
+                      <li class="video">
+                        <dl class="data_info">
+                          <dt>동영상</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- sound -->
+                      <li class="sound">
+                        <dl class="data_info">
+                          <dt>음성</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- dna -->
+                      <li class="dna">
+                        <dl class="data_info">
+                          <dt>DNA</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- 합계 -->
+                      <li class="total">
+                        <dl class="data_info">
+                          <dt>합계</dt>
+                          <dd>1,880</dd>
+                        </dl>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <!-- result_tit -->
+                    <strong class="result_tit">녹조식물문</strong>
+
+                    <!-- result_detail -->
+                    <ul class="result_detail">
+                      <!-- jong -->
+                      <li class="jong">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>128</dd>
+                        </dl>
+                      </li>
+
+                      <!-- specimen -->
+                      <li class="specimen">
+                        <dl class="data_info">
+                          <dt>표본</dt>
+                          <dd>3,355</dd>
+                        </dl>
+                      </li>
+
+                      <!-- observe -->
+                      <li class="observe">
+                        <dl class="data_info">
+                          <dt>관찰</dt>
+                          <dd>541</dd>
+                        </dl>
+                      </li>
+
+                      <!-- image -->
+                      <li class="image">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>65</dd>
+                          <dt>표본</dt>
+                          <dd>5,507</dd>
+                          <dt>관찰</dt>
+                          <dd>106</dd>
+                        </dl>
+                      </li>
+
+                      <!-- video -->
+                      <li class="video">
+                        <dl class="data_info">
+                          <dt>동영상</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- sound -->
+                      <li class="sound">
+                        <dl class="data_info">
+                          <dt>음성</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- dna -->
+                      <li class="dna">
+                        <dl class="data_info">
+                          <dt>DNA</dt>
+                          <dd>21</dd>
+                        </dl>
+                      </li>
+
+                      <!-- 합계 -->
+                      <li class="total">
+                        <dl class="data_info">
+                          <dt>합계</dt>
+                          <dd>9,530</dd>
+                        </dl>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <!-- result_tit -->
+                    <strong class="result_tit">담자균문</strong>
+
+                    <!-- result_detail -->
+                    <ul class="result_detail">
+                      <!-- jong -->
+                      <li class="jong">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>549</dd>
+                        </dl>
+                      </li>
+
+                      <!-- specimen -->
+                      <li class="specimen">
+                        <dl class="data_info">
+                          <dt>표본</dt>
+                          <dd>719</dd>
+                        </dl>
+                      </li>
+
+                      <!-- observe -->
+                      <li class="observe">
+                        <dl class="data_info">
+                          <dt>관찰</dt>
+                          <dd>1,384</dd>
+                        </dl>
+                      </li>
+
+                      <!-- image -->
+                      <li class="image">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>0</dd>
+                          <dt>표본</dt>
+                          <dd>0</dd>
+                          <dt>관찰</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- video -->
+                      <li class="video">
+                        <dl class="data_info">
+                          <dt>동영상</dt>
+                          <dd>18</dd>
+                        </dl>
+                      </li>
+
+                      <!-- sound -->
+                      <li class="sound">
+                        <dl class="data_info">
+                          <dt>음성</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- dna -->
+                      <li class="dna">
+                        <dl class="data_info">
+                          <dt>DNA</dt>
+                          <dd>153</dd>
+                        </dl>
+                      </li>
+
+                      <!-- 합계 -->
+                      <li class="total">
+                        <dl class="data_info">
+                          <dt>합계</dt>
+                          <dd>2,274</dd>
+                        </dl>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <!-- result_tit -->
+                    <strong class="result_tit">대롱편모조식물문</strong>
+
+                    <!-- result_detail -->
+                    <ul class="result_detail">
+                      <!-- jong -->
+                      <li class="jong">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>73</dd>
+                        </dl>
+                      </li>
+
+                      <!-- specimen -->
+                      <li class="specimen">
+                        <dl class="data_info">
+                          <dt>표본</dt>
+                          <dd>1,829</dd>
+                        </dl>
+                      </li>
+
+                      <!-- observe -->
+                      <li class="observe">
+                        <dl class="data_info">
+                          <dt>관찰</dt>
+                          <dd>140</dd>
+                        </dl>
+                      </li>
+
+                      <!-- image -->
+                      <li class="image">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>72</dd>
+                          <dt>표본</dt>
+                          <dd>3,502</dd>
+                          <dt>관찰</dt>
+                          <dd>140</dd>
+                        </dl>
+                      </li>
+
+                      <!-- video -->
+                      <li class="video">
+                        <dl class="data_info">
+                          <dt>동영상</dt>
+                          <dd>1</dd>
+                        </dl>
+                      </li>
+
+                      <!-- sound -->
+                      <li class="sound">
+                        <dl class="data_info">
+                          <dt>음성</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- dna -->
+                      <li class="dna">
+                        <dl class="data_info">
+                          <dt>DNA</dt>
+                          <dd>18</dd>
+                        </dl>
+                      </li>
+
+                      <!-- 합계 -->
+                      <li class="total">
+                        <dl class="data_info">
+                          <dt>합계</dt>
+                          <dd>5,630</dd>
+                        </dl>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <!-- result_tit -->
+                    <strong class="result_tit">대롱편모조식물문</strong>
+
+                    <!-- result_detail -->
+                    <ul class="result_detail">
+                      <!-- jong -->
+                      <li class="jong">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>68</dd>
+                        </dl>
+                      </li>
+
+                      <!-- specimen -->
+                      <li class="specimen">
+                        <dl class="data_info">
+                          <dt>표본</dt>
+                          <dd>924</dd>
+                        </dl>
+                      </li>
+
+                      <!-- observe -->
+                      <li class="observe">
+                        <dl class="data_info">
+                          <dt>관찰</dt>
+                          <dd>38</dd>
+                        </dl>
+                      </li>
+
+                      <!-- image -->
+                      <li class="image">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>65</dd>
+                          <dt>표본</dt>
+                          <dd>1,723</dd>
+                          <dt>관찰</dt>
+                          <dd>38</dd>
+                        </dl>
+                      </li>
+
+                      <!-- video -->
+                      <li class="video">
+                        <dl class="data_info">
+                          <dt>동영상</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- sound -->
+                      <li class="sound">
+                        <dl class="data_info">
+                          <dt>음성</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- dna -->
+                      <li class="dna">
+                        <dl class="data_info">
+                          <dt>DNA</dt>
+                          <dd>3</dd>
+                        </dl>
+                      </li>
+
+                      <!-- 합계 -->
+                      <li class="total">
+                        <dl class="data_info">
+                          <dt>합계</dt>
+                          <dd>2,726</dd>
+                        </dl>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <!-- result_tit -->
+                    <strong class="result_tit">돌말식물아문</strong>
+
+                    <!-- result_detail -->
+                    <ul class="result_detail">
+                      <!-- jong -->
+                      <li class="jong">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>1</dd>
+                        </dl>
+                      </li>
+
+                      <!-- specimen -->
+                      <li class="specimen">
+                        <dl class="data_info">
+                          <dt>표본</dt>
+                          <dd>1</dd>
+                        </dl>
+                      </li>
+
+                      <!-- observe -->
+                      <li class="observe">
+                        <dl class="data_info">
+                          <dt>관찰</dt>
+                          <dd>1</dd>
+                        </dl>
+                      </li>
+
+                      <!-- image -->
+                      <li class="image">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>1</dd>
+                          <dt>표본</dt>
+                          <dd>2</dd>
+                          <dt>관찰</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- video -->
+                      <li class="video">
+                        <dl class="data_info">
+                          <dt>동영상</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- sound -->
+                      <li class="sound">
+                        <dl class="data_info">
+                          <dt>음성</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- dna -->
+                      <li class="dna">
+                        <dl class="data_info">
+                          <dt>DNA</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- 합계 -->
+                      <li class="total">
+                        <dl class="data_info">
+                          <dt>합계</dt>
+                          <dd>4</dd>
+                        </dl>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <!-- result_tit -->
+                    <strong class="result_tit">몽골식물</strong>
+
+                    <!-- result_detail -->
+                    <ul class="result_detail">
+                      <!-- jong -->
+                      <li class="jong">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>399</dd>
+                        </dl>
+                      </li>
+
+                      <!-- specimen -->
+                      <li class="specimen">
+                        <dl class="data_info">
+                          <dt>표본</dt>
+                          <dd>1,445</dd>
+                        </dl>
+                      </li>
+
+                      <!-- observe -->
+                      <li class="observe">
+                        <dl class="data_info">
+                          <dt>관찰</dt>
+                          <dd>113</dd>
+                        </dl>
+                      </li>
+
+                      <!-- image -->
+                      <li class="image">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>0</dd>
+                          <dt>표본</dt>
+                          <dd>125</dd>
+                          <dt>관찰</dt>
+                          <dd>88</dd>
+                        </dl>
+                      </li>
+
+                      <!-- video -->
+                      <li class="video">
+                        <dl class="data_info">
+                          <dt>동영상</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- sound -->
+                      <li class="sound">
+                        <dl class="data_info">
+                          <dt>음성</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- dna -->
+                      <li class="dna">
+                        <dl class="data_info">
+                          <dt>DNA</dt>
+                          <dd>12</dd>
+                        </dl>
+                      </li>
+
+                      <!-- 합계 -->
+                      <li class="total">
+                        <dl class="data_info">
+                          <dt>합계</dt>
+                          <dd>1,783</dd>
+                        </dl>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <!-- result_tit -->
+                    <strong class="result_tit">미분류</strong>
+
+                    <!-- result_detail -->
+                    <ul class="result_detail">
+                      <!-- jong -->
+                      <li class="jong">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>1</dd>
+                        </dl>
+                      </li>
+
+                      <!-- specimen -->
+                      <li class="specimen">
+                        <dl class="data_info">
+                          <dt>표본</dt>
+                          <dd>45</dd>
+                        </dl>
+                      </li>
+
+                      <!-- observe -->
+                      <li class="observe">
+                        <dl class="data_info">
+                          <dt>관찰</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- image -->
+                      <li class="image">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>1</dd>
+                          <dt>표본</dt>
+                          <dd>90</dd>
+                          <dt>관찰</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- video -->
+                      <li class="video">
+                        <dl class="data_info">
+                          <dt>동영상</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- sound -->
+                      <li class="sound">
+                        <dl class="data_info">
+                          <dt>음성</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- dna -->
+                      <li class="dna">
+                        <dl class="data_info">
+                          <dt>DNA</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- 합계 -->
+                      <li class="total">
+                        <dl class="data_info">
+                          <dt>합계</dt>
+                          <dd>135</dd>
+                        </dl>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <!-- result_tit -->
+                    <strong class="result_tit">선태식물문</strong>
+
+                    <!-- result_detail -->
+                    <ul class="result_detail">
+                      <!-- jong -->
+                      <li class="jong">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>3</dd>
+                        </dl>
+                      </li>
+
+                      <!-- specimen -->
+                      <li class="specimen">
+                        <dl class="data_info">
+                          <dt>표본</dt>
+                          <dd>9</dd>
+                        </dl>
+                      </li>
+
+                      <!-- observe -->
+                      <li class="observe">
+                        <dl class="data_info">
+                          <dt>관찰</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- image -->
+                      <li class="image">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>2</dd>
+                          <dt>표본</dt>
+                          <dd>6</dd>
+                          <dt>관찰</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- video -->
+                      <li class="video">
+                        <dl class="data_info">
+                          <dt>동영상</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- sound -->
+                      <li class="sound">
+                        <dl class="data_info">
+                          <dt>음성</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- dna -->
+                      <li class="dna">
+                        <dl class="data_info">
+                          <dt>DNA</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- 합계 -->
+                      <li class="total">
+                        <dl class="data_info">
+                          <dt>합계</dt>
+                          <dd>15</dd>
+                        </dl>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <!-- result_tit -->
+                    <strong class="result_tit">섬모충문</strong>
+
+                    <!-- result_detail -->
+                    <ul class="result_detail">
+                      <!-- jong -->
+                      <li class="jong">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>19</dd>
+                        </dl>
+                      </li>
+
+                      <!-- specimen -->
+                      <li class="specimen">
+                        <dl class="data_info">
+                          <dt>표본</dt>
+                          <dd>498</dd>
+                        </dl>
+                      </li>
+
+                      <!-- observe -->
+                      <li class="observe">
+                        <dl class="data_info">
+                          <dt>관찰</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- image -->
+                      <li class="image">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>19</dd>
+                          <dt>표본</dt>
+                          <dd>996</dd>
+                          <dt>관찰</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- video -->
+                      <li class="video">
+                        <dl class="data_info">
+                          <dt>동영상</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- sound -->
+                      <li class="sound">
+                        <dl class="data_info">
+                          <dt>음성</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- dna -->
+                      <li class="dna">
+                        <dl class="data_info">
+                          <dt>DNA</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- 합계 -->
+                      <li class="total">
+                        <dl class="data_info">
+                          <dt>합계</dt>
+                          <dd>1,494</dd>
+                        </dl>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <!-- result_tit -->
+                    <strong class="result_tit">성구동물문</strong>
+
+                    <!-- result_detail -->
+                    <ul class="result_detail">
+                      <!-- jong -->
+                      <li class="jong">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>1</dd>
+                        </dl>
+                      </li>
+
+                      <!-- specimen -->
+                      <li class="specimen">
+                        <dl class="data_info">
+                          <dt>표본</dt>
+                          <dd>13</dd>
+                        </dl>
+                      </li>
+
+                      <!-- observe -->
+                      <li class="observe">
+                        <dl class="data_info">
+                          <dt>관찰</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- image -->
+                      <li class="image">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>0</dd>
+                          <dt>표본</dt>
+                          <dd>0</dd>
+                          <dt>관찰</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- video -->
+                      <li class="video">
+                        <dl class="data_info">
+                          <dt>동영상</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- sound -->
+                      <li class="sound">
+                        <dl class="data_info">
+                          <dt>음성</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- dna -->
+                      <li class="dna">
+                        <dl class="data_info">
+                          <dt>DNA</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- 합계 -->
+                      <li class="total">
+                        <dl class="data_info">
+                          <dt>합계</dt>
+                          <dd>13</dd>
+                        </dl>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <!-- result_tit -->
+                    <strong class="result_tit">암석/화석</strong>
+
+                    <!-- result_detail -->
+                    <ul class="result_detail">
+                      <!-- jong -->
+                      <li class="jong">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>802</dd>
+                        </dl>
+                      </li>
+
+                      <!-- specimen -->
+                      <li class="specimen">
+                        <dl class="data_info">
+                          <dt>표본</dt>
+                          <dd>10,002</dd>
+                        </dl>
+                      </li>
+
+                      <!-- observe -->
+                      <li class="observe">
+                        <dl class="data_info">
+                          <dt>관찰</dt>
+                          <dd>995</dd>
+                        </dl>
+                      </li>
+
+                      <!-- image -->
+                      <li class="image">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>675</dd>
+                          <dt>표본</dt>
+                          <dd>23,883</dd>
+                          <dt>관찰</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- video -->
+                      <li class="video">
+                        <dl class="data_info">
+                          <dt>동영상</dt>
+                          <dd>1</dd>
+                        </dl>
+                      </li>
+
+                      <!-- sound -->
+                      <li class="sound">
+                        <dl class="data_info">
+                          <dt>음성</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- dna -->
+                      <li class="dna">
+                        <dl class="data_info">
+                          <dt>DNA</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- 합계 -->
+                      <li class="total">
+                        <dl class="data_info">
+                          <dt>합계</dt>
+                          <dd>34,881</dd>
+                        </dl>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <!-- result_tit -->
+                    <strong class="result_tit">양치식물문</strong>
+
+                    <!-- result_detail -->
+                    <ul class="result_detail">
+                      <!-- jong -->
+                      <li class="jong">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>234</dd>
+                        </dl>
+                      </li>
+
+                      <!-- specimen -->
+                      <li class="specimen">
+                        <dl class="data_info">
+                          <dt>표본</dt>
+                          <dd>3,103</dd>
+                        </dl>
+                      </li>
+
+                      <!-- observe -->
+                      <li class="observe">
+                        <dl class="data_info">
+                          <dt>관찰</dt>
+                          <dd>1,756</dd>
+                        </dl>
+                      </li>
+
+                      <!-- image -->
+                      <li class="image">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>138</dd>
+                          <dt>표본</dt>
+                          <dd>4,371</dd>
+                          <dt>관찰</dt>
+                          <dd>212</dd>
+                        </dl>
+                      </li>
+
+                      <!-- video -->
+                      <li class="video">
+                        <dl class="data_info">
+                          <dt>동영상</dt>
+                          <dd>1</dd>
+                        </dl>
+                      </li>
+
+                      <!-- sound -->
+                      <li class="sound">
+                        <dl class="data_info">
+                          <dt>음성</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- dna -->
+                      <li class="dna">
+                        <dl class="data_info">
+                          <dt>DNA</dt>
+                          <dd>73</dd>
+                        </dl>
+                      </li>
+
+                      <!-- 합계 -->
+                      <li class="total">
+                        <dl class="data_info">
+                          <dt>합계</dt>
+                          <dd>9,516</dd>
+                        </dl>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <!-- result_tit -->
+                    <strong class="result_tit">연체동물문</strong>
+
+                    <!-- result_detail -->
+                    <ul class="result_detail">
+                      <!-- jong -->
+                      <li class="jong">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>548</dd>
+                        </dl>
+                      </li>
+
+                      <!-- specimen -->
+                      <li class="specimen">
+                        <dl class="data_info">
+                          <dt>표본</dt>
+                          <dd>28,178</dd>
+                        </dl>
+                      </li>
+
+                      <!-- observe -->
+                      <li class="observe">
+                        <dl class="data_info">
+                          <dt>관찰</dt>
+                          <dd>735</dd>
+                        </dl>
+                      </li>
+
+                      <!-- image -->
+                      <li class="image">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>645</dd>
+                          <dt>표본</dt>
+                          <dd>50,509</dd>
+                          <dt>관찰</dt>
+                          <dd>269</dd>
+                        </dl>
+                      </li>
+
+                      <!-- video -->
+                      <li class="video">
+                        <dl class="data_info">
+                          <dt>동영상</dt>
+                          <dd>4</dd>
+                        </dl>
+                      </li>
+
+                      <!-- sound -->
+                      <li class="sound">
+                        <dl class="data_info">
+                          <dt>음성</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- dna -->
+                      <li class="dna">
+                        <dl class="data_info">
+                          <dt>DNA</dt>
+                          <dd>396</dd>
+                        </dl>
+                      </li>
+
+                      <!-- 합계 -->
+                      <li class="total">
+                        <dl class="data_info">
+                          <dt>합계</dt>
+                          <dd>80,091</dd>
+                        </dl>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <!-- result_tit -->
+                    <strong class="result_tit">와편모조식물문</strong>
+
+                    <!-- result_detail -->
+                    <ul class="result_detail">
+                      <!-- jong -->
+                      <li class="jong">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>3</dd>
+                        </dl>
+                      </li>
+
+                      <!-- specimen -->
+                      <li class="specimen">
+                        <dl class="data_info">
+                          <dt>표본</dt>
+                          <dd>715</dd>
+                        </dl>
+                      </li>
+
+                      <!-- observe -->
+                      <li class="observe">
+                        <dl class="data_info">
+                          <dt>관찰</dt>
+                          <dd>8</dd>
+                        </dl>
+                      </li>
+
+                      <!-- image -->
+                      <li class="image">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>3</dd>
+                          <dt>표본</dt>
+                          <dd>1,430</dd>
+                          <dt>관찰</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- video -->
+                      <li class="video">
+                        <dl class="data_info">
+                          <dt>동영상</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- sound -->
+                      <li class="sound">
+                        <dl class="data_info">
+                          <dt>음성</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- dna -->
+                      <li class="dna">
+                        <dl class="data_info">
+                          <dt>DNA</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- 합계 -->
+                      <li class="total">
+                        <dl class="data_info">
+                          <dt>합계</dt>
+                          <dd>2,153</dd>
+                        </dl>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <!-- result_tit -->
+                    <strong class="result_tit">완족동물문</strong>
+
+                    <!-- result_detail -->
+                    <ul class="result_detail">
+                      <!-- jong -->
+                      <li class="jong">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>8</dd>
+                        </dl>
+                      </li>
+
+                      <!-- specimen -->
+                      <li class="specimen">
+                        <dl class="data_info">
+                          <dt>표본</dt>
+                          <dd>204</dd>
+                        </dl>
+                      </li>
+
+                      <!-- observe -->
+                      <li class="observe">
+                        <dl class="data_info">
+                          <dt>관찰</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- image -->
+                      <li class="image">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>6</dd>
+                          <dt>표본</dt>
+                          <dd>165</dd>
+                          <dt>관찰</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- video -->
+                      <li class="video">
+                        <dl class="data_info">
+                          <dt>동영상</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- sound -->
+                      <li class="sound">
+                        <dl class="data_info">
+                          <dt>음성</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- dna -->
+                      <li class="dna">
+                        <dl class="data_info">
+                          <dt>DNA</dt>
+                          <dd>6</dd>
+                        </dl>
+                      </li>
+
+                      <!-- 합계 -->
+                      <li class="total">
+                        <dl class="data_info">
+                          <dt>합계</dt>
+                          <dd>375</dd>
+                        </dl>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <!-- result_tit -->
+                    <strong class="result_tit">유글레나식물문</strong>
+
+                    <!-- result_detail -->
+                    <ul class="result_detail">
+                      <!-- jong -->
+                      <li class="jong">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>8</dd>
+                        </dl>
+                      </li>
+
+                      <!-- specimen -->
+                      <li class="specimen">
+                        <dl class="data_info">
+                          <dt>표본</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- observe -->
+                      <li class="observe">
+                        <dl class="data_info">
+                          <dt>관찰</dt>
+                          <dd>57</dd>
+                        </dl>
+                      </li>
+
+                      <!-- image -->
+                      <li class="image">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>0</dd>
+                          <dt>표본</dt>
+                          <dd>0</dd>
+                          <dt>관찰</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- video -->
+                      <li class="video">
+                        <dl class="data_info">
+                          <dt>동영상</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- sound -->
+                      <li class="sound">
+                        <dl class="data_info">
+                          <dt>음성</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- dna -->
+                      <li class="dna">
+                        <dl class="data_info">
+                          <dt>DNA</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- 합계 -->
+                      <li class="total">
+                        <dl class="data_info">
+                          <dt>합계</dt>
+                          <dd>57</dd>
+                        </dl>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <!-- result_tit -->
+                    <strong class="result_tit">윤형동물문</strong>
+
+                    <!-- result_detail -->
+                    <ul class="result_detail">
+                      <!-- jong -->
+                      <li class="jong">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>4</dd>
+                        </dl>
+                      </li>
+
+                      <!-- specimen -->
+                      <li class="specimen">
+                        <dl class="data_info">
+                          <dt>표본</dt>
+                          <dd>201</dd>
+                        </dl>
+                      </li>
+
+                      <!-- observe -->
+                      <li class="observe">
+                        <dl class="data_info">
+                          <dt>관찰</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- image -->
+                      <li class="image">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>4</dd>
+                          <dt>표본</dt>
+                          <dd>402</dd>
+                          <dt>관찰</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- video -->
+                      <li class="video">
+                        <dl class="data_info">
+                          <dt>동영상</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- sound -->
+                      <li class="sound">
+                        <dl class="data_info">
+                          <dt>음성</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- dna -->
+                      <li class="dna">
+                        <dl class="data_info">
+                          <dt>DNA</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- 합계 -->
+                      <li class="total">
+                        <dl class="data_info">
+                          <dt>합계</dt>
+                          <dd>603</dd>
+                        </dl>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <!-- result_tit -->
+                    <strong class="result_tit">은편모조식물문</strong>
+
+                    <!-- result_detail -->
+                    <ul class="result_detail">
+                      <!-- jong -->
+                      <li class="jong">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>1</dd>
+                        </dl>
+                      </li>
+
+                      <!-- specimen -->
+                      <li class="specimen">
+                        <dl class="data_info">
+                          <dt>표본</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- observe -->
+                      <li class="observe">
+                        <dl class="data_info">
+                          <dt>관찰</dt>
+                          <dd>3</dd>
+                        </dl>
+                      </li>
+
+                      <!-- image -->
+                      <li class="image">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>0</dd>
+                          <dt>표본</dt>
+                          <dd>0</dd>
+                          <dt>관찰</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- video -->
+                      <li class="video">
+                        <dl class="data_info">
+                          <dt>동영상</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- sound -->
+                      <li class="sound">
+                        <dl class="data_info">
+                          <dt>음성</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- dna -->
+                      <li class="dna">
+                        <dl class="data_info">
+                          <dt>DNA</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- 합계 -->
+                      <li class="total">
+                        <dl class="data_info">
+                          <dt>합계</dt>
+                          <dd>3</dd>
+                        </dl>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <!-- result_tit -->
+                    <strong class="result_tit">의충동물문</strong>
+
+                    <!-- result_detail -->
+                    <ul class="result_detail">
+                      <!-- jong -->
+                      <li class="jong">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>1</dd>
+                        </dl>
+                      </li>
+
+                      <!-- specimen -->
+                      <li class="specimen">
+                        <dl class="data_info">
+                          <dt>표본</dt>
+                          <dd>18</dd>
+                        </dl>
+                      </li>
+
+                      <!-- observe -->
+                      <li class="observe">
+                        <dl class="data_info">
+                          <dt>관찰</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- image -->
+                      <li class="image">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>1</dd>
+                          <dt>표본</dt>
+                          <dd>6</dd>
+                          <dt>관찰</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- video -->
+                      <li class="video">
+                        <dl class="data_info">
+                          <dt>동영상</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- sound -->
+                      <li class="sound">
+                        <dl class="data_info">
+                          <dt>음성</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- dna -->
+                      <li class="dna">
+                        <dl class="data_info">
+                          <dt>DNA</dt>
+                          <dd>3</dd>
+                        </dl>
+                      </li>
+
+                      <!-- 합계 -->
+                      <li class="total">
+                        <dl class="data_info">
+                          <dt>합계</dt>
+                          <dd>27</dd>
+                        </dl>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <!-- result_tit -->
+                    <strong class="result_tit">자낭균문</strong>
+
+                    <!-- result_detail -->
+                    <ul class="result_detail">
+                      <!-- jong -->
+                      <li class="jong">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>40</dd>
+                        </dl>
+                      </li>
+
+                      <!-- specimen -->
+                      <li class="specimen">
+                        <dl class="data_info">
+                          <dt>표본</dt>
+                          <dd>28</dd>
+                        </dl>
+                      </li>
+
+                      <!-- observe -->
+                      <li class="observe">
+                        <dl class="data_info">
+                          <dt>관찰</dt>
+                          <dd>83</dd>
+                        </dl>
+                      </li>
+
+                      <!-- image -->
+                      <li class="image">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>1</dd>
+                          <dt>표본</dt>
+                          <dd>2</dd>
+                          <dt>관찰</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- video -->
+                      <li class="video">
+                        <dl class="data_info">
+                          <dt>동영상</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- sound -->
+                      <li class="sound">
+                        <dl class="data_info">
+                          <dt>음성</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- dna -->
+                      <li class="dna">
+                        <dl class="data_info">
+                          <dt>DNA</dt>
+                          <dd>6</dd>
+                        </dl>
+                      </li>
+
+                      <!-- 합계 -->
+                      <li class="total">
+                        <dl class="data_info">
+                          <dt>합계</dt>
+                          <dd>119</dd>
+                        </dl>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <!-- result_tit -->
+                    <strong class="result_tit">자낭균문</strong>
+
+                    <!-- result_detail -->
+                    <ul class="result_detail">
+                      <!-- jong -->
+                      <li class="jong">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>2</dd>
+                        </dl>
+                      </li>
+
+                      <!-- specimen -->
+                      <li class="specimen">
+                        <dl class="data_info">
+                          <dt>표본</dt>
+                          <dd>2</dd>
+                        </dl>
+                      </li>
+
+                      <!-- observe -->
+                      <li class="observe">
+                        <dl class="data_info">
+                          <dt>관찰</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- image -->
+                      <li class="image">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>0</dd>
+                          <dt>표본</dt>
+                          <dd>0</dd>
+                          <dt>관찰</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- video -->
+                      <li class="video">
+                        <dl class="data_info">
+                          <dt>동영상</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- sound -->
+                      <li class="sound">
+                        <dl class="data_info">
+                          <dt>음성</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- dna -->
+                      <li class="dna">
+                        <dl class="data_info">
+                          <dt>DNA</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- 합계 -->
+                      <li class="total">
+                        <dl class="data_info">
+                          <dt>합계</dt>
+                          <dd>2</dd>
+                        </dl>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <!-- result_tit -->
+                    <strong class="result_tit">자포동물문</strong>
+
+                    <!-- result_detail -->
+                    <ul class="result_detail">
+                      <!-- jong -->
+                      <li class="jong">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>41</dd>
+                        </dl>
+                      </li>
+
+                      <!-- specimen -->
+                      <li class="specimen">
+                        <dl class="data_info">
+                          <dt>표본</dt>
+                          <dd>456</dd>
+                        </dl>
+                      </li>
+
+                      <!-- observe -->
+                      <li class="observe">
+                        <dl class="data_info">
+                          <dt>관찰</dt>
+                          <dd>50</dd>
+                        </dl>
+                      </li>
+
+                      <!-- image -->
+                      <li class="image">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>1</dd>
+                          <dt>표본</dt>
+                          <dd>40</dd>
+                          <dt>관찰</dt>
+                          <dd>50</dd>
+                        </dl>
+                      </li>
+
+                      <!-- video -->
+                      <li class="video">
+                        <dl class="data_info">
+                          <dt>동영상</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- sound -->
+                      <li class="sound">
+                        <dl class="data_info">
+                          <dt>음성</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- dna -->
+                      <li class="dna">
+                        <dl class="data_info">
+                          <dt>DNA</dt>
+                          <dd>3</dd>
+                        </dl>
+                      </li>
+
+                      <!-- 합계 -->
+                      <li class="total">
+                        <dl class="data_info">
+                          <dt>합계</dt>
+                          <dd>599</dd>
+                        </dl>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <!-- result_tit -->
+                    <strong class="result_tit">절지동물문</strong>
+
+                    <!-- result_detail -->
+                    <ul class="result_detail">
+                      <!-- jong -->
+                      <li class="jong">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>6,157</dd>
+                        </dl>
+                      </li>
+
+                      <!-- specimen -->
+                      <li class="specimen">
+                        <dl class="data_info">
+                          <dt>표본</dt>
+                          <dd>233,851</dd>
+                        </dl>
+                      </li>
+
+                      <!-- observe -->
+                      <li class="observe">
+                        <dl class="data_info">
+                          <dt>관찰</dt>
+                          <dd>47,168</dd>
+                        </dl>
+                      </li>
+
+                      <!-- image -->
+                      <li class="image">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>3,766</dd>
+                          <dt>표본</dt>
+                          <dd>257,277</dd>
+                          <dt>관찰</dt>
+                          <dd>7,369</dd>
+                        </dl>
+                      </li>
+
+                      <!-- video -->
+                      <li class="video">
+                        <dl class="data_info">
+                          <dt>동영상</dt>
+                          <dd>541</dd>
+                        </dl>
+                      </li>
+
+                      <!-- sound -->
+                      <li class="sound">
+                        <dl class="data_info">
+                          <dt>음성</dt>
+                          <dd>29</dd>
+                        </dl>
+                      </li>
+
+                      <!-- dna -->
+                      <li class="dna">
+                        <dl class="data_info">
+                          <dt>DNA</dt>
+                          <dd>3,788</dd>
+                        </dl>
+                      </li>
+
+                      <!-- 합계 -->
+                      <li class="total">
+                        <dl class="data_info">
+                          <dt>합계</dt>
+                          <dd>550,023</dd>
+                        </dl>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <!-- result_tit -->
+                    <strong class="result_tit">척삭동물문</strong>
+
+                    <!-- result_detail -->
+                    <ul class="result_detail">
+                      <!-- jong -->
+                      <li class="jong">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>1,156</dd>
+                        </dl>
+                      </li>
+
+                      <!-- specimen -->
+                      <li class="specimen">
+                        <dl class="data_info">
+                          <dt>표본</dt>
+                          <dd>234,996</dd>
+                        </dl>
+                      </li>
+
+                      <!-- observe -->
+                      <li class="observe">
+                        <dl class="data_info">
+                          <dt>관찰</dt>
+                          <dd>553,379</dd>
+                        </dl>
+                      </li>
+
+                      <!-- image -->
+                      <li class="image">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>1,446</dd>
+                          <dt>표본</dt>
+                          <dd>644,957</dd>
+                          <dt>관찰</dt>
+                          <dd>12,053</dd>
+                        </dl>
+                      </li>
+
+                      <!-- video -->
+                      <li class="video">
+                        <dl class="data_info">
+                          <dt>동영상</dt>
+                          <dd>1,438</dd>
+                        </dl>
+                      </li>
+
+                      <!-- sound -->
+                      <li class="sound">
+                        <dl class="data_info">
+                          <dt>음성</dt>
+                          <dd>216</dd>
+                        </dl>
+                      </li>
+
+                      <!-- dna -->
+                      <li class="dna">
+                        <dl class="data_info">
+                          <dt>DNA</dt>
+                          <dd>234</dd>
+                        </dl>
+                      </li>
+
+                      <!-- 합계 -->
+                      <li class="total">
+                        <dl class="data_info">
+                          <dt>합계</dt>
+                          <dd>1,447,273</dd>
+                        </dl>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <!-- result_tit -->
+                    <strong class="result_tit">태류식물문</strong>
+
+                    <!-- result_detail -->
+                    <ul class="result_detail">
+                      <!-- jong -->
+                      <li class="jong">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>2</dd>
+                        </dl>
+                      </li>
+
+                      <!-- specimen -->
+                      <li class="specimen">
+                        <dl class="data_info">
+                          <dt>표본</dt>
+                          <dd>4</dd>
+                        </dl>
+                      </li>
+
+                      <!-- observe -->
+                      <li class="observe">
+                        <dl class="data_info">
+                          <dt>관찰</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- image -->
+                      <li class="image">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>1</dd>
+                          <dt>표본</dt>
+                          <dd>4</dd>
+                          <dt>관찰</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- video -->
+                      <li class="video">
+                        <dl class="data_info">
+                          <dt>동영상</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- sound -->
+                      <li class="sound">
+                        <dl class="data_info">
+                          <dt>음성</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- dna -->
+                      <li class="dna">
+                        <dl class="data_info">
+                          <dt>DNA</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- 합계 -->
+                      <li class="total">
+                        <dl class="data_info">
+                          <dt>합계</dt>
+                          <dd>8</dd>
+                        </dl>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <!-- result_tit -->
+                    <strong class="result_tit">태형동물문</strong>
+
+                    <!-- result_detail -->
+                    <ul class="result_detail">
+                      <!-- jong -->
+                      <li class="jong">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>1</dd>
+                        </dl>
+                      </li>
+
+                      <!-- specimen -->
+                      <li class="specimen">
+                        <dl class="data_info">
+                          <dt>표본</dt>
+                          <dd>13</dd>
+                        </dl>
+                      </li>
+
+                      <!-- observe -->
+                      <li class="observe">
+                        <dl class="data_info">
+                          <dt>관찰</dt>
+                          <dd>6</dd>
+                        </dl>
+                      </li>
+
+                      <!-- image -->
+                      <li class="image">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>0</dd>
+                          <dt>표본</dt>
+                          <dd>2</dd>
+                          <dt>관찰</dt>
+                          <dd>6</dd>
+                        </dl>
+                      </li>
+
+                      <!-- video -->
+                      <li class="video">
+                        <dl class="data_info">
+                          <dt>동영상</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- sound -->
+                      <li class="sound">
+                        <dl class="data_info">
+                          <dt>음성</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- dna -->
+                      <li class="dna">
+                        <dl class="data_info">
+                          <dt>DNA</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- 합계 -->
+                      <li class="total">
+                        <dl class="data_info">
+                          <dt>합계</dt>
+                          <dd>27</dd>
+                        </dl>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <!-- result_tit -->
+                    <strong class="result_tit">피자식물문</strong>
+
+                    <!-- result_detail -->
+                    <ul class="result_detail">
+                      <!-- jong -->
+                      <li class="jong">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>3,123</dd>
+                        </dl>
+                      </li>
+
+                      <!-- specimen -->
+                      <li class="specimen">
+                        <dl class="data_info">
+                          <dt>표본</dt>
+                          <dd>65,464</dd>
+                        </dl>
+                      </li>
+
+                      <!-- observe -->
+                      <li class="observe">
+                        <dl class="data_info">
+                          <dt>관찰</dt>
+                          <dd>56,943</dd>
+                        </dl>
+                      </li>
+
+                      <!-- image -->
+                      <li class="image">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>2,480</dd>
+                          <dt>표본</dt>
+                          <dd>60,159</dd>
+                          <dt>관찰</dt>
+                          <dd>4,737</dd>
+                        </dl>
+                      </li>
+
+                      <!-- video -->
+                      <li class="video">
+                        <dl class="data_info">
+                          <dt>동영상</dt>
+                          <dd>81</dd>
+                        </dl>
+                      </li>
+
+                      <!-- sound -->
+                      <li class="sound">
+                        <dl class="data_info">
+                          <dt>음성</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- dna -->
+                      <li class="dna">
+                        <dl class="data_info">
+                          <dt>DNA</dt>
+                          <dd>2,304</dd>
+                        </dl>
+                      </li>
+
+                      <!-- 합계 -->
+                      <li class="total">
+                        <dl class="data_info">
+                          <dt>합계</dt>
+                          <dd>189,688</dd>
+                        </dl>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <!-- result_tit -->
+                    <strong class="result_tit">해면동물문</strong>
+
+                    <!-- result_detail -->
+                    <ul class="result_detail">
+                      <!-- jong -->
+                      <li class="jong">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>35</dd>
+                        </dl>
+                      </li>
+
+                      <!-- specimen -->
+                      <li class="specimen">
+                        <dl class="data_info">
+                          <dt>표본</dt>
+                          <dd>365</dd>
+                        </dl>
+                      </li>
+
+                      <!-- observe -->
+                      <li class="observe">
+                        <dl class="data_info">
+                          <dt>관찰</dt>
+                          <dd>2</dd>
+                        </dl>
+                      </li>
+
+                      <!-- image -->
+                      <li class="image">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>0</dd>
+                          <dt>표본</dt>
+                          <dd>3</dd>
+                          <dt>관찰</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- video -->
+                      <li class="video">
+                        <dl class="data_info">
+                          <dt>동영상</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- sound -->
+                      <li class="sound">
+                        <dl class="data_info">
+                          <dt>음성</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- dna -->
+                      <li class="dna">
+                        <dl class="data_info">
+                          <dt>DNA</dt>
+                          <dd>3</dd>
+                        </dl>
+                      </li>
+
+                      <!-- 합계 -->
+                      <li class="total">
+                        <dl class="data_info">
+                          <dt>합계</dt>
+                          <dd>373</dd>
+                        </dl>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <!-- result_tit -->
+                    <strong class="result_tit">홍조식물문</strong>
+
+                    <!-- result_detail -->
+                    <ul class="result_detail">
+                      <!-- jong -->
+                      <li class="jong">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>183</dd>
+                        </dl>
+                      </li>
+
+                      <!-- specimen -->
+                      <li class="specimen">
+                        <dl class="data_info">
+                          <dt>표본</dt>
+                          <dd>2,786</dd>
+                        </dl>
+                      </li>
+
+                      <!-- observe -->
+                      <li class="observe">
+                        <dl class="data_info">
+                          <dt>관찰</dt>
+                          <dd>315</dd>
+                        </dl>
+                      </li>
+
+                      <!-- image -->
+                      <li class="image">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>137</dd>
+                          <dt>표본</dt>
+                          <dd>3,617</dd>
+                          <dt>관찰</dt>
+                          <dd>314</dd>
+                        </dl>
+                      </li>
+
+                      <!-- video -->
+                      <li class="video">
+                        <dl class="data_info">
+                          <dt>동영상</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- sound -->
+                      <li class="sound">
+                        <dl class="data_info">
+                          <dt>음성</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- dna -->
+                      <li class="dna">
+                        <dl class="data_info">
+                          <dt>DNA</dt>
+                          <dd>193</dd>
+                        </dl>
+                      </li>
+
+                      <!-- 합계 -->
+                      <li class="total">
+                        <dl class="data_info">
+                          <dt>합계</dt>
+                          <dd>7,225</dd>
+                        </dl>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <!-- result_tit -->
+                    <strong class="result_tit">환형동물문</strong>
+
+                    <!-- result_detail -->
+                    <ul class="result_detail">
+                      <!-- jong -->
+                      <li class="jong">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>4</dd>
+                        </dl>
+                      </li>
+
+                      <!-- specimen -->
+                      <li class="specimen">
+                        <dl class="data_info">
+                          <dt>표본</dt>
+                          <dd>114</dd>
+                        </dl>
+                      </li>
+
+                      <!-- observe -->
+                      <li class="observe">
+                        <dl class="data_info">
+                          <dt>관찰</dt>
+                          <dd>1</dd>
+                        </dl>
+                      </li>
+
+                      <!-- image -->
+                      <li class="image">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>1</dd>
+                          <dt>표본</dt>
+                          <dd>148</dd>
+                          <dt>관찰</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- video -->
+                      <li class="video">
+                        <dl class="data_info">
+                          <dt>동영상</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- sound -->
+                      <li class="sound">
+                        <dl class="data_info">
+                          <dt>음성</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- dna -->
+                      <li class="dna">
+                        <dl class="data_info">
+                          <dt>DNA</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- 합계 -->
+                      <li class="total">
+                        <dl class="data_info">
+                          <dt>합계</dt>
+                          <dd>263</dd>
+                        </dl>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <!-- result_tit -->
+                    <strong class="result_tit"
+                      >황갈조식물문, 대롱편모조식물문</strong
+                    >
+
+                    <!-- result_detail -->
+                    <ul class="result_detail">
+                      <!-- jong -->
+                      <li class="jong">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>7</dd>
+                        </dl>
+                      </li>
+
+                      <!-- specimen -->
+                      <li class="specimen">
+                        <dl class="data_info">
+                          <dt>표본</dt>
+                          <dd>117</dd>
+                        </dl>
+                      </li>
+
+                      <!-- observe -->
+                      <li class="observe">
+                        <dl class="data_info">
+                          <dt>관찰</dt>
+                          <dd>11</dd>
+                        </dl>
+                      </li>
+
+                      <!-- image -->
+                      <li class="image">
+                        <dl class="data_info">
+                          <dt>종</dt>
+                          <dd>4</dd>
+                          <dt>표본</dt>
+                          <dd>234</dd>
+                          <dt>관찰</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- video -->
+                      <li class="video">
+                        <dl class="data_info">
+                          <dt>동영상</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- sound -->
+                      <li class="sound">
+                        <dl class="data_info">
+                          <dt>음성</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- dna -->
+                      <li class="dna">
+                        <dl class="data_info">
+                          <dt>DNA</dt>
+                          <dd>0</dd>
+                        </dl>
+                      </li>
+
+                      <!-- 합계 -->
+                      <li class="total">
+                        <dl class="data_info">
+                          <dt>합계</dt>
+                          <dd>362</dd>
+                        </dl>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- //개발자 컨텐츠 영역 -->
+          </div>
+          <!-- //scontents_inner -->
+        </div>
+        <!-- //scontents -->
+      </div>
+      <!-- //container -->
+    </div>
+    <!-- //wrap -->
+    <div id="footers"></div>
+  </body>
+</html>
